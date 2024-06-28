@@ -1,29 +1,31 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.StoreEntity;
+using OnlineStore.Infrastructure.Repository.StoreEntity;
 
 namespace OnlineStore.Web.Controllers.StoreControllers
 {
     public class CategoryController : Controller
     {
-        // GET: CategoryController
+        private readonly CategoryRepo<Category> categoryRepo;
+
+        public CategoryController(CategoryRepo<Category> _categoryRepo)
+        {
+            categoryRepo = _categoryRepo;
+        }
         public ActionResult Index()
         {
-            return View();
+            var Catrgories = categoryRepo.GetAllAsync().Result;
+            return View(Catrgories) ;
         }
-
-        // GET: CategoryController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var category =  categoryRepo.GetById(id);
+            return View(category.Result);
         }
-
-        // GET: CategoryController/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: CategoryController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -37,14 +39,10 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 return View();
             }
         }
-
-        // GET: CategoryController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
-
-        // POST: CategoryController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -58,14 +56,10 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 return View();
             }
         }
-
-        // GET: CategoryController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
-        // POST: CategoryController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

@@ -1,29 +1,31 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.Users;
+using OnlineStore.Infrastructure.Repository.Users;
 
 namespace OnlineStore.Web.Controllers.UsersControllers
 {
     public class CustomersController : Controller
     {
-        // GET: CustomersController
+        private readonly CustomerRepo<Customer> customerRepo;
+
+        public CustomersController(CustomerRepo<Customer> _customerRepo)
+        {
+            customerRepo = _customerRepo;
+        }
         public ActionResult Index()
         {
-            return View();
+            var customers = customerRepo.GetAllAsync().Result;
+            return View(customers);
         }
-
-        // GET: CustomersController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(customerRepo.GetById(id).Result);
         }
-
-        // GET: CustomersController/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: CustomersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -37,14 +39,10 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                 return View();
             }
         }
-
-        // GET: CustomersController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
-
-        // POST: CustomersController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -58,14 +56,10 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                 return View();
             }
         }
-
-        // GET: CustomersController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
-        // POST: CustomersController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

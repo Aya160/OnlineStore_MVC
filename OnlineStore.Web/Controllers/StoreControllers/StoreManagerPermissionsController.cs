@@ -1,29 +1,32 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.StoreEntity;
+using OnlineStore.Infrastructure.Repository.StoreEntity;
 
 namespace OnlineStore.Web.Controllers.StoreControllers
 {
     public class StoreManagerPermissionsController : Controller
     {
-        // GET: StoreManagerPermissionsController
+        private readonly StoreMangerPermissionRepo<StoreManagerPermissions> sMPsRepo;
+
+        public StoreManagerPermissionsController(StoreMangerPermissionRepo<StoreManagerPermissions> _sMPsRepo)
+        {
+            sMPsRepo = _sMPsRepo;
+        }
         public ActionResult Index()
         {
-            return View();
+            var permissions = sMPsRepo.GetAllAsync().Result;
+            return View(permissions);
         }
-
-        // GET: StoreManagerPermissionsController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(sMPsRepo.GetById(id).Result);
         }
-
-        // GET: StoreManagerPermissionsController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: StoreManagerPermissionsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -37,14 +40,11 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 return View();
             }
         }
-
-        // GET: StoreManagerPermissionsController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: StoreManagerPermissionsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -58,14 +58,10 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 return View();
             }
         }
-
-        // GET: StoreManagerPermissionsController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
-        // POST: StoreManagerPermissionsController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

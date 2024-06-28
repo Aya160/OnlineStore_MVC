@@ -1,29 +1,31 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.Users;
+using OnlineStore.Infrastructure.Repository.Users;
 
 namespace OnlineStore.Web.Controllers.UsersControllers
 {
     public class AdministratorsController : Controller
     {
-        // GET: AdministratorsController
+        private readonly AdministratorRepo<Administrator> administratorRepo;
+
+        public AdministratorsController(AdministratorRepo<Administrator> _administratorRepo)
+        {
+            administratorRepo = _administratorRepo;
+        }
         public ActionResult Index()
         {
-            return View();
+            var admins = administratorRepo.GetAllAsync().Result;
+            return View(admins);
         }
-
-        // GET: AdministratorsController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(administratorRepo.GetById(id).Result);
         }
-
-        // GET: AdministratorsController/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: AdministratorsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -37,14 +39,10 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                 return View();
             }
         }
-
-        // GET: AdministratorsController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
-
-        // POST: AdministratorsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -58,14 +56,10 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                 return View();
             }
         }
-
-        // GET: AdministratorsController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
-        // POST: AdministratorsController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

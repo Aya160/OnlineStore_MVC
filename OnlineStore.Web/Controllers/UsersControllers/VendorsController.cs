@@ -1,29 +1,31 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.Users;
+using OnlineStore.Infrastructure.Repository.Users;
 
 namespace OnlineStore.Web.Controllers.UsersControllers
 {
     public class VendorsController : Controller
     {
-        // GET: VendorsController
+        private readonly VendorRepo<Vendor> vendorRepo;
+
+        public VendorsController(VendorRepo<Vendor> _vendorRepo)
+        {
+            vendorRepo = _vendorRepo;
+        }
         public ActionResult Index()
         {
-            return View();
+            var vendors = vendorRepo.GetAllAsync().Result;
+            return View(vendors);
         }
-
-        // GET: VendorsController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(vendorRepo.GetById(id).Result);
         }
-
-        // GET: VendorsController/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: VendorsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -37,14 +39,10 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                 return View();
             }
         }
-
-        // GET: VendorsController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
-
-        // POST: VendorsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -58,14 +56,10 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                 return View();
             }
         }
-
-        // GET: VendorsController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
-        // POST: VendorsController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

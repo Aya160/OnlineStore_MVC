@@ -1,5 +1,10 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using OnlineStore.Core.Entities.Users;
 using OnlineStore.Infrastructure.Data;
+using OnlineStore.Infrastructure.Repository.StoreEntity;
+using OnlineStore.Infrastructure.Repository.Users;
+using System;
 
 namespace OnlineStore.Web
 {
@@ -9,12 +14,49 @@ namespace OnlineStore.Web
         {
             var builder = WebApplication.CreateBuilder(args);
 
+   
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
+
+            #region Resolve Services
+            #region Resolve Identity & Database
+            // Database
             builder.Services.AddDbContext<ApplicationDbContext>(options => {
                 options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"]);
             });
+           //----------------------------------------------
+           //Identity
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(option =>
+            {
+                option.Password.RequiredLength = 8;
+                option.Password.RequireUppercase = false;
+                option.Password.RequireNonAlphanumeric = false;
+                option.User.RequireUniqueEmail = true;
+            })
+      .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            #endregion
+
+            #region Resolve StoreControllers
+            builder.Services.AddScoped(typeof(CategoryRepo<>));
+            builder.Services.AddScoped(typeof(OrderRepo<>));
+            builder.Services.AddScoped(typeof(ProductRepo<>));
+            builder.Services.AddScoped(typeof(SaleCategoryRepo<>));
+            builder.Services.AddScoped(typeof(SaleProductRepo<>));
+            builder.Services.AddScoped(typeof(StoreMangerPermissionRepo<>));
+            builder.Services.AddScoped(typeof(StoreMangerRepo<>));
+            builder.Services.AddScoped(typeof(StoreRepo<>));
+            #endregion
+
+            #region Resolve Users Controllers
+            builder.Services.AddScoped(typeof(AdministratorRepo<>));
+            builder.Services.AddScoped(typeof(AdministratorPermissionRepo<>));
+            builder.Services.AddScoped(typeof(CustomerRepo<>));
+            builder.Services.AddScoped(typeof(VendorRepo<>));
+
+            #endregion
+
+            #endregion
 
             var app = builder.Build();
 

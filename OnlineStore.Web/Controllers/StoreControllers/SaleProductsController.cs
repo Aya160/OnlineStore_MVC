@@ -1,29 +1,31 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.StoreEntity;
+using OnlineStore.Infrastructure.Repository.StoreEntity;
 
 namespace OnlineStore.Web.Controllers.StoreControllers
 {
     public class SaleProductsController : Controller
     {
-        // GET: SaleProductsController
+        private readonly SaleProductRepo<SaleProduct> saleProductRepo;
+
+        public SaleProductsController(SaleProductRepo<SaleProduct> _saleProductRepo)
+        {
+            saleProductRepo = _saleProductRepo;
+        }
         public ActionResult Index()
         {
-            return View();
+            var saleProducts = saleProductRepo.GetAllAsync().Result;
+            return View(saleProducts);
         }
-
-        // GET: SaleProductsController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(saleProductRepo.GetById(id).Result);
         }
-
-        // GET: SaleProductsController/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: SaleProductsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -37,14 +39,10 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 return View();
             }
         }
-
-        // GET: SaleProductsController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
-
-        // POST: SaleProductsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -58,14 +56,10 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 return View();
             }
         }
-
-        // GET: SaleProductsController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
-        // POST: SaleProductsController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
