@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
+          "OnlineStore.Core": "1.0.0",
           "OnlineStore.Infrastructure": "1.0.0"
         },
         "runtime": {

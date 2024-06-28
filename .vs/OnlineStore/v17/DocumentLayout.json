@@ -1,11 +1,16 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\",
+=======
+  "WorkspaceRootPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\",
+>>>>>>> f3e37b81c0888d9c57e26225d13556518dc62944
   "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
+<<<<<<< HEAD
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -40,6 +45,9 @@
           ]
         }
       ]
+=======
+      "DocumentGroups": []
+>>>>>>> f3e37b81c0888d9c57e26225d13556518dc62944
     }
   ]
 }
