@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Core.Entities.Shipping;
-using OnlineStore.Infrastructure.Data;
 using OnlineStore.Infrastructure.Repository.Shipping;
 
 namespace OnlineStore.Web.Controllers.ShippingControllers

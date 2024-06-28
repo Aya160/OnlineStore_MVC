@@ -29,11 +29,8 @@
   <ItemGroup>
     <Folder Include="Controllers\AppAccountingControllers\" />
     <Folder Include="Controllers\ShippingControllers\" />
-<<<<<<< HEAD
 
     <Folder Include="Controllers\UsersControllers\" />
-=======
->>>>>>> 488d619f497c2beafc8fe97152e9fbd4fcdd3f5f
   </ItemGroup>
 
 </Project>
