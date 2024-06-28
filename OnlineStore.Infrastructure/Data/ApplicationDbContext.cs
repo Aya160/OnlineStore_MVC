@@ -1,16 +1,14 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using OnlineStore.Core.Entities.AppAccounting;
 using OnlineStore.Core.Entities.General;
 using OnlineStore.Core.Entities.Shipping;
 using OnlineStore.Core.Entities.StoreEntity;
 using OnlineStore.Core.Entities.Users;
-using OnlineStore.Core.Identity;
 using System.Reflection;
 
 namespace OnlineStore.Infrastructure.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : DbContext
     {
         //User
         public DbSet<Account> Accounts { get; set; }

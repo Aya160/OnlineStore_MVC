@@ -4107,19 +4107,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RTC\\.nuget\\packages\\": {}
+    "C:\\Users\\ramad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Core\\OnlineStore.Core.csproj",
       "projectName": "OnlineStore.Core",
       "projectPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Core\\OnlineStore.Core.csproj",
       "packagesPath": "C:\\Users\\RTC\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Core\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Core\\OnlineStore.Core.csproj",
+      "projectName": "OnlineStore.Core",
+      "projectPath": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Core\\OnlineStore.Core.csproj",
+      "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Core\\obj\\",
+>>>>>>> 51523793e4f7912ccdcb2bb1f53af658e17db064
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\RTC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4187,7 +4195,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

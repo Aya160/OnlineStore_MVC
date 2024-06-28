@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using OnlineStore.Core.Entities.General;
+﻿using OnlineStore.Core.Entities.General;
 
 namespace OnlineStore.Core.Entities.StoreEntity
 {

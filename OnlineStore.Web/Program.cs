@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using OnlineStore.Infrastructure.Data;
+
 namespace OnlineStore.Web
 {
     public class Program
@@ -5,6 +8,10 @@ namespace OnlineStore.Web
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options => {
+                options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"]);
+            });
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
