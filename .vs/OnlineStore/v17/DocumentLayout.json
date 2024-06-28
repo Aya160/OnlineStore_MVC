@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,26 +90,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "OnlineStore.Web\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "OnlineStore.Web\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAADwvzMAAAA+AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-28T17:29:46.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\appsettings.json",
               "RelativeDocumentMoniker": "OnlineStore.Web\\appsettings.json",
               "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\appsettings.json",
               "RelativeToolTip": "OnlineStore.Web\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABLAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-06-28T17:26:43.201Z",
               "EditorCaption": ""
@@ -124,8 +124,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Program.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAAABQAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T17:05:30.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T17:05:30.118Z"
             },
             {
               "$type": "Document",
@@ -137,8 +136,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\VendorsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T17:01:38.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T17:01:38.53Z"
             },
             {
               "$type": "Document",
@@ -150,8 +148,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\AddressesController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:50:46.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:50:46.677Z"
             },
             {
               "$type": "Document",
@@ -163,8 +160,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\AccountsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:50:44.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:50:44.327Z"
             },
             {
               "$type": "Document",
@@ -176,8 +172,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\StoresController.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAUwA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:47:58.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:47:58.099Z"
             },
             {
               "$type": "Document",
@@ -189,8 +184,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\StoreMangersController.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAUwBIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:45:24.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:45:24.339Z"
             },
             {
               "$type": "Document",
@@ -202,8 +196,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\StoreManagerPermissionsController.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAA4wEAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:39:42.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:39:42.737Z"
             },
             {
               "$type": "Document",
@@ -215,8 +208,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\CustomersController.cs",
               "ViewState": "AQIAAEAAAAAAAAAAAADwvz4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:58:32.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:58:32.605Z"
             },
             {
               "$type": "Document",
@@ -228,8 +220,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorPermissionsController.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAUwBIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:50:49.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:50:49.208Z"
             },
             {
               "$type": "Document",
@@ -241,8 +232,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorsController.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAUwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:55:49.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:55:49.833Z"
             },
             {
               "$type": "Document",
@@ -254,8 +244,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\SaleProductsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:36:57.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:36:57.809Z"
             },
             {
               "$type": "Document",
@@ -267,8 +256,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\SaleCategoriesController.cs",
               "ViewState": "AQIAAD0AAAAAAAAAAADwvz4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:34:05.585Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:34:05.585Z"
             },
             {
               "$type": "Document",
@@ -280,8 +268,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\OrdersController.cs",
               "ViewState": "AQIAACgAAAAAAAAAAAAowCoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:23:02.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:23:02.844Z"
             },
             {
               "$type": "Document",
@@ -293,8 +280,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\ProductsController.cs",
               "ViewState": "AQIAAD4AAAAAAAAAAAAAAEcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T16:23:01.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T16:23:01.531Z"
             }
           ]
         },
