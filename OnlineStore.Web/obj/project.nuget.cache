@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ADbLE9PWXRg4xIcYwgrdpKFzfgOxpfqco7uc12IHwGt2MeOYhRzJpKeOCwF7STFA88vObChgJh1J23CRSbiKOQ==",
+  "dgSpecHash": "ksMzT+NBoHvurGJ44gsP6RAzzfXYSjNMb3mqhu7Vb5HTobOQM0PUaz5Bgl8EqnM1Q3K/gKHw0iqXEAqWwm8d0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore\\OnlineStore.Web\\OnlineStore.Web.csproj",
+  "projectFilePath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\OnlineStore.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RTC\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\RTC\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

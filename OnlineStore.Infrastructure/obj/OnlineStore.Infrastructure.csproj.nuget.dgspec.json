@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj": {}
+    "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj": {
+    "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj",
         "projectName": "OnlineStore.Infrastructure",
-        "projectPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\RTC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore\\OnlineStore.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\RTC\\AppData\\Roaming\\NuGet\\NuGet.Config",
