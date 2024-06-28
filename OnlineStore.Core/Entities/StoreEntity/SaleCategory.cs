@@ -10,7 +10,7 @@ namespace OnlineStore.Core.Entities.StoreEntity
         [Range(1, 100)]
         public int Discount { get; set; }
         public int? StoreId { get; set; }
-        public Store Store { get; set; }
-        public ICollection<Category> Categories { get; set; }
+        public Store Store { get; set; } = new Store();
+        public ICollection<Category> Categories { get; set; } 
     }
 }

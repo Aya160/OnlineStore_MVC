@@ -1,12 +1,460 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\",
   "Documents": [],
+=======
+  "WorkspaceRootPath": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\storecontrollers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\storecontrollers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\storecontrollers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\storecontrollers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\storecontrollers\\salecategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\storecontrollers\\salecategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6221010E-732E-44B6-8910-1AF74D6A8260}|OnlineStore.Core\\OnlineStore.Core.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.core\\entities\\storeentity\\salecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6221010E-732E-44B6-8910-1AF74D6A8260}|OnlineStore.Core\\OnlineStore.Core.csproj|solutionrelative:onlinestore.core\\entities\\storeentity\\salecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\views\\salecategories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\views\\salecategories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\views\\stores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\views\\stores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\storecontrollers\\storescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\storecontrollers\\storescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\storecontrollers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\storecontrollers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6221010E-732E-44B6-8910-1AF74D6A8260}|OnlineStore.Core\\OnlineStore.Core.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.core\\entities\\storeentity\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6221010E-732E-44B6-8910-1AF74D6A8260}|OnlineStore.Core\\OnlineStore.Core.csproj|solutionrelative:onlinestore.core\\entities\\storeentity\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\OnlineStore.Web.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OnlineStore.Web\\OnlineStore.Web.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\userscontrollers\\vendorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\userscontrollers\\vendorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\userscontrollers\\addressescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\userscontrollers\\addressescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\userscontrollers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\userscontrollers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\storecontrollers\\storemangerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\storecontrollers\\storemangerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\storecontrollers\\storemanagerpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\storecontrollers\\storemanagerpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\userscontrollers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\userscontrollers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\userscontrollers\\administratorpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\userscontrollers\\administratorpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\userscontrollers\\administratorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\userscontrollers\\administratorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\storecontrollers\\saleproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\storecontrollers\\saleproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+>>>>>>> e527a5b4cd2e051708b5f293b5c8180d9e8a76e5
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
+<<<<<<< HEAD
       "DocumentGroups": []
+=======
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\Category\\Edit.cshtml",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Views\\Category\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\Category\\Edit.cshtml",
+              "RelativeToolTip": "OnlineStore.Web\\Views\\Category\\Edit.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T23:06:42.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\Category\\Create.cshtml",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Views\\Category\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\Category\\Create.cshtml",
+              "RelativeToolTip": "OnlineStore.Web\\Views\\Category\\Create.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T21:23:06.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\StoreControllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\CategoryController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\CategoryController.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAmwC0AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:07:57.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\StoreControllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\ProductsController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\ProductsController.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAAAEUAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\StoreControllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\OrdersController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\OrdersController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAcwDcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SaleCategory.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Core\\Entities\\StoreEntity\\SaleCategory.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Core\\Entities\\StoreEntity\\SaleCategory.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Core\\Entities\\StoreEntity\\SaleCategory.cs",
+              "RelativeToolTip": "OnlineStore.Core\\Entities\\StoreEntity\\SaleCategory.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAYwAwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:28:59.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SaleCategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\SaleCategoriesController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\StoreControllers\\SaleCategoriesController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\SaleCategoriesController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\SaleCategoriesController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwCAAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\appsettings.json",
+              "RelativeToolTip": "OnlineStore.Web\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAACCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-28T21:04:11.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\Stores\\Create.cshtml",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Views\\Stores\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\Stores\\Create.cshtml",
+              "RelativeToolTip": "OnlineStore.Web\\Views\\Stores\\Create.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T22:00:12.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\SaleCategories\\Create.cshtml",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Views\\SaleCategories\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\SaleCategories\\Create.cshtml",
+              "RelativeToolTip": "OnlineStore.Web\\Views\\SaleCategories\\Create.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T22:00:35.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Core\\Entities\\StoreEntity\\Category.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Core\\Entities\\StoreEntity\\Category.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Core\\Entities\\StoreEntity\\Category.cs",
+              "RelativeToolTip": "OnlineStore.Core\\Entities\\StoreEntity\\Category.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:29:06.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StoresController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\StoresController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\StoreControllers\\StoresController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\StoresController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\StoresController.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAuwCIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OnlineStore.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T21:04:11.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAawCAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-06-28T21:09:51.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Program.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Program.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAD4AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OnlineStore.Web.csproj.user",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\OnlineStore.Web.csproj.user",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\OnlineStore.Web.csproj.user",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\OnlineStore.Web.csproj.user",
+              "RelativeToolTip": "OnlineStore.Web\\OnlineStore.Web.csproj.user",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2024-06-28T21:09:57.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "VendorsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\VendorsController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\UsersControllers\\VendorsController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\VendorsController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\VendorsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AddressesController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\AddressesController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\UsersControllers\\AddressesController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\AddressesController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\AddressesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\UsersControllers\\AccountsController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\AccountsController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\AccountsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "StoreMangersController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\StoreMangersController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\StoreControllers\\StoreMangersController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\StoreMangersController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\StoreMangersController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAUwBIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "StoreManagerPermissionsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\StoreManagerPermissionsController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\StoreControllers\\StoreManagerPermissionsController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\StoreManagerPermissionsController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\StoreManagerPermissionsController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAA4wEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\UsersControllers\\CustomersController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\CustomersController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\CustomersController.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAADwvz4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AdministratorPermissionsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorPermissionsController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorPermissionsController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorPermissionsController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorPermissionsController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAUwBIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AdministratorsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorsController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorsController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorsController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorsController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAUwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SaleProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\SaleProductsController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\StoreControllers\\SaleProductsController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\StoreControllers\\SaleProductsController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\SaleProductsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:04:11.89Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 435,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+>>>>>>> e527a5b4cd2e051708b5f293b5c8180d9e8a76e5
     }
   ]
 }
