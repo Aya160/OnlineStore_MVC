@@ -7876,31 +7876,24 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.6",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.2",
+      "OnlineStore.Core >= 1.0.0",
       "OnlineStore.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ramad\\.nuget\\packages\\": {}
+    "C:\\Users\\RTC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\OnlineStore.Web.csproj",
       "projectName": "OnlineStore.Web",
       "projectPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\OnlineStore.Web.csproj",
       "packagesPath": "C:\\Users\\RTC\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\OnlineStore.Web.csproj",
-      "projectName": "OnlineStore.Web",
-      "projectPath": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\OnlineStore.Web.csproj",
-      "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\obj\\",
->>>>>>> 51523793e4f7912ccdcb2bb1f53af658e17db064
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RTC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7914,8 +7907,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj"
+            "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Core\\OnlineStore.Core.csproj": {
+              "projectPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Core\\OnlineStore.Core.csproj"
+            },
+            "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Infrastructure\\OnlineStore.Infrastructure.csproj"
             }
           }
         }
@@ -7979,7 +7975,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

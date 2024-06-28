@@ -21,13 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OnlineStore.Core\OnlineStore.Core.csproj" />
     <ProjectReference Include="..\OnlineStore.Infrastructure\OnlineStore.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\AppAccountingControllers\" />
     <Folder Include="Controllers\UsersControllers\" />
-    <Folder Include="Controllers\ShippingControllers\" />
   </ItemGroup>
 
 </Project>
