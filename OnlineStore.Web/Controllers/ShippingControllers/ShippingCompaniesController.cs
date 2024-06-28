@@ -1,20 +1,28 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.Shipping;
+using OnlineStore.Infrastructure.Repository.Shipping;
 
 namespace OnlineStore.Web.Controllers.ShippingControllers
 {
     public class ShippingCompaniesController : Controller
     {
+        private readonly ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo;
+
+        public ShippingCompaniesController(ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo)
+        {
+            this.shippingCompaniesRepo = shippingCompaniesRepo;
+        }
         // GET: ShippingCompaniesController
         public ActionResult Index()
         {
-            return View();
+            return View(shippingCompaniesRepo.GetAllAsync().Result);
         }
 
         // GET: ShippingCompaniesController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(shippingCompaniesRepo.GetById(id).Result);
         }
 
         // GET: ShippingCompaniesController/Create

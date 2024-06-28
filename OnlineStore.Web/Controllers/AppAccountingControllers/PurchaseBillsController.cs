@@ -1,20 +1,28 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.AppAccounting;
+using OnlineStore.Infrastructure.Repository.AppAccouting;
 
 namespace OnlineStore.Web.Controllers.AppAccountingControllers
 {
     public class PurchaseBillsController : Controller
     {
+        private readonly PurchaseBillRepo<PurchaseBill> purchaseBillRepo;
+
+        public PurchaseBillsController(PurchaseBillRepo<PurchaseBill> purchaseBillRepo)
+        {
+            this.purchaseBillRepo = purchaseBillRepo;
+        }
         // GET: PurchaseBillsController
         public ActionResult Index()
         {
-            return View();
+            return View(purchaseBillRepo.GetAllAsync().Result);
         }
 
         // GET: PurchaseBillsController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(purchaseBillRepo.GetById(id).Result);
         }
 
         // GET: PurchaseBillsController/Create
