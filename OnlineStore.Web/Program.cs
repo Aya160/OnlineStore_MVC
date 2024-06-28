@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using OnlineStore.Infrastructure.Data;
+using OnlineStore.Infrastructure.Repository.Shipping;
+using OnlineStore.Infrastructure.Repository.StoreEntity;
 
 namespace OnlineStore.Web
 {
@@ -12,7 +14,7 @@ namespace OnlineStore.Web
             builder.Services.AddDbContext<ApplicationDbContext>(options => {
                 options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"]);
             });
-
+            builder.Services.AddScoped(typeof(DeliverCartRepo<>));
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 

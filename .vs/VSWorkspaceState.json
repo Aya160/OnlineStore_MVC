@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "\\OnlineStore.Web",
+    "\\OnlineStore.Web\\Controllers",
+    "\\OnlineStore.Web\\Controllers\\ShippingControllers"
   ],
   "PreviewInSolutionExplorer": false
 }

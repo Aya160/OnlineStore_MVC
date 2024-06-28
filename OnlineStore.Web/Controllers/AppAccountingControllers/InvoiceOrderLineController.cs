@@ -1,20 +1,28 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.AppAccounting;
+using OnlineStore.Infrastructure.Repository.AppAccouting;
 
 namespace OnlineStore.Web.Controllers.AppAccountingControllers
 {
     public class InvoiceOrderLineController : Controller
     {
+        private readonly InvoiceOrderLineRepo<InvoiceOrderLine> invoiceOrderLineRepo;
+
+        public InvoiceOrderLineController(InvoiceOrderLineRepo<InvoiceOrderLine> invoiceOrderLineRepo) 
+        {
+            this.invoiceOrderLineRepo = invoiceOrderLineRepo;
+        }
         // GET: InvoiceOrderLineController
         public ActionResult Index()
         {
-            return View();
+            return View(invoiceOrderLineRepo.GetAllAsync().Result);
         }
 
         // GET: InvoiceOrderLineController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(invoiceOrderLineRepo.GetById(id).Result);
         }
 
         // GET: InvoiceOrderLineController/Create

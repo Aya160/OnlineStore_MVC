@@ -485,8 +485,8 @@ C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web\bin\Debug\net8.0\runtim
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web\bin\Debug\net8.0\OnlineStore.Core.dll
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web\bin\Debug\net8.0\OnlineStore.Infrastructure.dll
-C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web\bin\Debug\net8.0\OnlineStore.Infrastructure.pdb
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web\bin\Debug\net8.0\OnlineStore.Core.pdb
+C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web\bin\Debug\net8.0\OnlineStore.Infrastructure.pdb
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web\obj\Debug\net8.0\OnlineStore.Web.csproj.AssemblyReference.cache
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web\obj\Debug\net8.0\OnlineStore.Web.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web\obj\Debug\net8.0\OnlineStore.Web.AssemblyInfoInputs.cache

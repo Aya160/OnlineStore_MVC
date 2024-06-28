@@ -1,20 +1,28 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.AppAccounting;
+using OnlineStore.Infrastructure.Repository.AppAccouting;
 
 namespace OnlineStore.Web.Controllers.AppAccountingControllers
 {
     public class SuppliersController : Controller
     {
+        private readonly SupplierRepo<Supplier> supplierRepo;
+
+        public SuppliersController(SupplierRepo<Supplier> supplierRepo) 
+        {
+            this.supplierRepo = supplierRepo;
+        }
         // GET: SuppliersController
         public ActionResult Index()
         {
-            return View();
+            return View(supplierRepo.GetAllAsync().Result);
         }
 
         // GET: SuppliersController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(supplierRepo.GetById(id).Result);
         }
 
         // GET: SuppliersController/Create
