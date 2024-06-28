@@ -1,29 +1,32 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.StoreEntity;
+using OnlineStore.Infrastructure.Repository.StoreEntity;
 
 namespace OnlineStore.Web.Controllers.StoreControllers
 {
     public class StoresController : Controller
     {
-        // GET: StoresController
+        private readonly StoreRepo<Store> storeRepo;
+
+        public StoresController(StoreRepo<Store> _storeRepo)
+        {
+            storeRepo = _storeRepo;
+        }
         public ActionResult Index()
         {
-            return View();
-        }
+            var stores = storeRepo.GetAllAsync().Result;
 
-        // GET: StoresController/Details/5
+            return View(stores);
+        }
         public ActionResult Details(int id)
         {
-            return View();
+            return View(storeRepo.GetById(id).Result);
         }
-
-        // GET: StoresController/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: StoresController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -37,14 +40,10 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 return View();
             }
         }
-
-        // GET: StoresController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
-
-        // POST: StoresController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -58,14 +57,10 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 return View();
             }
         }
-
-        // GET: StoresController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
-        // POST: StoresController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

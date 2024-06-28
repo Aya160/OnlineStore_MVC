@@ -1,29 +1,31 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.StoreEntity;
+using OnlineStore.Infrastructure.Repository.StoreEntity;
 
 namespace OnlineStore.Web.Controllers.StoreControllers
 {
     public class StoreMangersController : Controller
     {
-        // GET: StoreMangersController
+        private readonly StoreMangerRepo<StoreManager> storeMangerRepo;
+
+        public StoreMangersController(StoreMangerRepo<StoreManager> _storeMangerRepo)
+        {
+            storeMangerRepo = _storeMangerRepo;
+        }
         public ActionResult Index()
         {
-            return View();
+            var storeMangers = storeMangerRepo.GetAllAsync().Result;
+            return View(storeMangers);
         }
-
-        // GET: StoreMangersController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(storeMangerRepo.GetById(id).Result);
         }
-
-        // GET: StoreMangersController/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: StoreMangersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -43,8 +45,6 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         {
             return View();
         }
-
-        // POST: StoreMangersController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -64,8 +64,6 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         {
             return View();
         }
-
-        // POST: StoreMangersController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

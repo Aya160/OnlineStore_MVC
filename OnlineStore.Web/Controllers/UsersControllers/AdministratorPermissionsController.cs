@@ -1,29 +1,31 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.Users;
+using OnlineStore.Infrastructure.Repository.Users;
 
 namespace OnlineStore.Web.Controllers.UsersControllers
 {
     public class AdministratorPermissionsController : Controller
     {
-        // GET: AdministratorPermissionsController
+        private readonly AdministratorPermissionRepo<AdministratorPermission> adminPermissionsRepo;
+
+        public AdministratorPermissionsController(AdministratorPermissionRepo<AdministratorPermission> _adminPermissionsRepo)
+        {
+            adminPermissionsRepo = _adminPermissionsRepo;
+        }
         public ActionResult Index()
         {
-            return View();
+            var adminPermissions = adminPermissionsRepo.GetAllAsync().Result;
+            return View(adminPermissions);
         }
-
-        // GET: AdministratorPermissionsController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(adminPermissionsRepo.GetById(id).Result);
         }
-
-        // GET: AdministratorPermissionsController/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: AdministratorPermissionsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -37,14 +39,10 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                 return View();
             }
         }
-
-        // GET: AdministratorPermissionsController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
-
-        // POST: AdministratorPermissionsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -58,14 +56,10 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                 return View();
             }
         }
-
-        // GET: AdministratorPermissionsController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
-        // POST: AdministratorPermissionsController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
