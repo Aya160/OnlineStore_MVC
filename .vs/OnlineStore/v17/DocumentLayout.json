@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\rtc\\desktop\\mvc\\onlinestore_mvc\\onlinestore.web\\controllers\\storecontrollers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\storecontrollers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\rtc\\desktop\\mvc\\onlinestore_mvc\\onlinestore.web\\controllers\\userscontrollers\\administratorpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\userscontrollers\\administratorpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\rtc\\desktop\\mvc\\onlinestore_mvc\\onlinestore.web\\controllers\\appaccountingcontrollers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\appaccountingcontrollers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,11 +34,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\Controllers\\StoreControllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\StoreControllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\Controllers\\StoreControllers\\CategoryController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\StoreControllers\\CategoryController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T18:20:32.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdministratorPermissionsController.cs",
+              "DocumentMoniker": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorPermissionsController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorPermissionsController.cs",
+              "ToolTip": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorPermissionsController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorPermissionsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T18:20:24.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\Views\\Suppliers\\Index.cshtml",
               "RelativeDocumentMoniker": "OnlineStore.Web\\Views\\Suppliers\\Index.cshtml",
@@ -38,12 +72,11 @@
               "RelativeToolTip": "OnlineStore.Web\\Views\\Suppliers\\Index.cshtml",
               "ViewState": "AQIAADMAAAAAAAAAAAAAADsAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-28T14:19:44.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T14:19:44.483Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SuppliersController.cs",
               "DocumentMoniker": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\Controllers\\AppAccountingControllers\\SuppliersController.cs",
               "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\AppAccountingControllers\\SuppliersController.cs",
@@ -56,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\Views\\PurchaseBills\\Index.cshtml",
               "RelativeDocumentMoniker": "OnlineStore.Web\\Views\\PurchaseBills\\Index.cshtml",
@@ -64,12 +97,11 @@
               "RelativeToolTip": "OnlineStore.Web\\Views\\PurchaseBills\\Index.cshtml",
               "ViewState": "AQIAADEAAAAAAAAAAAAAAEcAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-28T14:19:16.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T14:19:16.852Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PurchaseBillsController.cs",
               "DocumentMoniker": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\Controllers\\AppAccountingControllers\\PurchaseBillsController.cs",
               "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\AppAccountingControllers\\PurchaseBillsController.cs",
@@ -77,8 +109,7 @@
               "RelativeToolTip": "OnlineStore.Web\\Controllers\\AppAccountingControllers\\PurchaseBillsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T14:19:08.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T14:19:08.514Z"
             }
           ]
         }
