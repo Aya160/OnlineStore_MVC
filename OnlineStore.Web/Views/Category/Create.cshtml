@@ -1,7 +1,7 @@
 ﻿@model OnlineStore.Core.Entities.StoreEntity.Category
 
 @{
-    ViewData["Title"] = "Create";
+    var salesList = ViewBag.Sales;
 }
 
 <h1>Create</h1>
@@ -17,16 +17,15 @@
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SaleCategoryId" class="control-label"></label>
-                <input asp-for="SaleCategoryId" class="form-control" />
-                <span asp-validation-for="SaleCategoryId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Id" class="control-label"></label>
-                <input asp-for="Id" class="form-control" />
-                <span asp-validation-for="Id" class="text-danger"></span>
-            </div>
+
+            <select asp-for="SaleCategoryId" asp-items="salesList" class="form form-control">
+            <option value="0">Select Offer</option>
+          
+                <option value="value"> </option>
+           
+           
+        </select>
+
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="IsDeleted" /> @Html.DisplayNameFor(model => model.IsDeleted)

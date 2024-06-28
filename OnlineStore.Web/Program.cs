@@ -2,14 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OnlineStore.Core.Entities.Users;
 using OnlineStore.Infrastructure.Data;
-<<<<<<< HEAD
 using OnlineStore.Infrastructure.Repository.Shipping;
-using OnlineStore.Infrastructure.Repository.StoreEntity;
-=======
 using OnlineStore.Infrastructure.Repository.StoreEntity;
 using OnlineStore.Infrastructure.Repository.Users;
 using System;
->>>>>>> 488d619f497c2beafc8fe97152e9fbd4fcdd3f5f
 
 namespace OnlineStore.Web
 {
@@ -29,11 +25,9 @@ namespace OnlineStore.Web
             builder.Services.AddDbContext<ApplicationDbContext>(options => {
                 options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"]);
             });
-<<<<<<< HEAD
             builder.Services.AddScoped(typeof(DeliverCartRepo<>));
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-=======
            //----------------------------------------------
            //Identity
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(option =>
@@ -67,7 +61,6 @@ namespace OnlineStore.Web
             #endregion
 
             #endregion
->>>>>>> 488d619f497c2beafc8fe97152e9fbd4fcdd3f5f
 
             var app = builder.Build();
 

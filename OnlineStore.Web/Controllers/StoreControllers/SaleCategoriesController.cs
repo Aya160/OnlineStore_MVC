@@ -28,16 +28,10 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(SaleCategory saleCategory)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            await saleCategoryRepo.CreateAsync(saleCategory);
+            return View();
         }
         public ActionResult Edit(int id)
         {
