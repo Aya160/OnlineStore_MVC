@@ -35,6 +35,7 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                     var user = await userManager.CreateAsync(appUser, userData.Password);
                     if (user.Succeeded)
                     {
+                       await userManager.AddToRoleAsync(appUser, "Customer");
                         await signInManager.SignInAsync(appUser, true);
                         return RedirectToAction("Index", "Home");
                     }
@@ -79,5 +80,46 @@ namespace OnlineStore.Web.Controllers.UsersControllers
             await signInManager.SignOutAsync();
             return RedirectToAction(nameof(Login));
         }
+        [HttpGet]
+        public IActionResult CreateAdmin()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateAdmin(RegisterViewModel userData)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser appUser = new()
+                {
+                    UserName = userData.UserName,
+                    PasswordHash = userData.Password,
+                    Email = userData.EmailAddress,
+                    FirstName = userData.FirstName,
+                    LastName = userData.LastName,
+                    Address = userData.Address,
+                };
+                var existsEmail = await userManager.FindByEmailAsync(userData.EmailAddress);
+                if (existsEmail is null)
+                {
+                    var user = await userManager.CreateAsync(appUser, userData.Password);
+                    if (user.Succeeded)
+                    {
+                        await userManager.AddToRoleAsync(appUser, "Admin");
+                        await signInManager.SignInAsync(appUser, true);
+                        return RedirectToAction("Index", "Home");
+                    }
+                    foreach (var item in user.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+                }
+                ModelState.AddModelError("EmailAddress", "this Email is already exist");
+
+            }
+            return View(userData);
+        }
+
     }
 }

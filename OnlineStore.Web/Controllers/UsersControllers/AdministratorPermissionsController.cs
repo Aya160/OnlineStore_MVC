@@ -28,49 +28,54 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(AdministratorPermission adminPermission)
         {
             try
             {
+                await adminPermissionsRepo.CreateAsync(adminPermission);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(adminPermission);
             }
         }
         public ActionResult Edit(int id)
         {
-            return View();
+            var permission = adminPermissionsRepo.GetById(id).Result;
+            return View(permission);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, AdministratorPermission adminPermission)
         {
             try
             {
+                var oldPermission = adminPermissionsRepo.GetById(id).Result;
+                oldPermission.Administrator = adminPermission.Administrator;
+                oldPermission.Permission = adminPermission.Permission;
+                oldPermission.AdministratorId = adminPermission.Id;
+                await adminPermissionsRepo.UpdateAsync(id, oldPermission);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(adminPermission);
             }
-        }
-        public ActionResult Delete(int id)
-        {
-            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await adminPermissionsRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

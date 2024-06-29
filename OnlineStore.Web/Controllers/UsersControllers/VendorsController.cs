@@ -28,49 +28,57 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(Vendor vendor)
         {
             try
             {
+                await vendorRepo.CreateAsync(vendor);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(vendor);
             }
         }
         public ActionResult Edit(int id)
         {
-            return View();
+           var vendor= vendorRepo.GetById(id).Result;
+            return View(vendor);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, Vendor vendor)
         {
             try
             {
+                var oldVendor = vendorRepo.GetById(id).Result;
+                oldVendor.Store = vendor.Store;
+                oldVendor.StoreId = vendor.StoreId; 
+                oldVendor.StoreManager = vendor.StoreManager;
+                oldVendor.Salary = vendor.Salary;
+                oldVendor.Name = vendor.Name;
+                oldVendor.SSN = vendor.SSN;
+
+                await vendorRepo.UpdateAsync(id,oldVendor);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(vendor);
             }
-        }
-        public ActionResult Delete(int id)
-        {
-            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await vendorRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

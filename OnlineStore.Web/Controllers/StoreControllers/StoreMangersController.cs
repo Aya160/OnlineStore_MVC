@@ -42,7 +42,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         public async Task<ActionResult> Edit(int id)
         {
-            var manger = await storeMangerRepo.GetById(id);
+            var manger =  storeMangerRepo.GetById(id).Result;
             return View(manger);
         }
         [HttpPost]

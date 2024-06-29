@@ -1,82 +1,84 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Core.Entities.Users;
+using OnlineStore.Infrastructure.Repository.StoreEntity;
+using OnlineStore.Infrastructure.Repository.Users;
 
 namespace OnlineStore.Web.Controllers.UsersControllers
 {
     public class AddressesController : Controller
     {
-        // GET: AddressesController
+        private readonly AddressRepo<Address> addressRepo;
+
+        public AddressesController(AddressRepo<Address> _addressRepo)
+        {
+            this.addressRepo = _addressRepo;
+        }
         public ActionResult Index()
         {
-            return View();
+            var adresses = addressRepo.GetAllAsync().Result;
+            return View(adresses);
         }
 
-        // GET: AddressesController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(addressRepo.GetById(id).Result);
         }
-
-        // GET: AddressesController/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: AddressesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(Address address)
         {
             try
             {
+               await addressRepo.CreateAsync(address);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(address);
             }
         }
-
-        // GET: AddressesController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            var address= addressRepo.GetById(id).Result;
+            return View(address);
         }
-
-        // POST: AddressesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, Address address)
         {
             try
             {
+                var oldAddress = addressRepo.GetById(id).Result;
+                oldAddress.StreetAdderss = address.StreetAdderss;
+                oldAddress.City = address.City;
+                oldAddress.State = address.State;
+                oldAddress.DeliverCart = address.DeliverCart;
+                await addressRepo.UpdateAsync(id, oldAddress);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(address);
             }
         }
-
-        // GET: AddressesController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: AddressesController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await addressRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

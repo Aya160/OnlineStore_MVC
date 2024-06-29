@@ -28,49 +28,51 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(Customer customer)
         {
             try
             {
+               await customerRepo.CreateAsync(customer);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(customer);
             }
         }
         public ActionResult Edit(int id)
         {
-            return View();
+            var customer = customerRepo.GetById(id).Result;
+            return View(customer);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, Customer customer)
         {
             try
             {
+                var oldCustomer = customerRepo.GetById(id).Result;
+                oldCustomer.Image = customer.Image;
+                await customerRepo.UpdateAsync(id, oldCustomer);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(customer);
             }
-        }
-        public ActionResult Delete(int id)
-        {
-            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+               await customerRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }
