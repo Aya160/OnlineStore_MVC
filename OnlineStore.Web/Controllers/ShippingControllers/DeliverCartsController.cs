@@ -56,9 +56,9 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         // GET: DeliverCartsController/Edit/5
         public ActionResult Edit(int id)
         {
-            var companyList = shippingCompaniesRepo.GetAllAsync().Result;
+            var companyList = shippingCompaniesRepo.GetById(id).Result;
             ViewBag.companyList = companyList;
-            return View();
+            return View(companyList);
         }
 
         // POST: DeliverCartsController/Edit/5
@@ -78,7 +78,7 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
             }
             catch
             {
-                return View();
+                return View(deliverCart);
             }
         }
         [HttpPost]
