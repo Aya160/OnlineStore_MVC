@@ -1,5 +1,9 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\",
+  "Documents": [],
+=======
   "WorkspaceRootPath": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\",
   "Documents": [
     {
@@ -110,10 +114,14 @@
       "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\userscontrollers\\administratorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
+>>>>>>> e527a5b4cd2e051708b5f293b5c8180d9e8a76e5
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
+<<<<<<< HEAD
+      "DocumentGroups": []
+=======
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -483,6 +491,7 @@
           ]
         }
       ]
+>>>>>>> e527a5b4cd2e051708b5f293b5c8180d9e8a76e5
     }
   ]
 }

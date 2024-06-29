@@ -2,10 +2,17 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OnlineStore.Core.Entities.Users;
 using OnlineStore.Infrastructure.Data;
+<<<<<<< HEAD
+using OnlineStore.Infrastructure.Repository.AppAccouting;
+using OnlineStore.Infrastructure.Repository.Shipping;
+using OnlineStore.Infrastructure.Repository.StoreEntity;
+using OnlineStore.Infrastructure.Repository.Users;
+=======
 using OnlineStore.Infrastructure.Repository.Shipping;
 using OnlineStore.Infrastructure.Repository.StoreEntity;
 using OnlineStore.Infrastructure.Repository.Users;
 using System;
+>>>>>>> e527a5b4cd2e051708b5f293b5c8180d9e8a76e5
 
 namespace OnlineStore.Web
 {
@@ -15,7 +22,7 @@ namespace OnlineStore.Web
         {
             var builder = WebApplication.CreateBuilder(args);
 
-   
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
@@ -25,6 +32,10 @@ namespace OnlineStore.Web
             builder.Services.AddDbContext<ApplicationDbContext>(options => {
                 options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"]);
             });
+<<<<<<< HEAD
+
+=======
+>>>>>>> e527a5b4cd2e051708b5f293b5c8180d9e8a76e5
             builder.Services.AddScoped(typeof(DeliverCartRepo<>));
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -39,6 +50,22 @@ namespace OnlineStore.Web
             })
       .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            #endregion
+            builder.Services.AddScoped(typeof(DeliverCartRepo<>));
+            builder.Services.AddScoped(typeof(InvoiceLineRepo<>));
+            builder.Services.AddScoped(typeof(InvoiceOrderRepo<>));
+            builder.Services.AddScoped(typeof(InvoiceOrderLineRepo<>));
+            builder.Services.AddScoped(typeof(InvoiceOrderOnlineLineRepo<>));
+            builder.Services.AddScoped(typeof(PurchaseBillRepo<>));
+            builder.Services.AddScoped(typeof(SupplierRepo<>));
+            #endregion
+
+            #region Resolve Shipping Controllers
+
+            #region Resolve Shipping Controllers
+            builder.Services.AddScoped(typeof(DeliverCartRepo<>));
+            builder.Services.AddScoped(typeof(ShippingCompaniesRepo<>));
+            builder.Services.AddScoped(typeof(ShippingCompaniesPermissionsRepo<>));
             #endregion
 
             #region Resolve StoreControllers
