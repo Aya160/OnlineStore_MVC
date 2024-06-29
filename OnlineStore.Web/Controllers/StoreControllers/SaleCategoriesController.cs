@@ -33,38 +33,42 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             await saleCategoryRepo.CreateAsync(saleCategory);
             return View();
         }
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            var sale = await saleCategoryRepo.GetById(id);
+            return View(sale);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id,SaleCategory sale)
         {
             try
             {
+                var oldSale = await saleCategoryRepo.GetById(id);
+                oldSale.StartSale = sale.StartSale;
+                oldSale.EndSale = sale.EndSale;
+                oldSale.Store =  sale.Store;
+                oldSale.StoreId = sale.StoreId;
+                await saleCategoryRepo.UpdateAsync(id, oldSale);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(sale);
             }
-        }
-        public ActionResult Delete(int id)
-        {
-            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+               await saleCategoryRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }
