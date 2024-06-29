@@ -25,14 +25,9 @@
     <ProjectReference Include="..\OnlineStore.Core\OnlineStore.Core.csproj" />
     <ProjectReference Include="..\OnlineStore.Infrastructure\OnlineStore.Infrastructure.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Folder Include="Controllers\AppAccountingControllers\" />
     <Folder Include="Controllers\ShippingControllers\" />
-<<<<<<< HEAD
-=======
     <Folder Include="Controllers\UsersControllers\" />
->>>>>>> ed33d1d5eff7e2da787d7e9911f747e73594afbe
   </ItemGroup>
-
 </Project>
