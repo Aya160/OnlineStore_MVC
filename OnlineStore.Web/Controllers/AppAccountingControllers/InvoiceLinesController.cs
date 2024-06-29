@@ -13,78 +13,68 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
         {
             this.invoiceLineRepo = invoiceLineRepo;
         }
-        // GET: InvoiceLinesController
         public ActionResult Index()
         {
             return View(invoiceLineRepo.GetAllAsync().Result);
         }
-
-        // GET: InvoiceLinesController/Details/5
         public ActionResult Details(int id)
         {
             return View(invoiceLineRepo.GetById(id).Result);
         }
-
-        // GET: InvoiceLinesController/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: InvoiceLinesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(InvoiceLine invoiceLine)
         {
             try
             {
+                await invoiceLineRepo.CreateAsync(invoiceLine);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(invoiceLine);
             }
         }
-
-        // GET: InvoiceLinesController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            return View(invoiceLineRepo.GetById(id).Result);
         }
-
-        // POST: InvoiceLinesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, InvoiceLine invoiceLine)
         {
             try
             {
+                var oldinvoiceLine = await invoiceLineRepo.GetById(id);
+                oldinvoiceLine.Price = invoiceLine.Price;
+                oldinvoiceLine.Quantity = invoiceLine.Quantity;
+                oldinvoiceLine.InvoiceId = invoiceLine.InvoiceId;
+                oldinvoiceLine.PurchaseBill = invoiceLine.PurchaseBill;
+                oldinvoiceLine.ProductId = invoiceLine.ProductId;
+                oldinvoiceLine.Product = invoiceLine.Product;
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(invoiceLine);
             }
         }
-
-        // GET: InvoiceLinesController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: InvoiceLinesController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await invoiceLineRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

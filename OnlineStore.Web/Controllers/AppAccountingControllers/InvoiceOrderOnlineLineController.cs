@@ -7,22 +7,22 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
 {
     public class InvoiceOrderOnlineLineController : Controller
     {
-        private readonly InvoiceOrderOnlineLineRepo<InvoiceOrderOnlineLine> invoiceOrderOnlineLine;
+        private readonly InvoiceOrderOnlineLineRepo<InvoiceOrderOnlineLine> invoiceOrderOnlineLineRepo;
 
-        public InvoiceOrderOnlineLineController(InvoiceOrderOnlineLineRepo<InvoiceOrderOnlineLine> invoiceOrderOnlineLine) 
+        public InvoiceOrderOnlineLineController(InvoiceOrderOnlineLineRepo<InvoiceOrderOnlineLine> invoiceOrderOnlineLineRepo)
         {
-            this.invoiceOrderOnlineLine = invoiceOrderOnlineLine;
+            this.invoiceOrderOnlineLineRepo = invoiceOrderOnlineLineRepo;
         }
         // GET: InvoiceOrderOnlineLineController
         public ActionResult Index()
         {
-            return View(invoiceOrderOnlineLine.GetAllAsync().Result);
+            return View(invoiceOrderOnlineLineRepo.GetAllAsync().Result);
         }
 
         // GET: InvoiceOrderOnlineLineController/Details/5
         public ActionResult Details(int id)
         {
-            return View(invoiceOrderOnlineLine.GetById(id).Result);
+            return View(invoiceOrderOnlineLineRepo.GetById(id).Result);
         }
 
         // GET: InvoiceOrderOnlineLineController/Create
@@ -34,57 +34,58 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
         // POST: InvoiceOrderOnlineLineController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(InvoiceOrderOnlineLine invoiceOrderOnlineLine)
         {
             try
             {
+                await invoiceOrderOnlineLineRepo.CreateAsync(invoiceOrderOnlineLine);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(invoiceOrderOnlineLine);
             }
         }
 
         // GET: InvoiceOrderOnlineLineController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            return View(invoiceOrderOnlineLineRepo.GetById(id).Result);
         }
 
         // POST: InvoiceOrderOnlineLineController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, InvoiceOrderOnlineLine invoiceOrderOnlineLine)
         {
             try
             {
+                var oldInvoiceOrderLine = await invoiceOrderOnlineLineRepo.GetById(id);
+                oldInvoiceOrderLine.Quantity = invoiceOrderOnlineLine.Quantity;
+                oldInvoiceOrderLine.ProductId = invoiceOrderOnlineLine.ProductId;
+                oldInvoiceOrderLine.Product = invoiceOrderOnlineLine.Product;
+                oldInvoiceOrderLine.OrderId = invoiceOrderOnlineLine.OrderId;
+                oldInvoiceOrderLine.Order = invoiceOrderOnlineLine.Order;
+                await invoiceOrderOnlineLineRepo.UpdateAsync(id, oldInvoiceOrderLine);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(invoiceOrderOnlineLine);
             }
         }
-
-        // GET: InvoiceOrderOnlineLineController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: InvoiceOrderOnlineLineController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await invoiceOrderOnlineLineRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

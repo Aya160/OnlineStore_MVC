@@ -9,7 +9,7 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
     {
         private readonly DetailsInvoiceRepo<DetailsInvoice> detailsInvoiceRepo;
 
-        public DetalisInvoiceController(DetailsInvoiceRepo<DetailsInvoice> detailsInvoiceRepo) 
+        public DetalisInvoiceController(DetailsInvoiceRepo<DetailsInvoice> detailsInvoiceRepo)
         {
             this.detailsInvoiceRepo = detailsInvoiceRepo;
         }
@@ -34,57 +34,59 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
         // POST: DetalisInvoiceController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(DetailsInvoice detailsInvoice)
         {
             try
             {
+                await detailsInvoiceRepo.CreateAsync(detailsInvoice);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(detailsInvoice);
             }
         }
 
         // GET: DetalisInvoiceController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            return View( detailsInvoiceRepo.GetById(id).Result);
         }
 
         // POST: DetalisInvoiceController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, DetailsInvoice detailsInvoic)
         {
             try
             {
+                var oldInvoice = await detailsInvoiceRepo.GetById(id);
+                oldInvoice.PayCash = detailsInvoic.PayCash;
+                oldInvoice.Postpaid = detailsInvoic.Postpaid;
+                oldInvoice.DueDate = detailsInvoic.DueDate;
+                oldInvoice.InvoiceId = detailsInvoic.InvoiceId;
+                oldInvoice.PurchaseBill = detailsInvoic.PurchaseBill;
+                oldInvoice.SupplierId = detailsInvoic.SupplierId;
+                oldInvoice.Supplier = detailsInvoic.Supplier;
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(detailsInvoic);
             }
         }
-
-        // GET: DetalisInvoiceController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: DetalisInvoiceController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await detailsInvoiceRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

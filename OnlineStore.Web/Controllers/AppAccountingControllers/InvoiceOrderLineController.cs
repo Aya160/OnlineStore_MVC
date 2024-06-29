@@ -9,7 +9,7 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
     {
         private readonly InvoiceOrderLineRepo<InvoiceOrderLine> invoiceOrderLineRepo;
 
-        public InvoiceOrderLineController(InvoiceOrderLineRepo<InvoiceOrderLine> invoiceOrderLineRepo) 
+        public InvoiceOrderLineController(InvoiceOrderLineRepo<InvoiceOrderLine> invoiceOrderLineRepo)
         {
             this.invoiceOrderLineRepo = invoiceOrderLineRepo;
         }
@@ -34,57 +34,58 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
         // POST: InvoiceOrderLineController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(InvoiceOrderLine invoiceOrderLine)
         {
             try
             {
+                await invoiceOrderLineRepo.CreateAsync(invoiceOrderLine);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(invoiceOrderLine);
             }
         }
 
         // GET: InvoiceOrderLineController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            return View(invoiceOrderLineRepo.GetById(id));
         }
 
         // POST: InvoiceOrderLineController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, InvoiceOrderLine invoiceOrderLine)
         {
             try
             {
+                var oldInvoiceOrderLine = await invoiceOrderLineRepo.GetById(id);
+                oldInvoiceOrderLine.Quantity = invoiceOrderLine.Quantity;
+                oldInvoiceOrderLine.ProductId = invoiceOrderLine.ProductId;
+                oldInvoiceOrderLine.Product = invoiceOrderLine.Product;
+                oldInvoiceOrderLine.InvoiceOrderId = invoiceOrderLine.InvoiceOrderId;
+                oldInvoiceOrderLine.InvoiceOrder = invoiceOrderLine.InvoiceOrder;
+                await invoiceOrderLineRepo.UpdateAsync(id, oldInvoiceOrderLine);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(invoiceOrderLine);
             }
         }
-
-        // GET: InvoiceOrderLineController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: InvoiceOrderLineController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await invoiceOrderLineRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

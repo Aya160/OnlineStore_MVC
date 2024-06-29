@@ -9,7 +9,7 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
     {
         private readonly SupplierRepo<Supplier> supplierRepo;
 
-        public SuppliersController(SupplierRepo<Supplier> supplierRepo) 
+        public SuppliersController(SupplierRepo<Supplier> supplierRepo)
         {
             this.supplierRepo = supplierRepo;
         }
@@ -34,57 +34,57 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
         // POST: SuppliersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(Supplier supplier)
         {
             try
             {
+                await supplierRepo.CreateAsync(supplier);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(supplier);
             }
         }
 
         // GET: SuppliersController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            return View(supplierRepo.GetById(id).Result);
         }
 
         // POST: SuppliersController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, Supplier supplier)
         {
             try
             {
+                var oldSupplier = await supplierRepo.GetById(id);
+                oldSupplier.SupplierName = supplier.SupplierName;
+                oldSupplier.PhoneNO = supplier.PhoneNO;
+                oldSupplier.Email = supplier.Email;
+                oldSupplier.MaterialSupplied = supplier.MaterialSupplied;
+                await supplierRepo.UpdateAsync(id, oldSupplier);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(supplier);
             }
         }
-
-        // GET: SuppliersController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: SuppliersController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await supplierRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

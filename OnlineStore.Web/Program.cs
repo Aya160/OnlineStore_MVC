@@ -6,7 +6,10 @@ using OnlineStore.Infrastructure.Repository.AppAccouting;
 using OnlineStore.Infrastructure.Repository.Shipping;
 using OnlineStore.Infrastructure.Repository.StoreEntity;
 using OnlineStore.Infrastructure.Repository.Users;
+<<<<<<< HEAD
 using System;
+=======
+>>>>>>> ed33d1d5eff7e2da787d7e9911f747e73594afbe
 
 namespace OnlineStore.Web
 {
