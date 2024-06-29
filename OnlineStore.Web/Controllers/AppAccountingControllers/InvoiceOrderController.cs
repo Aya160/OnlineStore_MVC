@@ -34,57 +34,59 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
         // POST: InvoiceOrderController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(InvoiceOrder invoiceOrder)
         {
             try
             {
+                await invoiceOrderRepo.CreateAsync(invoiceOrder);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(invoiceOrder);
             }
         }
 
         // GET: InvoiceOrderController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(invoiceOrderRepo.GetById(id).Result);
         }
 
         // POST: InvoiceOrderController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult>  Edit(int id, InvoiceOrder invoiceOrder)
         {
             try
             {
+                var oldInvoiceOrder = await invoiceOrderRepo.GetById(id);
+                oldInvoiceOrder.CashPayment = invoiceOrder.CashPayment;
+                oldInvoiceOrder.OnlinePayment = invoiceOrder.OnlinePayment;
+                oldInvoiceOrder.Tax = invoiceOrder.Tax;
+                oldInvoiceOrder.TotalAmount = invoiceOrder.TotalAmount;
+                oldInvoiceOrder.VendorId = invoiceOrder.VendorId;
+                oldInvoiceOrder.Vendor = invoiceOrder.Vendor;
+                await invoiceOrderRepo.UpdateAsync(id, oldInvoiceOrder);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(invoiceOrder);
             }
         }
-
-        // GET: InvoiceOrderController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: InvoiceOrderController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await invoiceOrderRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

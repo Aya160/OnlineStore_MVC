@@ -11,7 +11,7 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         private readonly ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo;
 
         public ShippingCompaniesPermissionsController(ShippingCompaniesPermissionsRepo<ShippingCompaniesPermissions> shippingCompaniesPermissionsRepo,
-            ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo) 
+            ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo)
         {
             this.shippingCompaniesPermissionsRepo = shippingCompaniesPermissionsRepo;
             this.shippingCompaniesRepo = shippingCompaniesRepo;
@@ -72,25 +72,18 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
                 return View(shippingCompaniesPermissions);
             }
         }
-
-        // GET: ShippingCompaniesPermissionsController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: ShippingCompaniesPermissionsController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await shippingCompaniesPermissionsRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

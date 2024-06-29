@@ -34,57 +34,61 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
         // POST: PurchaseBillsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(PurchaseBill purchaseBill)
         {
             try
             {
+                await purchaseBillRepo.CreateAsync(purchaseBill);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(purchaseBill);
             }
         }
 
         // GET: PurchaseBillsController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            return View(purchaseBillRepo.GetById(id).Result);
         }
 
         // POST: PurchaseBillsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, PurchaseBill purchaseBill)
         {
             try
             {
+                var oldPurchaseBill = await purchaseBillRepo.GetById(id);
+                oldPurchaseBill.InvoiceName = purchaseBill.InvoiceName;
+                oldPurchaseBill.CashPayment = purchaseBill.CashPayment;
+                oldPurchaseBill.CreditPayment = purchaseBill.CreditPayment;
+                oldPurchaseBill.DateInvoice = purchaseBill.DateInvoice;
+                oldPurchaseBill.Tax = purchaseBill.Tax;
+                oldPurchaseBill.TotalAmount = purchaseBill.TotalAmount;
+                oldPurchaseBill.CreateDate = purchaseBill.CreateDate;
+                oldPurchaseBill.DateInvoice = purchaseBill.DateInvoice;
+                await purchaseBillRepo.UpdateAsync(id, oldPurchaseBill);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(purchaseBill);
             }
         }
-
-        // GET: PurchaseBillsController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: PurchaseBillsController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await purchaseBillRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

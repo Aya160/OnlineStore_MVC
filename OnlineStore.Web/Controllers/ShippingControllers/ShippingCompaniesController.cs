@@ -39,13 +39,13 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
                 return View(shippingCompanies);
             }
         }
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            return View(shippingCompaniesRepo.GetById(id).Result);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, ShippingCompanies shippingCompanies)
+        public async Task<ActionResult> Edit(int id, ShippingCompanies shippingCompanies)
         {
             try
             {
@@ -61,25 +61,18 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
                 return View(shippingCompanies);
             }
         }
-
-        // GET: ShippingCompaniesController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: ShippingCompaniesController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await shippingCompaniesRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }
