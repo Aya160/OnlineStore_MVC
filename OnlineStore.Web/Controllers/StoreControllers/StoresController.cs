@@ -29,7 +29,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Store store)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Store store)
         {
             try
             {

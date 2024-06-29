@@ -28,49 +28,54 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(Order order)
         {
             try
             {
+               await orderRepo.CreateAsync(order);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(order);
             }
         }
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+           var order = await orderRepo.GetById(id);
+            return View(order);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, Order order)
         {
             try
             {
+                var oldOrder = await orderRepo.GetById(id);
+                oldOrder.RequstDate = order.RequstDate;
+                oldOrder.Customer = order.Customer;
+                oldOrder.CustomerId = order.Id;
+
+                await orderRepo.UpdateAsync(id, oldOrder);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(order);
             }
-        }
-        public ActionResult Delete(int id)
-        {
-            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+               await orderRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

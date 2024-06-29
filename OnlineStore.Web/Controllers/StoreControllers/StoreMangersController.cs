@@ -28,53 +28,56 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(StoreManager storeManager)
         {
             try
             {
+                await storeMangerRepo.CreateAsync(storeManager);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(storeManager);
             }
         }
-
-        // GET: StoreMangersController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            var manger = await storeMangerRepo.GetById(id);
+            return View(manger);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, StoreManager storeManager)
         {
             try
             {
+                var oldManger = await storeMangerRepo.GetById(id);
+                oldManger.Vendor = storeManager.Vendor;
+                oldManger.StartAt = storeManager.StartAt;
+                oldManger.Store = storeManager.Store;
+                oldManger.StoreId = storeManager.StoreId;
+
+                await storeMangerRepo.UpdateAsync(id, oldManger);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(storeManager);
             }
-        }
-
-        // GET: StoreMangersController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await storeMangerRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }

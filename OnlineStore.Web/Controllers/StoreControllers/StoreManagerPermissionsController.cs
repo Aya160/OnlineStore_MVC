@@ -29,28 +29,32 @@ namespace OnlineStore.Web.Controllers.StoreControllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(StoreManagerPermissions storeManagerPermissions)
         {
             try
             {
+               await sMPsRepo.CreateAsync(storeManagerPermissions);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(storeManagerPermissions);
             }
         }
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            var permission = await sMPsRepo.GetById(id);
+            return View(permission);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, StoreManagerPermissions storeManagerPermissions)
         {
             try
             {
+                var permission = await sMPsRepo.GetById(id);
+
                 return RedirectToAction(nameof(Index));
             }
             catch

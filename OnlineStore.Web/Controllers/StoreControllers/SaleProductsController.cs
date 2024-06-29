@@ -28,49 +28,54 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(SaleProduct saleProduct)
         {
             try
             {
+                await saleProductRepo.CreateAsync(saleProduct);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(saleProduct);
             }
         }
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            var sale = await saleProductRepo.GetById(id);
+            return View(sale);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, SaleProduct saleProduct)
         {
             try
             {
+                var oldSale = await saleProductRepo.GetById(id);
+                oldSale.StartSale = saleProduct.StartSale;
+                oldSale.EndSale = saleProduct.EndSale;
+                oldSale.Store = saleProduct.Store;
+                oldSale.StoreId = saleProduct.StoreId;
+                await saleProductRepo.UpdateAsync(id, oldSale);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(saleProduct);
             }
-        }
-        public ActionResult Delete(int id)
-        {
-            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
+                await saleProductRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(nameof(Index));
             }
         }
     }
