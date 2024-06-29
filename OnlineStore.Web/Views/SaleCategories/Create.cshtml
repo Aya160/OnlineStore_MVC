@@ -1,13 +1,5 @@
 ﻿@model OnlineStore.Core.Entities.StoreEntity.SaleCategory
 
-@{
-    ViewData["Title"] = "Create";
-}
-
-<h1>Create</h1>
-
-<h4>SaleCategory</h4>
-<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -22,12 +14,7 @@
                 <input asp-for="StoreId" class="form-control" />
                 <span asp-validation-for="StoreId" class="text-danger"></span>
             </div>
-        
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsDeleted" /> @Html.DisplayNameFor(model => model.IsDeleted)
-                </label>
-            </div>
+       
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

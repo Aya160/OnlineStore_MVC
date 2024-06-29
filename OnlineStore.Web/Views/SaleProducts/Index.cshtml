@@ -1,11 +1,5 @@
 ﻿@model IEnumerable<OnlineStore.Core.Entities.StoreEntity.SaleProduct>
 
-@{
-    ViewData["Title"] = "Index";
-}
-
-<h1>Index</h1>
-
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -17,12 +11,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.StoreId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsDeleted)
             </th>
             <th></th>
         </tr>
@@ -36,16 +24,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.StoreId)
             </td>
+         
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsDeleted)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>
 }

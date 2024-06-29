@@ -1,11 +1,5 @@
 ﻿@model IEnumerable<OnlineStore.Core.Entities.Users.Address>
 
-@{
-    ViewData["Title"] = "Index";
-}
-
-<h1>Index</h1>
-
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -24,9 +18,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.City)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ApplicationUserId)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -44,9 +35,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApplicationUserId)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

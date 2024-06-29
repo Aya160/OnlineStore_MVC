@@ -49,9 +49,9 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         // GET: ShippingCompaniesPermissionsController/Edit/5
         public ActionResult Edit(int id)
         {
-            var companyList = shippingCompaniesRepo.GetAllAsync().Result;
+            var companyList = shippingCompaniesRepo.GetById(id).Result;
             ViewBag.companyList = companyList;
-            return View();
+            return View(companyList);
         }
 
         // POST: ShippingCompaniesPermissionsController/Edit/5
