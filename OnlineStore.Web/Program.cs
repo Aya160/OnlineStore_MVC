@@ -7,6 +7,10 @@ using OnlineStore.Infrastructure.Repository.Shipping;
 using OnlineStore.Infrastructure.Repository.StoreEntity;
 using OnlineStore.Infrastructure.Repository.Users;
 using System;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c2c017c05e5240d279629376848c07e9e03cb1e
 namespace OnlineStore.Web
 {
     public class Program

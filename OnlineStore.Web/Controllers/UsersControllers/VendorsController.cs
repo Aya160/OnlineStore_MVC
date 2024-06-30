@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Core.Entities.Users;
+using OnlineStore.Infrastructure.EntityConfigs.General;
 using OnlineStore.Infrastructure.Repository.Users;
 
 namespace OnlineStore.Web.Controllers.UsersControllers
@@ -8,10 +9,12 @@ namespace OnlineStore.Web.Controllers.UsersControllers
     public class VendorsController : Controller
     {
         private readonly VendorRepo<Vendor> vendorRepo;
+        private readonly SelectListHelper selectListHelper;
 
-        public VendorsController(VendorRepo<Vendor> _vendorRepo)
+        public VendorsController(VendorRepo<Vendor> _vendorRepo, SelectListHelper selectListHelper)
         {
             vendorRepo = _vendorRepo;
+            this.selectListHelper = selectListHelper;
         }
         public ActionResult Index()
         {
@@ -22,8 +25,9 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         {
             return View(vendorRepo.GetById(id).Result);
         }
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
+            ViewBag.Stores = await selectListHelper.GetStoresListAsync();
             return View();
         }
         [HttpPost]
@@ -40,9 +44,10 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                 return View(vendor);
             }
         }
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-           var vendor= vendorRepo.GetById(id).Result;
+            ViewBag.Stores = await selectListHelper.GetStoresListAsync();
+            var vendor = vendorRepo.GetById(id).Result;
             return View(vendor);
         }
         [HttpPost]
@@ -53,13 +58,13 @@ namespace OnlineStore.Web.Controllers.UsersControllers
             {
                 var oldVendor = vendorRepo.GetById(id).Result;
                 oldVendor.Store = vendor.Store;
-                oldVendor.StoreId = vendor.StoreId; 
+                oldVendor.StoreId = vendor.StoreId;
                 oldVendor.StoreManager = vendor.StoreManager;
                 oldVendor.Salary = vendor.Salary;
                 oldVendor.Name = vendor.Name;
                 oldVendor.SSN = vendor.SSN;
 
-                await vendorRepo.UpdateAsync(id,oldVendor);
+                await vendorRepo.UpdateAsync(id, oldVendor);
                 return RedirectToAction(nameof(Index));
             }
             catch

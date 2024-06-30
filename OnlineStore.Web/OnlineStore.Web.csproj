@@ -29,6 +29,9 @@
     <Folder Include="Controllers\AppAccountingControllers\" />
     <Folder Include="Controllers\ShippingControllers\" />
     <Folder Include="Controllers\UsersControllers\" />
+<<<<<<< HEAD
     <Folder Include="wwwroot\UploadedFiles\" />
+=======
+>>>>>>> 9c2c017c05e5240d279629376848c07e9e03cb1e
   </ItemGroup>
 </Project>

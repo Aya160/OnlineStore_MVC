@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Core.Entities.Users;
+using OnlineStore.Infrastructure.EntityConfigs.General;
 using OnlineStore.Infrastructure.Repository.Users;
 
 namespace OnlineStore.Web.Controllers.UsersControllers
@@ -8,10 +9,13 @@ namespace OnlineStore.Web.Controllers.UsersControllers
     public class AdministratorPermissionsController : Controller
     {
         private readonly AdministratorPermissionRepo<AdministratorPermission> adminPermissionsRepo;
+        private readonly SelectListHelper selectListHelper;
 
-        public AdministratorPermissionsController(AdministratorPermissionRepo<AdministratorPermission> _adminPermissionsRepo)
+        public AdministratorPermissionsController(AdministratorPermissionRepo<AdministratorPermission> _adminPermissionsRepo,
+            SelectListHelper selectListHelper)
         {
             adminPermissionsRepo = _adminPermissionsRepo;
+            this.selectListHelper = selectListHelper;
         }
         public ActionResult Index()
         {
@@ -22,8 +26,9 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         {
             return View(adminPermissionsRepo.GetById(id).Result);
         }
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
+            ViewBag.Admins = await selectListHelper.GetAdministratorListAsync();
             return View();
         }
         [HttpPost]
@@ -40,8 +45,9 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                 return View(adminPermission);
             }
         }
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
+            ViewBag.Admins = await selectListHelper.GetAdministratorListAsync();
             var permission = adminPermissionsRepo.GetById(id).Result;
             return View(permission);
         }

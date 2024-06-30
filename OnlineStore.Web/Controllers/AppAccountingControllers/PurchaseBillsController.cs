@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Core.Entities.AppAccounting;
+using OnlineStore.Infrastructure.EntityConfigs.General;
 using OnlineStore.Infrastructure.Repository.AppAccouting;
 
 namespace OnlineStore.Web.Controllers.AppAccountingControllers
@@ -8,30 +9,26 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
     public class PurchaseBillsController : Controller
     {
         private readonly PurchaseBillRepo<PurchaseBill> purchaseBillRepo;
+        private readonly SelectListHelper selectListHelper;
 
-        public PurchaseBillsController(PurchaseBillRepo<PurchaseBill> purchaseBillRepo)
+        public PurchaseBillsController(PurchaseBillRepo<PurchaseBill> purchaseBillRepo, SelectListHelper selectListHelper)
         {
             this.purchaseBillRepo = purchaseBillRepo;
+            this.selectListHelper = selectListHelper;
         }
-        // GET: PurchaseBillsController
         public ActionResult Index()
         {
             return View(purchaseBillRepo.GetAllAsync().Result);
         }
-
-        // GET: PurchaseBillsController/Details/5
         public ActionResult Details(int id)
         {
             return View(purchaseBillRepo.GetById(id).Result);
         }
-
-        // GET: PurchaseBillsController/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
+            ViewBag.Admins = await selectListHelper.GetAdministratorListAsync();
             return View();
         }
-
-        // POST: PurchaseBillsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(PurchaseBill purchaseBill)
@@ -46,14 +43,11 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
                 return View(purchaseBill);
             }
         }
-
-        // GET: PurchaseBillsController/Edit/5
         public async Task<ActionResult> Edit(int id)
         {
+            ViewBag.Admins = await selectListHelper.GetAdministratorListAsync();
             return View(purchaseBillRepo.GetById(id).Result);
         }
-
-        // POST: PurchaseBillsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(int id, PurchaseBill purchaseBill)

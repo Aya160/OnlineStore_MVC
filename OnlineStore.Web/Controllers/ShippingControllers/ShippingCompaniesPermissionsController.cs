@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Core.Entities.Shipping;
+using OnlineStore.Infrastructure.EntityConfigs.General;
 using OnlineStore.Infrastructure.Repository.Shipping;
 
 namespace OnlineStore.Web.Controllers.ShippingControllers
@@ -9,12 +11,14 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
     {
         private readonly ShippingCompaniesPermissionsRepo<ShippingCompaniesPermissions> shippingCompaniesPermissionsRepo;
         private readonly ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo;
+        private readonly SelectListHelper selectListHelper;
 
         public ShippingCompaniesPermissionsController(ShippingCompaniesPermissionsRepo<ShippingCompaniesPermissions> shippingCompaniesPermissionsRepo,
-            ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo)
+            ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo, SelectListHelper selectListHelper)
         {
             this.shippingCompaniesPermissionsRepo = shippingCompaniesPermissionsRepo;
             this.shippingCompaniesRepo = shippingCompaniesRepo;
+            this.selectListHelper = selectListHelper;
         }
         public ActionResult Index()
         {
@@ -24,8 +28,9 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         {
             return View(shippingCompaniesPermissionsRepo.GetById(id).Result);
         }
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
+            ViewBag.Companies = await selectListHelper.GetCompaniesListAsync();
             return View();
         }
 
@@ -35,8 +40,6 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         {
             try
             {
-                var companyList = shippingCompaniesRepo.GetAllAsync().Result;
-                ViewBag.companyList = companyList;
                 await shippingCompaniesPermissionsRepo.CreateAsync(shippingCompaniesPermissions);
                 return RedirectToAction(nameof(Index));
             }
@@ -47,11 +50,10 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         }
 
         // GET: ShippingCompaniesPermissionsController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            var companyList = shippingCompaniesPermissionsRepo.GetById(id).Result;
-            ViewBag.companyList = companyList;
-            return View(companyList);
+            ViewBag.Companies = await selectListHelper.GetCompaniesListAsync();
+            return View(shippingCompaniesPermissionsRepo.GetById(id).Result);
         }
 
         // POST: ShippingCompaniesPermissionsController/Edit/5

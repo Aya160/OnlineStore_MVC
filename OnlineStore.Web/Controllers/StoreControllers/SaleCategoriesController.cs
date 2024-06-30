@@ -40,7 +40,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id,SaleCategory sale)
+        public async Task<ActionResult> Edit(int id, SaleCategory sale)
         {
             try
             {
@@ -62,7 +62,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         {
             try
             {
-               await saleCategoryRepo.DeleteAsync(id);
+                await saleCategoryRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch

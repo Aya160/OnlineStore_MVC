@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Core.Entities.AppAccounting;
+using OnlineStore.Infrastructure.EntityConfigs.General;
 using OnlineStore.Infrastructure.Repository.AppAccouting;
 
 namespace OnlineStore.Web.Controllers.AppAccountingControllers
@@ -8,10 +9,12 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
     public class InvoiceOrderController : Controller
     {
         private readonly InvoiceOrderRepo<InvoiceOrder> invoiceOrderRepo;
+        private readonly SelectListHelper selectListHelper;
 
-        public InvoiceOrderController(InvoiceOrderRepo<InvoiceOrder> invoiceOrderRepo) 
+        public InvoiceOrderController(InvoiceOrderRepo<InvoiceOrder> invoiceOrderRepo, SelectListHelper selectListHelper)
         {
             this.invoiceOrderRepo = invoiceOrderRepo;
+            this.selectListHelper = selectListHelper;
         }
         // GET: InvoiceOrderController
         public ActionResult Index()
@@ -26,8 +29,10 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
         }
 
         // GET: InvoiceOrderController/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
+            ViewBag.Stores = await selectListHelper.GetStoresListAsync();
+            ViewBag.Vendors = await selectListHelper.GetVendorsListAsync();
             return View();
         }
 
@@ -48,15 +53,17 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
         }
 
         // GET: InvoiceOrderController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
+            ViewBag.Stores = await selectListHelper.GetStoresListAsync();
+            ViewBag.Vendors = await selectListHelper.GetVendorsListAsync();
             return View(invoiceOrderRepo.GetById(id).Result);
         }
 
         // POST: InvoiceOrderController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult>  Edit(int id, InvoiceOrder invoiceOrder)
+        public async Task<ActionResult> Edit(int id, InvoiceOrder invoiceOrder)
         {
             try
             {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using OnlineStore.Core.Entities.StoreEntity;
 using OnlineStore.Infrastructure.Repository.StoreEntity;
 
@@ -8,10 +9,15 @@ namespace OnlineStore.Web.Controllers.StoreControllers
     public class ProductsController : Controller
     {
         private readonly ProductRepo<Product> productRepo;
+        private readonly SaleProductRepo<SaleProduct> saleProductRepo;
+        private readonly CategoryRepo<Category> categoryRepo;
 
-        public ProductsController(ProductRepo<Product> _productRepo)
+        public ProductsController(ProductRepo<Product> _productRepo, SaleProductRepo<SaleProduct> saleProductRepo,
+            CategoryRepo<Category> categoryRepo)
         {
             productRepo = _productRepo;
+            this.saleProductRepo = saleProductRepo;
+            this.categoryRepo = categoryRepo;
         }
         public ActionResult Index()
         {
@@ -22,8 +28,14 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         {
             return View(productRepo.GetById(id).Result);
         }
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
+            var salesList = await saleProductRepo.GetAllAsync();
+            SelectList saleList = new SelectList(salesList, "Id", "Discount");
+            ViewBag.Sales = saleList;
+            var categoriesList = await categoryRepo.GetAllAsync();
+            SelectList categoriesNameList = new SelectList(categoriesList, "Id", "Name");
+            ViewBag.Categories = categoriesNameList;
             return View();
         }
         [HttpPost]
@@ -32,7 +44,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         {
             try
             {
-               await productRepo.CreateAsync(product);
+                await productRepo.CreateAsync(product);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -42,7 +54,12 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         public async Task<ActionResult> Edit(int id)
         {
-
+            var salesList = await saleProductRepo.GetAllAsync();
+            SelectList saleList = new SelectList(salesList, "Id", "Discount");
+            ViewBag.Sales = saleList;
+            var categoriesList = await categoryRepo.GetAllAsync();
+            SelectList categoriesNameList = new SelectList(categoriesList, "Id", "Name");
+            ViewBag.Categories = categoriesNameList;
             return View(productRepo.GetById(id).Result);
         }
         [HttpPost]
