@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Core.Entities.Users;
 using OnlineStore.Web.ViewModels;
@@ -98,6 +99,44 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                     Email = userData.EmailAddress,
                     FirstName = userData.FirstName,
                     LastName = userData.LastName,
+                   // SSN = userData.SSN,
+                    Address = userData.Address,
+                };
+                var existsEmail = await userManager.FindByEmailAsync(userData.EmailAddress);
+                if (existsEmail is null)
+                {
+                    var user = await userManager.CreateAsync(appUser, userData.Password);
+                    if (user.Succeeded)
+                    {
+                        await userManager.AddToRoleAsync(appUser, "Admin");
+                        await signInManager.SignInAsync(appUser, true);
+                        return RedirectToAction("Index", "Home");
+                    }
+                    foreach (var item in user.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+                }
+                ModelState.AddModelError("EmailAddress", "this Email is already exist");
+
+            }
+            return View(userData);
+        }
+        [Authorize(Roles ="Admin")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateVendor(RegisterViewModel userData)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser appUser = new()
+                {
+                    UserName = userData.UserName,
+                    PasswordHash = userData.Password,
+                    Email = userData.EmailAddress,
+                    FirstName = userData.FirstName,
+                    LastName = userData.LastName,
+                   // Salary   = userData.Salary,
                     Address = userData.Address,
                 };
                 var existsEmail = await userManager.FindByEmailAsync(userData.EmailAddress);

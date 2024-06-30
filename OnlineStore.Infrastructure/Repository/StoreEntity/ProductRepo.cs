@@ -16,6 +16,8 @@ namespace OnlineStore.Infrastructure.Repository.StoreEntity
         public async Task<IEnumerable<T>> GetAllAsync() => (IEnumerable<T>)await context.Products.Include(p => p.SaleProduct).ToListAsync();
 
         public async Task<T> GetById(int id) => (T)await context.Products.Include(p => p.SaleProduct).FirstOrDefaultAsync(v => v.Id == id);
+
+        public async Task<T> GetProductByName(string name) => (T)await context.Products.Include(p => p.SaleProduct).FirstOrDefaultAsync(p => p.Name == name);
         public async Task CreateAsync(T entity)
         {
             context.Products.Add(entity);
