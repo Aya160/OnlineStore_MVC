@@ -20,7 +20,6 @@ namespace OnlineStore.Web
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            #region Resolve Services
             #region Resolve Identity & Database
             // Database
             builder.Services.AddDbContext<ApplicationDbContext>(options => {
@@ -41,6 +40,12 @@ namespace OnlineStore.Web
       .AddEntityFrameworkStores<ApplicationDbContext>();
 
             #endregion
+
+
+            #region Resolve Controllers
+
+            #region Resolve AppAconting Controllers
+            builder.Services.AddScoped(typeof(DetailsInvoiceRepo<>));
             builder.Services.AddScoped(typeof(DeliverCartRepo<>));
             builder.Services.AddScoped(typeof(InvoiceLineRepo<>));
             builder.Services.AddScoped(typeof(InvoiceOrderRepo<>));
@@ -49,8 +54,6 @@ namespace OnlineStore.Web
             builder.Services.AddScoped(typeof(PurchaseBillRepo<>));
             builder.Services.AddScoped(typeof(SupplierRepo<>));
             #endregion
-
-            #region Resolve Shipping Controllers
 
             #region Resolve Shipping Controllers
             builder.Services.AddScoped(typeof(DeliverCartRepo<>));

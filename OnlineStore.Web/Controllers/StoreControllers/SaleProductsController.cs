@@ -54,7 +54,6 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 var oldSale = await saleProductRepo.GetById(id);
                 oldSale.StartSale = saleProduct.StartSale;
                 oldSale.EndSale = saleProduct.EndSale;
-                oldSale.Store = saleProduct.Store;
                 oldSale.StoreId = saleProduct.StoreId;
                 await saleProductRepo.UpdateAsync(id, oldSale);
                 return RedirectToAction(nameof(Index));

@@ -13,7 +13,7 @@ namespace OnlineStore.Infrastructure.Repository.AppAccouting
         {
             context = _context;
         }
-        public async Task<IEnumerable<T>> GetAllAsync() => (IEnumerable<T>)await context.DetailsInvoices.Include(i => i.PurchaseBill).ToListAsync();
+        public async Task<IEnumerable<T>> GetAllAsync() => (IEnumerable<T>)await context.DetailsInvoices.Include(i => i.Supplier).Include(i => i.PurchaseBill).ToListAsync();
 
         public async Task<T> GetById(int id) => (T)await context.DetailsInvoices.Include(i => i.PurchaseBill).FirstOrDefaultAsync(v => v.Id == id);
         public async Task CreateAsync(T entity)

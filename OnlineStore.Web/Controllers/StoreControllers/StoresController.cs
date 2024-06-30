@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Core.Entities.StoreEntity;
+using OnlineStore.Infrastructure.EntityConfigs.General;
 using OnlineStore.Infrastructure.Repository.StoreEntity;
 
 namespace OnlineStore.Web.Controllers.StoreControllers
@@ -8,10 +9,12 @@ namespace OnlineStore.Web.Controllers.StoreControllers
     public class StoresController : Controller
     {
         private readonly StoreRepo<Store> storeRepo;
+        private readonly SelectListHelper selectListHelper;
 
-        public StoresController(StoreRepo<Store> _storeRepo)
+        public StoresController(StoreRepo<Store> _storeRepo, SelectListHelper selectListHelper)
         {
             storeRepo = _storeRepo;
+            this.selectListHelper = selectListHelper;
         }
         public ActionResult Index()
         {
@@ -23,8 +26,10 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         {
             return View(storeRepo.GetById(id).Result);
         }
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
+            ViewBag.Admins = await selectListHelper.GetAdministratorListAsync();
+            ViewBag.Address = await selectListHelper.GetAddressListAsync();
             return View();
         }
         [HttpPost]
@@ -43,7 +48,9 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         public async Task<ActionResult> Edit(int id)
         {
-            var store =  storeRepo.GetById(id).Result;
+            ViewBag.Admins = await selectListHelper.GetAdministratorListAsync();
+            ViewBag.Address = await selectListHelper.GetAddressListAsync();
+            var store = storeRepo.GetById(id).Result;
             return View(store);
         }
         [HttpPost]
@@ -59,7 +66,8 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 oldStore.Address = store.Address;
                 oldStore.AddressId = store.AddressId;
                 oldStore.Administrator = store.Administrator;
-               
+                oldStore.AdministratorId = store.AdministratorId;
+
                 await storeRepo.UpdateAsync(id, oldStore);
                 return RedirectToAction(nameof(Index));
             }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Core.Entities.StoreEntity;
+using OnlineStore.Infrastructure.EntityConfigs.General;
 using OnlineStore.Infrastructure.Repository.StoreEntity;
 
 namespace OnlineStore.Web.Controllers.StoreControllers
@@ -8,10 +9,12 @@ namespace OnlineStore.Web.Controllers.StoreControllers
     public class StoreMangersController : Controller
     {
         private readonly StoreMangerRepo<StoreManager> storeMangerRepo;
+        private readonly SelectListHelper selectListHelper;
 
-        public StoreMangersController(StoreMangerRepo<StoreManager> _storeMangerRepo)
+        public StoreMangersController(StoreMangerRepo<StoreManager> _storeMangerRepo, SelectListHelper selectListHelper)
         {
             storeMangerRepo = _storeMangerRepo;
+            this.selectListHelper = selectListHelper;
         }
         public ActionResult Index()
         {
@@ -22,8 +25,10 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         {
             return View(storeMangerRepo.GetById(id).Result);
         }
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
+            ViewBag.Stores = await selectListHelper.GetStoresListAsync();
+            ViewBag.Vendors = await selectListHelper.GetVendorsListAsync();
             return View();
         }
         [HttpPost]
@@ -42,7 +47,9 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         public async Task<ActionResult> Edit(int id)
         {
-            var manger =  storeMangerRepo.GetById(id).Result;
+            ViewBag.Stores = await selectListHelper.GetStoresListAsync();
+            ViewBag.Vendors = await selectListHelper.GetVendorsListAsync();
+            var manger = storeMangerRepo.GetById(id).Result;
             return View(manger);
         }
         [HttpPost]
@@ -52,10 +59,9 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             try
             {
                 var oldManger = await storeMangerRepo.GetById(id);
-                oldManger.Vendor = storeManager.Vendor;
                 oldManger.StartAt = storeManager.StartAt;
-                oldManger.Store = storeManager.Store;
                 oldManger.StoreId = storeManager.StoreId;
+                oldManger.VenderId = storeManager.VenderId;
 
                 await storeMangerRepo.UpdateAsync(id, oldManger);
 

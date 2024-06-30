@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Core.Entities.Shipping;
+using OnlineStore.Infrastructure.EntityConfigs.General;
 using OnlineStore.Infrastructure.Repository.Shipping;
 
 namespace OnlineStore.Web.Controllers.ShippingControllers
@@ -8,13 +9,16 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
     public class DeliverCartsController : Controller
     {
         private readonly DeliverCartRepo<DeliverCart> deliverCartRepo;
+        private readonly SelectListHelper selectListHelper;
 
         public ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo { get; }
 
-        public DeliverCartsController(DeliverCartRepo<DeliverCart> deliverCartRepo, ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo)
+        public DeliverCartsController(DeliverCartRepo<DeliverCart> deliverCartRepo, ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo,
+           SelectListHelper selectListHelper)
         {
             this.deliverCartRepo = deliverCartRepo;
             this.shippingCompaniesRepo = shippingCompaniesRepo;
+            this.selectListHelper = selectListHelper;
         }
         // GET: DeliverCartsController
         public ActionResult Index()
@@ -30,8 +34,9 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         }
 
         // GET: DeliverCartsController/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
+            ViewBag.Companies = await selectListHelper.GetCompaniesListAsync();
             return View();
         }
 
@@ -42,8 +47,6 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         {
             try
             {
-                var companyList = shippingCompaniesRepo.GetAllAsync().Result;
-                ViewBag.companyList = companyList;
                 await deliverCartRepo.CreateAsync(deliverCart);
                 return RedirectToAction("Index");
             }
@@ -54,11 +57,10 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         }
 
         // GET: DeliverCartsController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            var companyList = shippingCompaniesRepo.GetById(id).Result;
-            ViewBag.companyList = companyList;
-            return View(companyList);
+            ViewBag.Companies = await selectListHelper.GetCompaniesListAsync();
+            return View(deliverCartRepo.GetById(id).Result);
         }
 
         // POST: DeliverCartsController/Edit/5
@@ -72,7 +74,7 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
                 oldDeliver.DeliverLocation = deliverCart.DeliverLocation;
                 oldDeliver.DateArrival = deliverCart.DateArrival;
                 oldDeliver.CompanyId = deliverCart.CompanyId;
-                oldDeliver.Order = deliverCart.Order;
+                oldDeliver.OrderId = deliverCart.OrderId;
                 await deliverCartRepo.UpdateAsync(id, oldDeliver);
                 return RedirectToAction(nameof(Index));
             }
