@@ -15,7 +15,7 @@ namespace OnlineStore.Infrastructure.Repository.StoreEntity
         }
         public async Task<IEnumerable<T>> GetAllAsync() => (IEnumerable<T>)await context.Categories.Include(c => c.SaleCategory).ToListAsync();
 
-        public async Task<T> GetById(int id) => (T)await context.Categories.Include(c => c.SaleCategory).FirstOrDefaultAsync(v => v.Id == id);
+        public async Task<T> GetById(int id) => (T)await context.Categories.FirstOrDefaultAsync(v => v.Id == id);
         public async Task CreateAsync(T entity)
         {
             context.Categories.Add(entity);

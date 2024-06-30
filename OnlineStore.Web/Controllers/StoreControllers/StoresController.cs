@@ -59,6 +59,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 oldStore.Address = store.Address;
                 oldStore.AddressId = store.AddressId;
                 oldStore.Administrator = store.Administrator;
+                oldStore.AdministratorId = store.AdministratorId;
                
                 await storeRepo.UpdateAsync(id, oldStore);
                 return RedirectToAction(nameof(Index));

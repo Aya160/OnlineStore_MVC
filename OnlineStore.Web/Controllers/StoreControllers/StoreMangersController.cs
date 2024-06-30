@@ -52,10 +52,9 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             try
             {
                 var oldManger = await storeMangerRepo.GetById(id);
-                oldManger.Vendor = storeManager.Vendor;
                 oldManger.StartAt = storeManager.StartAt;
-                oldManger.Store = storeManager.Store;
                 oldManger.StoreId = storeManager.StoreId;
+                oldManger.VenderId = storeManager.VenderId;
 
                 await storeMangerRepo.UpdateAsync(id, oldManger);
 

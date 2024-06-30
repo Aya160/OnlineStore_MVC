@@ -66,7 +66,6 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
                 oldInvoiceOrder.Tax = invoiceOrder.Tax;
                 oldInvoiceOrder.TotalAmount = invoiceOrder.TotalAmount;
                 oldInvoiceOrder.VendorId = invoiceOrder.VendorId;
-                oldInvoiceOrder.Vendor = invoiceOrder.Vendor;
                 await invoiceOrderRepo.UpdateAsync(id, oldInvoiceOrder);
                 return RedirectToAction(nameof(Index));
             }

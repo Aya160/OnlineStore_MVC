@@ -68,6 +68,8 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
                 oldInvoice.PurchaseBill = detailsInvoic.PurchaseBill;
                 oldInvoice.SupplierId = detailsInvoic.SupplierId;
                 oldInvoice.Supplier = detailsInvoic.Supplier;
+
+                await detailsInvoiceRepo.UpdateAsync(id, oldInvoice);   
                 return RedirectToAction(nameof(Index));
             }
             catch

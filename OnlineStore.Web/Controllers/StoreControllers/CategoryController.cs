@@ -9,11 +9,13 @@ namespace OnlineStore.Web.Controllers.StoreControllers
     {
         private readonly CategoryRepo<Category> categoryRepo;
         private readonly SaleCategoryRepo<SaleCategory> saleCategoryRepo;
+        private readonly SaleProductRepo<SaleProduct> saleProductRepo;
 
-        public CategoryController(CategoryRepo<Category> _categoryRepo,SaleCategoryRepo<SaleCategory> _saleCategoryRepo)
+        public CategoryController(CategoryRepo<Category> _categoryRepo,SaleCategoryRepo<SaleCategory> _saleCategoryRepo,SaleProductRepo<SaleProduct> _saleProductRepo)
         {
             categoryRepo = _categoryRepo;
             saleCategoryRepo = _saleCategoryRepo;
+            saleProductRepo = _saleProductRepo;
         }
         public ActionResult Index()
         {
@@ -25,20 +27,21 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             var category =  categoryRepo.GetById(id);
             return View(category.Result);
         }
-        public ActionResult Create()
+        public async Task<ActionResult> CreateAsync()
         {
+            var salesList = await saleCategoryRepo.GetAllAsync();
+            SelectList categoryList = new SelectList(salesList, "Id", "Discount");
+
+            ViewBag.Sales = categoryList;
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Category category)
         {
-            var salesList = await saleCategoryRepo.GetAllAsync();
-            SelectList categoryList = new SelectList(salesList, "Id", "Discount");
-
-            ViewBag.Sales = categoryList;
+           
             await categoryRepo.CreateAsync(category);
-            return View();
+            return RedirectToAction(nameof(Index));
         }
         public async Task<ActionResult> Edit(int id)
         {

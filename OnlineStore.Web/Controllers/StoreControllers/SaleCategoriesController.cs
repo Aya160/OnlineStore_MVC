@@ -31,7 +31,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         public async Task<ActionResult> Create(SaleCategory saleCategory)
         {
             await saleCategoryRepo.CreateAsync(saleCategory);
-            return View();
+            return RedirectToAction(nameof(Index));
         }
         public async Task<ActionResult> Edit(int id)
         {
@@ -47,7 +47,6 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 var oldSale = await saleCategoryRepo.GetById(id);
                 oldSale.StartSale = sale.StartSale;
                 oldSale.EndSale = sale.EndSale;
-                oldSale.Store =  sale.Store;
                 oldSale.StoreId = sale.StoreId;
                 await saleCategoryRepo.UpdateAsync(id, oldSale);
                 return RedirectToAction(nameof(Index));

@@ -53,7 +53,6 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             {
                 var oldProduct = await productRepo.GetById(id);
                 oldProduct.SaleProductId = product.SaleProductId;
-                oldProduct.SaleProduct = product.SaleProduct;
                 oldProduct.Name = product.Name;
                 oldProduct.Price = product.Price;
                 await productRepo.UpdateAsync(id, oldProduct);

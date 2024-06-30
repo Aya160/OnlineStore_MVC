@@ -49,7 +49,7 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         // GET: ShippingCompaniesPermissionsController/Edit/5
         public ActionResult Edit(int id)
         {
-            var companyList = shippingCompaniesRepo.GetById(id).Result;
+            var companyList = shippingCompaniesPermissionsRepo.GetById(id).Result;
             ViewBag.companyList = companyList;
             return View(companyList);
         }
@@ -63,6 +63,7 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
             {
                 var oldPermissions = shippingCompaniesPermissionsRepo.GetById(id).Result;
                 oldPermissions.Permission = shippingCompaniesPermissions.Permission;
+                oldPermissions.CompanyId = shippingCompaniesPermissions.CompanyId;
                 oldPermissions.DeliverPrice = shippingCompaniesPermissions.DeliverPrice;
                 await shippingCompaniesPermissionsRepo.UpdateAsync(id, oldPermissions);
                 return RedirectToAction(nameof(Index));

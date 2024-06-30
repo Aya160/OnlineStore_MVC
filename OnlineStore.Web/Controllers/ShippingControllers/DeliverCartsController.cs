@@ -56,9 +56,8 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         // GET: DeliverCartsController/Edit/5
         public ActionResult Edit(int id)
         {
-            var companyList = shippingCompaniesRepo.GetById(id).Result;
-            ViewBag.companyList = companyList;
-            return View(companyList);
+            var deliverCart= deliverCartRepo.GetById(id).Result;
+            return View(deliverCart);
         }
 
         // POST: DeliverCartsController/Edit/5
@@ -72,7 +71,7 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
                 oldDeliver.DeliverLocation = deliverCart.DeliverLocation;
                 oldDeliver.DateArrival = deliverCart.DateArrival;
                 oldDeliver.CompanyId = deliverCart.CompanyId;
-                oldDeliver.Order = deliverCart.Order;
+                oldDeliver.OrderId = deliverCart.OrderId;
                 await deliverCartRepo.UpdateAsync(id, oldDeliver);
                 return RedirectToAction(nameof(Index));
             }
