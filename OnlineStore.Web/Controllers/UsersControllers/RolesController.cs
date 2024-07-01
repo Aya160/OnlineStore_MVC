@@ -35,7 +35,7 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                 IdentityRole identityRole = new IdentityRole();
                 identityRole.Name = roleVM.RoleName;
                 var result = await roleManger.CreateAsync(identityRole);
-                if (result.Succeeded) { return RedirectToAction("Index"); }
+                if (result.Succeeded) { return RedirectToAction("Index","Products"); }
                 else
                 {
                     foreach (var error in result.Errors)

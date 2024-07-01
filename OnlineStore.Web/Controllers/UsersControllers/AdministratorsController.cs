@@ -15,8 +15,8 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         }
         public ActionResult Index()
         {
-            var admins = administratorRepo.GetAllAsync().Result;
-            return View(admins);
+            var admins = administratorRepo.GetAllAdminsAsync();
+            return View(admins.Where(u => u.SSN != string.Empty));
         }
         public ActionResult Details(int id)
         {

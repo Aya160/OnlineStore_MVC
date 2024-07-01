@@ -17,6 +17,12 @@ namespace OnlineStore.Web.ViewModels
         public string Gender { get; set; }
         public string PhoneNO1 { get; set; }
         public string PhoneNO2 { get; set; }
-        public Address Address { get; set; }
+        //public Address Address { get; set; }
+        public string SSN { get; set; } = string.Empty;
+        public decimal Salary { get; set; } = 0;
+        public string StreetAddress { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
+        public string City { get; set; }
     }
 }

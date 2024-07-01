@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OnlineStore.Core.Entities.StoreEntity;
 using OnlineStore.Infrastructure.Repository.StoreEntity;
+using OnlineStore.Web.ViewModels;
 
 namespace OnlineStore.Web.Controllers.StoreControllers
 {
@@ -11,13 +12,15 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         private readonly ProductRepo<Product> productRepo;
         private readonly SaleProductRepo<SaleProduct> saleProductRepo;
         private readonly CategoryRepo<Category> categoryRepo;
+        private readonly ProductImagesController productImages;
 
         public ProductsController(ProductRepo<Product> _productRepo, SaleProductRepo<SaleProduct> saleProductRepo,
-            CategoryRepo<Category> categoryRepo)
+            CategoryRepo<Category> categoryRepo,ProductImagesController _productImages)
         {
             productRepo = _productRepo;
             this.saleProductRepo = saleProductRepo;
             this.categoryRepo = categoryRepo;
+            productImages = _productImages;
         }
         public ActionResult Index()
         {
@@ -36,20 +39,31 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             var categoriesList = await categoryRepo.GetAllAsync();
             SelectList categoriesNameList = new SelectList(categoriesList, "Id", "Name");
             ViewBag.Categories = categoriesNameList;
+
+
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Product product)
+        public async Task<ActionResult> Create(ProductViewModel productViewModel)
         {
             try
             {
+                var product = new Product()
+                {
+                    Name = productViewModel.Name,
+                    Price = productViewModel.Price,
+                    SaleProductId = productViewModel.SaleProductId,
+                    CategoryId = productViewModel.CategoryId,
+                    ImageUrl = productViewModel.Image.FileName,
+                };
+                productImages.UploadImage(productViewModel.Image);
                 await productRepo.CreateAsync(product);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View(product);
+                return View(productViewModel);
             }
         }
         public async Task<ActionResult> Edit(int id)
@@ -60,7 +74,17 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             var categoriesList = await categoryRepo.GetAllAsync();
             SelectList categoriesNameList = new SelectList(categoriesList, "Id", "Name");
             ViewBag.Categories = categoriesNameList;
-            return View(productRepo.GetById(id).Result);
+
+            var product = productRepo.GetById(id).Result;
+            var productVM = new ProductViewModel
+            {
+                Name = product.Name,
+                Price = product.Price,
+                SaleProductId = product.SaleProductId,
+                CategoryId = product.CategoryId,
+                ImageUrl = product.ImageUrl,
+            };
+            return View(productVM);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

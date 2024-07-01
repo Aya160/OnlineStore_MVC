@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using OnlineStore.Core.Entities.AppAccounting;
 using OnlineStore.Core.Entities.General;
 using OnlineStore.Core.Entities.Shipping;
@@ -8,7 +9,7 @@ using System.Reflection;
 
 namespace OnlineStore.Infrastructure.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         //User
         public DbSet<Account> Accounts { get; set; }
