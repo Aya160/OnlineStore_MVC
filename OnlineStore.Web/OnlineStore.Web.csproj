@@ -31,4 +31,9 @@
     <Folder Include="Controllers\UsersControllers\" />
     <Folder Include="wwwroot\UploadedFiles\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\img\blog\.DS_Store" />
+    <None Include="wwwroot\img\gallery\.DS_Store" />
+    <None Include="wwwroot\vendors\linericon\.DS_Store" />
+  </ItemGroup>
 </Project>

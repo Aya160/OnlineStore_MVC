@@ -7,11 +7,13 @@ using OnlineStore.Web.ViewModels;
 
 namespace OnlineStore.Web.Controllers.UsersControllers
 {
-    public class AccountsController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,AddressRepo<Address> _addressRepo) : Controller
+    public class AccountsController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,AddressRepo<Address> _addressRepo, CustomerRepo<Customer> _customerRepo, VendorRepo<Vendor> _vendorRepo) : Controller
     {
         private readonly UserManager<ApplicationUser> userManager = userManager;
         private readonly SignInManager<ApplicationUser> signInManager = signInManager;
         private readonly AddressRepo<Address> addressRepo = _addressRepo;
+        private readonly CustomerRepo<Customer> customerRepo = _customerRepo;
+        private readonly VendorRepo<Vendor> vendorRepo = _vendorRepo;
 
         public IActionResult Register()
         {
@@ -49,6 +51,13 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                             Zip = userData.Zip,
                             UserId = appUser.Id
                         };
+                        var customer = new Customer
+                        {
+                           // AccountId = appUser.Id,
+                            
+                        };
+                        
+                       
                         await addressRepo.CreateAsync(address);
                         await userManager.AddToRoleAsync(appUser, "Customer");
                         await signInManager.SignInAsync(appUser, true);

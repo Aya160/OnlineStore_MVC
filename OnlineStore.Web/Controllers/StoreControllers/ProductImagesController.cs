@@ -5,14 +5,12 @@ using OnlineStore.Web.ViewModels;
 
 public class ProductImagesController : Controller
 {
-    private readonly ProductImageRepo<ProductImage> imageRepo;
-    private readonly ProductImagesController productImagesController;
+
     private readonly IWebHostEnvironment hostingEnvironment;
 
-    public ProductImagesController( ProductImageRepo<ProductImage> _imageRepo,ProductImagesController _productImagesController,IWebHostEnvironment hostingEnvironment)
+    public ProductImagesController(IWebHostEnvironment hostingEnvironment)
     {
-        imageRepo = _imageRepo;
-        productImagesController = _productImagesController;
+
         this.hostingEnvironment = hostingEnvironment;
     }
 

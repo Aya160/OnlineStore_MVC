@@ -7,6 +7,7 @@ using OnlineStore.Infrastructure.Repository.AppAccouting;
 using OnlineStore.Infrastructure.Repository.Shipping;
 using OnlineStore.Infrastructure.Repository.StoreEntity;
 using OnlineStore.Infrastructure.Repository.Users;
+using OnlineStore.Web.Controllers.UsersControllers;
 using System;
 namespace OnlineStore.Web
 {
@@ -84,6 +85,7 @@ namespace OnlineStore.Web
             #endregion
 
             builder.Services.AddScoped(typeof(SelectListHelper));
+            builder.Services.AddTransient<ProductImagesController>();
 
 
             #endregion
