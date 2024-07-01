@@ -2,12 +2,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OnlineStore.Core.Entities.Users;
 using OnlineStore.Infrastructure.Data;
+using OnlineStore.Infrastructure.EntityConfigs.General;
 using OnlineStore.Infrastructure.Repository.AppAccouting;
 using OnlineStore.Infrastructure.Repository.Shipping;
 using OnlineStore.Infrastructure.Repository.StoreEntity;
 using OnlineStore.Infrastructure.Repository.Users;
 using System;
-
 namespace OnlineStore.Web
 {
     public class Program
@@ -65,11 +65,12 @@ namespace OnlineStore.Web
             builder.Services.AddScoped(typeof(CategoryRepo<>));
             builder.Services.AddScoped(typeof(OrderRepo<>));
             builder.Services.AddScoped(typeof(ProductRepo<>));
-            builder.Services.AddScoped(typeof(SaleCategoryRepo<>));
-            builder.Services.AddScoped(typeof(SaleProductRepo<>));
+            builder.Services.AddScoped(typeof(SaleRepo<>));
             builder.Services.AddScoped(typeof(StoreMangerPermissionRepo<>));
             builder.Services.AddScoped(typeof(StoreMangerRepo<>));
             builder.Services.AddScoped(typeof(StoreRepo<>));
+            builder.Services.AddScoped(typeof(ProductImageRepo<>));
+
             #endregion
 
             #region Resolve Users Controllers
@@ -80,6 +81,9 @@ namespace OnlineStore.Web
             builder.Services.AddScoped(typeof(AddressRepo<>));
 
             #endregion
+
+            builder.Services.AddScoped(typeof(SelectListHelper));
+
 
             #endregion
 

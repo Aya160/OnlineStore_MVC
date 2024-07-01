@@ -17,8 +17,7 @@ namespace OnlineStore.Core.Entities.StoreEntity
         public ICollection<IncludeCategory> IncludeCategories { get; set; }
         public ICollection<StoreReliesOnShippingCompanies> ShippingCompanies { get; set; }
         public ICollection<InvoiceOrder> InvoiceOrders { get; set; }
-        public ICollection<SaleCategory> SaleCategories { get; set; }
-        public ICollection<SaleProduct> SaleProducts { get; set; }
+        public ICollection<Sale> Sales { get; set; }
         public ICollection<Vendor> Vendors { get; set; }
     }
 }

@@ -14,7 +14,8 @@ namespace OnlineStore.Infrastructure.Repository.Users
             context = _context;
         }
         public async Task<IEnumerable<T>> GetAllAsync() => (IEnumerable<T>)await context.Administrators.Include(a => a.Stores).Include(a => a.Permissions).ToListAsync();
-
+        public IEnumerable<ApplicationUser> GetAllAdminsAsync() =>
+            context.Users;
         public async Task<T> GetById(int id) => (T)await context.Administrators.Include(a => a.Stores).FirstOrDefaultAsync(c => c.Id == id);
         public async Task CreateAsync(T entity)
         {

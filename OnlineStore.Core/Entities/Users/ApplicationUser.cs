@@ -8,6 +8,7 @@ namespace OnlineStore.Core.Entities.Users
         public string LastName { get; set; }
         public string Gender { get; set; }
         public string PhoneNo2 { get; set; } = string.Empty;
-        public Address Address { get; set; }
+        public string SSN { get; set; } = string.Empty;
+        public decimal Salary { get; set; } = 0;
     }
 }

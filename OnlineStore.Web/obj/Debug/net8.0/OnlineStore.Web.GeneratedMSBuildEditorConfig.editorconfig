@@ -238,6 +238,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ProductImages/Upload.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEltYWdlc1xVcGxvYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ProductImages/UploadImage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEltYWdlc1xVcGxvYWRJbWFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -270,6 +278,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VCaWxsc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Roles/CreateRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/SaleCategories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZUNhdGVnb3JpZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -284,22 +296,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/SaleCategories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZUNhdGVnb3JpZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/SaleProducts/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVByb2R1Y3RzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/SaleProducts/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVByb2R1Y3RzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/SaleProducts/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVByb2R1Y3RzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/SaleProducts/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVByb2R1Y3RzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Shared/Error.cshtml]

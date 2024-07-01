@@ -54,7 +54,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 var oldOrder = await orderRepo.GetById(id);
                 oldOrder.RequstDate = order.RequstDate;
                 oldOrder.Customer = order.Customer;
-                oldOrder.CustomerId = order.Id;
+                oldOrder.CustomerId = order.CustomerId;
 
                 await orderRepo.UpdateAsync(id, oldOrder);
                 return RedirectToAction(nameof(Index));

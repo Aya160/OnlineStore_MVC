@@ -3,21 +3,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OnlineStore.Core.Entities.StoreEntity;
 using OnlineStore.Infrastructure.Repository.StoreEntity;
+using OnlineStore.Web.ViewModels;
 
 namespace OnlineStore.Web.Controllers.StoreControllers
 {
     public class ProductsController : Controller
     {
         private readonly ProductRepo<Product> productRepo;
-        private readonly SaleProductRepo<SaleProduct> saleProductRepo;
+        private readonly SaleRepo<Sale> saleRepo;
         private readonly CategoryRepo<Category> categoryRepo;
+        private readonly ProductImagesController productImages;
 
-        public ProductsController(ProductRepo<Product> _productRepo, SaleProductRepo<SaleProduct> saleProductRepo,
-            CategoryRepo<Category> categoryRepo)
+        public ProductsController(ProductRepo<Product> _productRepo, SaleRepo<Sale> saleRepo,
+            CategoryRepo<Category> categoryRepo,ProductImagesController _productImages)
         {
             productRepo = _productRepo;
-            this.saleProductRepo = saleProductRepo;
+            this.saleRepo = saleRepo;
             this.categoryRepo = categoryRepo;
+            productImages = _productImages;
         }
         public ActionResult Index()
         {
@@ -30,37 +33,58 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         public async Task<ActionResult> Create()
         {
-            var salesList = await saleProductRepo.GetAllAsync();
+            var salesList = await saleRepo.GetAllAsync();
             SelectList saleList = new SelectList(salesList, "Id", "Discount");
             ViewBag.Sales = saleList;
             var categoriesList = await categoryRepo.GetAllAsync();
             SelectList categoriesNameList = new SelectList(categoriesList, "Id", "Name");
             ViewBag.Categories = categoriesNameList;
+
+
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Product product)
+        public async Task<ActionResult> Create(ProductViewModel productViewModel)
         {
             try
             {
+                var product = new Product()
+                {
+                    Name = productViewModel.Name,
+                    Price = productViewModel.Price,
+                    SaleId = productViewModel.SaleProductId,
+                    CategoryId = productViewModel.CategoryId,
+                    ImageUrl = productViewModel.Image.FileName,
+                };
+                productImages.UploadImage(productViewModel.Image);
                 await productRepo.CreateAsync(product);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View(product);
+                return View(productViewModel);
             }
         }
         public async Task<ActionResult> Edit(int id)
         {
-            var salesList = await saleProductRepo.GetAllAsync();
+            var salesList = await saleRepo.GetAllAsync();
             SelectList saleList = new SelectList(salesList, "Id", "Discount");
             ViewBag.Sales = saleList;
             var categoriesList = await categoryRepo.GetAllAsync();
             SelectList categoriesNameList = new SelectList(categoriesList, "Id", "Name");
             ViewBag.Categories = categoriesNameList;
-            return View(productRepo.GetById(id).Result);
+
+            var product = productRepo.GetById(id).Result;
+            var productVM = new ProductViewModel
+            {
+                Name = product.Name,
+                Price = product.Price,
+                SaleProductId = product.SaleId,
+                CategoryId = product.CategoryId,
+                ImageUrl = product.ImageUrl,
+            };
+            return View(productVM);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -69,7 +93,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             try
             {
                 var oldProduct = await productRepo.GetById(id);
-                oldProduct.SaleProductId = product.SaleProductId;
+                oldProduct.SaleId = product.SaleId;
                 oldProduct.Name = product.Name;
                 oldProduct.Price = product.Price;
                 await productRepo.UpdateAsync(id, oldProduct);

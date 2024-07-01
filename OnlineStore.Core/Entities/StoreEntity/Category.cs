@@ -7,7 +7,7 @@ namespace OnlineStore.Core.Entities.StoreEntity
         public  string Name {  get; set; }
         public ICollection<IncludeCategory> IncludeCategories { get; set; }
         public ICollection<Product> Products { get; set; }
-        public int? SaleCategoryId { get; set; }
-        public SaleCategory SaleCategory { get; set;}
+        public int? SaleId { get; set; }
+        public Sale Sale { get; set;}
     }
 }

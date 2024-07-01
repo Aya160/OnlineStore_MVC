@@ -8,14 +8,12 @@ namespace OnlineStore.Web.Controllers.StoreControllers
     public class CategoryController : Controller
     {
         private readonly CategoryRepo<Category> categoryRepo;
-        private readonly SaleCategoryRepo<SaleCategory> saleCategoryRepo;
-        private readonly SaleProductRepo<SaleProduct> saleProductRepo;
+        private readonly SaleRepo<Sale> saleRepo;
 
-        public CategoryController(CategoryRepo<Category> _categoryRepo, SaleCategoryRepo<SaleCategory> _saleCategoryRepo, SaleProductRepo<SaleProduct> _saleProductRepo)
+        public CategoryController(CategoryRepo<Category> _categoryRepo, SaleRepo<Sale> _saleRepo)
         {
             categoryRepo = _categoryRepo;
-            saleCategoryRepo = _saleCategoryRepo;
-            saleProductRepo = _saleProductRepo;
+            saleRepo = _saleRepo;
         }
         public ActionResult Index()
         {
@@ -29,7 +27,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         public async Task<ActionResult> CreateAsync()
         {
-            var salesList = await saleCategoryRepo.GetAllAsync();
+            var salesList = await saleRepo.GetAllAsync();
             SelectList categoryList = new SelectList(salesList, "Id", "Discount");
             ViewBag.Sales = categoryList;
             return View();
@@ -44,7 +42,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         public async Task<ActionResult> Edit(int id)
         {
-            var salesList = await saleCategoryRepo.GetAllAsync();
+            var salesList = await saleRepo.GetAllAsync();
             SelectList categoryList = new SelectList(salesList, "Id", "Discount");
             ViewBag.Sales = categoryList;
             return View(categoryRepo.GetById(id).Result);
@@ -57,8 +55,8 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             {
                 var oldCategory = categoryRepo.GetById(id).Result;
                 oldCategory.Name = category.Name;
-                oldCategory.SaleCategoryId = category.SaleCategoryId;
-                oldCategory.SaleCategory = category.SaleCategory;
+                oldCategory.SaleId = category.SaleId;
+                oldCategory.Sale = category.Sale;
                 await categoryRepo.UpdateAsync(id, oldCategory);
                 return RedirectToAction(nameof(Index));
             }

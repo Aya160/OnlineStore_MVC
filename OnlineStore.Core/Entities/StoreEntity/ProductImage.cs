@@ -1,7 +1,9 @@
 ﻿using OnlineStore.Core.Entities.General;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnlineStore.Core.Entities.StoreEntity
 {
+    [NotMapped]
     public class ProductImage : BaseEntity
     {
         public string Image {  get; set; }

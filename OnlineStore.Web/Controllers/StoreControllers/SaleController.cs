@@ -5,22 +5,22 @@ using OnlineStore.Infrastructure.Repository.StoreEntity;
 
 namespace OnlineStore.Web.Controllers.StoreControllers
 {
-    public class SaleCategoriesController : Controller
+    public class SaleController : Controller
     {
-        private readonly SaleCategoryRepo<SaleCategory> saleCategoryRepo;
+        private readonly SaleRepo<Sale> saleRepo;
 
-        public SaleCategoriesController(SaleCategoryRepo<SaleCategory> _saleCategoryRepo)
+        public SaleController(SaleRepo<Sale> _saleRepo)
         {
-            saleCategoryRepo = _saleCategoryRepo;
+            saleRepo = _saleRepo;
         }
         public ActionResult Index()
         {
-            var saleCategories = saleCategoryRepo.GetAllAsync().Result;
+            var saleCategories = saleRepo.GetAllAsync().Result;
             return View(saleCategories);
         }
         public ActionResult Details(int id)
         {
-            return View(saleCategoryRepo.GetById(id).Result);
+            return View(saleRepo.GetById(id).Result);
         }
         public ActionResult Create()
         {
@@ -28,27 +28,27 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(SaleCategory saleCategory)
+        public async Task<ActionResult> Create(Sale saleCategory)
         {
-            await saleCategoryRepo.CreateAsync(saleCategory);
+            await saleRepo.CreateAsync(saleCategory);
             return RedirectToAction(nameof(Index));
         }
         public async Task<ActionResult> Edit(int id)
         {
-            var sale = await saleCategoryRepo.GetById(id);
+            var sale = await saleRepo.GetById(id);
             return View(sale);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id, SaleCategory sale)
+        public async Task<ActionResult> Edit(int id, Sale sale)
         {
             try
             {
-                var oldSale = await saleCategoryRepo.GetById(id);
+                var oldSale = await saleRepo.GetById(id);
                 oldSale.StartSale = sale.StartSale;
                 oldSale.EndSale = sale.EndSale;
                 oldSale.StoreId = sale.StoreId;
-                await saleCategoryRepo.UpdateAsync(id, oldSale);
+                await saleRepo.UpdateAsync(id, oldSale);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -62,7 +62,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         {
             try
             {
-                await saleCategoryRepo.DeleteAsync(id);
+                await saleRepo.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch

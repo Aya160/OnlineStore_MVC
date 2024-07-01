@@ -1,14 +1,17 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Core.Entities.Users;
+using OnlineStore.Infrastructure.Repository.Users;
 using OnlineStore.Web.ViewModels;
 
 namespace OnlineStore.Web.Controllers.UsersControllers
 {
-    public class AccountsController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager) : Controller
+    public class AccountsController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,AddressRepo<Address> _addressRepo) : Controller
     {
         private readonly UserManager<ApplicationUser> userManager = userManager;
         private readonly SignInManager<ApplicationUser> signInManager = signInManager;
+        private readonly AddressRepo<Address> addressRepo = _addressRepo;
 
         public IActionResult Register()
         {
@@ -27,15 +30,27 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                     Email = userData.EmailAddress,
                     FirstName = userData.FirstName,
                     LastName = userData.LastName,
-                    Address = userData.Address,
+                    PhoneNumber = userData.PhoneNO1,
+                    PhoneNo2 = userData.PhoneNO2,
+                    Gender = userData.Gender,
+                  //  Address = userData.Address,
                 };
-             var existsEmail=  await userManager.FindByEmailAsync(userData.EmailAddress);
+                var existsEmail = await userManager.FindByEmailAsync(userData.EmailAddress);
                 if (existsEmail is null)
                 {
                     var user = await userManager.CreateAsync(appUser, userData.Password);
                     if (user.Succeeded)
                     {
-                       await userManager.AddToRoleAsync(appUser, "Customer");
+                        var address = new Address
+                        {
+                            StreetAdderss = userData.StreetAddress,
+                            State = userData.State,
+                            City = userData.City,
+                            Zip = userData.Zip,
+                            UserId = appUser.Id
+                        };
+                        await addressRepo.CreateAsync(address);
+                        await userManager.AddToRoleAsync(appUser, "Customer");
                         await signInManager.SignInAsync(appUser, true);
                         return RedirectToAction("Index", "Home");
                     }
@@ -85,6 +100,8 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         {
             return View();
         }
+
+       // [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateAdmin(RegisterViewModel userData)
@@ -98,7 +115,10 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                     Email = userData.EmailAddress,
                     FirstName = userData.FirstName,
                     LastName = userData.LastName,
-                    Address = userData.Address,
+                    PhoneNumber = userData.PhoneNO1,
+                    PhoneNo2 = userData.PhoneNO2,
+                    Gender = userData.Gender,
+                    SSN = userData.SSN,
                 };
                 var existsEmail = await userManager.FindByEmailAsync(userData.EmailAddress);
                 if (existsEmail is null)
@@ -106,7 +126,64 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                     var user = await userManager.CreateAsync(appUser, userData.Password);
                     if (user.Succeeded)
                     {
+                        var address = new Address
+                        {
+                            StreetAdderss = userData.StreetAddress,
+                            State = userData.State,
+                            City = userData.City,
+                            Zip = userData.Zip,
+                            UserId = appUser.Id
+                        };
+                        await addressRepo.CreateAsync(address);
                         await userManager.AddToRoleAsync(appUser, "Admin");
+                        await signInManager.SignInAsync(appUser, true);
+                        return RedirectToAction("Index", "Home");
+                    }
+                    foreach (var item in user.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+                }
+                ModelState.AddModelError("EmailAddress", "this Email is already exist");
+
+            }
+            return View(userData);
+        }
+        [Authorize(Roles ="Admin")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateVendor(RegisterViewModel userData)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser appUser = new()
+                {
+                    UserName = userData.UserName,
+                    PasswordHash = userData.Password,
+                    Email = userData.EmailAddress,
+                    FirstName = userData.FirstName,
+                    LastName = userData.LastName,
+                    PhoneNumber = userData.PhoneNO1,
+                    PhoneNo2 = userData.PhoneNO2,
+                    Gender = userData.Gender,
+                    Salary = userData.Salary,
+                };
+                var existsEmail = await userManager.FindByEmailAsync(userData.EmailAddress);
+                if (existsEmail is null)
+                {
+                    var user = await userManager.CreateAsync(appUser, userData.Password);
+                    if (user.Succeeded)
+                    {
+                        var address = new Address
+                        {
+                            StreetAdderss = userData.StreetAddress,
+                            State = userData.State,
+                            City = userData.City,
+                            Zip = userData.Zip,
+                            UserId = appUser.Id
+                        };
+                        await addressRepo.CreateAsync(address);
+                        await userManager.AddToRoleAsync(appUser, "Vendor");
                         await signInManager.SignInAsync(appUser, true);
                         return RedirectToAction("Index", "Home");
                     }

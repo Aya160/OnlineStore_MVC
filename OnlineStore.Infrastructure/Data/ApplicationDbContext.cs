@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using OnlineStore.Core.Entities.AppAccounting;
 using OnlineStore.Core.Entities.General;
 using OnlineStore.Core.Entities.Shipping;
@@ -8,7 +9,7 @@ using System.Reflection;
 
 namespace OnlineStore.Infrastructure.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         //User
         public DbSet<Account> Accounts { get; set; }
@@ -24,8 +25,7 @@ namespace OnlineStore.Infrastructure.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
-        public DbSet<SaleCategory> SaleCategories { get; set; }
-        public DbSet<SaleProduct> SaleProducts { get; set; }
+        public DbSet<Sale> Sales { get; set; }
         public DbSet<Store> Stores { get; set; }
         public DbSet<StoreManager> StoreManagers { get; set; }
         public DbSet<StoreManagerPermissions> StoreManagersPermissions { get; set; }

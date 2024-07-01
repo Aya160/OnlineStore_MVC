@@ -21,8 +21,7 @@ namespace OnlineStore.Infrastructure.EntityConfigs.StoreCon
             builder.HasMany(s => s.IncludeCategories).WithOne(i => i.Store);
             builder.HasMany(s => s.ShippingCompanies).WithOne(c => c.Store);
             builder.HasMany(s => s.InvoiceOrders).WithOne(i => i.Store);
-            builder.HasMany(s => s.SaleProducts).WithOne(c => c.Store);
-            builder.HasMany(s => s.SaleCategories).WithOne(p => p.Store);
+            builder.HasMany(s => s.Sales).WithOne(c => c.Store);
         }
     }
 }

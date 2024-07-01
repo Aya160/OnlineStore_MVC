@@ -10,6 +10,7 @@ namespace OnlineStore.Core.Entities.Users
         public string State { get; set; }
         public string Zip {  get; set; }
         public string City { get; set; }
+        public string UserId { get; set; }
         public Account Account { get; set; }
         public DeliverCart DeliverCart { get; set; }
         public ICollection<Store> Stores { get; set; }
