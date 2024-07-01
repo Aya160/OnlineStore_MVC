@@ -15,8 +15,8 @@ namespace OnlineStore.Infrastructure.EntityConfigs.StoreCon
 
             builder.HasMany(c => c.IncludeCategories).WithOne(i => i.Category);
             builder.HasMany(c => c.Products).WithOne(p => p.Category);
-            builder.HasOne(c => c.SaleCategory).WithMany(s => s.Categories)
-                .HasForeignKey(c=>c.SaleCategoryId).OnDelete(DeleteBehavior.Restrict);
+            builder.HasOne(c => c.Sale).WithMany(s => s.Categories)
+                .HasForeignKey(c=>c.SaleId).OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

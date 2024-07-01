@@ -10,15 +10,15 @@ namespace OnlineStore.Web.Controllers.StoreControllers
     public class ProductsController : Controller
     {
         private readonly ProductRepo<Product> productRepo;
-        private readonly SaleProductRepo<SaleProduct> saleProductRepo;
+        private readonly SaleRepo<Sale> saleRepo;
         private readonly CategoryRepo<Category> categoryRepo;
         private readonly ProductImagesController productImages;
 
-        public ProductsController(ProductRepo<Product> _productRepo, SaleProductRepo<SaleProduct> saleProductRepo,
+        public ProductsController(ProductRepo<Product> _productRepo, SaleRepo<Sale> saleRepo,
             CategoryRepo<Category> categoryRepo,ProductImagesController _productImages)
         {
             productRepo = _productRepo;
-            this.saleProductRepo = saleProductRepo;
+            this.saleRepo = saleRepo;
             this.categoryRepo = categoryRepo;
             productImages = _productImages;
         }
@@ -33,7 +33,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         public async Task<ActionResult> Create()
         {
-            var salesList = await saleProductRepo.GetAllAsync();
+            var salesList = await saleRepo.GetAllAsync();
             SelectList saleList = new SelectList(salesList, "Id", "Discount");
             ViewBag.Sales = saleList;
             var categoriesList = await categoryRepo.GetAllAsync();
@@ -53,7 +53,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 {
                     Name = productViewModel.Name,
                     Price = productViewModel.Price,
-                    SaleProductId = productViewModel.SaleProductId,
+                    SaleId = productViewModel.SaleProductId,
                     CategoryId = productViewModel.CategoryId,
                     ImageUrl = productViewModel.Image.FileName,
                 };
@@ -68,7 +68,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         public async Task<ActionResult> Edit(int id)
         {
-            var salesList = await saleProductRepo.GetAllAsync();
+            var salesList = await saleRepo.GetAllAsync();
             SelectList saleList = new SelectList(salesList, "Id", "Discount");
             ViewBag.Sales = saleList;
             var categoriesList = await categoryRepo.GetAllAsync();
@@ -80,7 +80,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             {
                 Name = product.Name,
                 Price = product.Price,
-                SaleProductId = product.SaleProductId,
+                SaleProductId = product.SaleId,
                 CategoryId = product.CategoryId,
                 ImageUrl = product.ImageUrl,
             };
@@ -93,7 +93,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             try
             {
                 var oldProduct = await productRepo.GetById(id);
-                oldProduct.SaleProductId = product.SaleProductId;
+                oldProduct.SaleId = product.SaleId;
                 oldProduct.Name = product.Name;
                 oldProduct.Price = product.Price;
                 await productRepo.UpdateAsync(id, oldProduct);

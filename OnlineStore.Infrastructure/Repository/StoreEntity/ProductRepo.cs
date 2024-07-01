@@ -13,11 +13,11 @@ namespace OnlineStore.Infrastructure.Repository.StoreEntity
         {
             context = _context;
         }
-        public async Task<IEnumerable<T>> GetAllAsync() => (IEnumerable<T>)await context.Products.Include(p => p.SaleProduct).ToListAsync();
+        public async Task<IEnumerable<T>> GetAllAsync() => (IEnumerable<T>)await context.Products.Include(p => p.Sale).ToListAsync();
 
-        public async Task<T> GetById(int id) => (T)await context.Products.Include(p => p.SaleProduct).FirstOrDefaultAsync(v => v.Id == id);
+        public async Task<T> GetById(int id) => (T)await context.Products.Include(p => p.Sale).FirstOrDefaultAsync(v => v.Id == id);
 
-        public async Task<T> GetProductByName(string name) => (T)await context.Products.Include(p => p.SaleProduct).FirstOrDefaultAsync(p => p.Name == name);
+        public async Task<T> GetProductByName(string name) => (T)await context.Products.Include(p => p.Sale).FirstOrDefaultAsync(p => p.Name == name);
         public async Task CreateAsync(T entity)
         {
             context.Products.Add(entity);

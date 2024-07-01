@@ -18,8 +18,8 @@ namespace OnlineStore.Infrastructure.EntityConfigs.StoreCon
             builder.HasMany(p => p.ContaintProducts).WithOne(c => c.Product);
             builder.HasMany(p => p.InvoiceLines).WithOne(i => i.Product);
             builder.HasMany(p => p.InvoiceOrderLines).WithOne(i => i.Product);
-            builder.HasOne(p => p.SaleProduct).WithMany(s => s.Products)
-                .HasForeignKey(p => p.SaleProductId).OnDelete(DeleteBehavior.Restrict);
+            builder.HasOne(p => p.Sale).WithMany(s => s.Products)
+                .HasForeignKey(p => p.SaleId).OnDelete(DeleteBehavior.Restrict);
             builder.HasMany(p => p.InvoiceOrderOnlineLines).WithOne(i => i.Product);
         }
     }

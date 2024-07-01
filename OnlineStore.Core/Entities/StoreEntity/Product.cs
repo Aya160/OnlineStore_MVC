@@ -13,8 +13,8 @@ namespace OnlineStore.Core.Entities.StoreEntity
         public ICollection<ContaintProduct> ContaintProducts { get; set; }
         public ICollection<InvoiceLine> InvoiceLines { get; set; }
         public ICollection<InvoiceOrderLine> InvoiceOrderLines { get; set; }
-        public int? SaleProductId { get; set; }
-        public SaleProduct SaleProduct { get; set; }
+        public int? SaleId { get; set; }
+        public Sale Sale { get; set; }
         public ICollection<InvoiceOrderOnlineLine> InvoiceOrderOnlineLines { get; set; } 
     }
 }

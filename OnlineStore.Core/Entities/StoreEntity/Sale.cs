@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OnlineStore.Core.Entities.StoreEntity
 {
-    public class SaleCategory : BaseEntity
+    public class Sale : BaseEntity
     {
         public DateOnly StartSale { get; set; }
         public DateOnly EndSale { get; set; }
@@ -11,6 +11,7 @@ namespace OnlineStore.Core.Entities.StoreEntity
         public int Discount { get; set; }
         public int? StoreId { get; set; }
         public Store Store { get; set; }
-        public ICollection<Category> Categories { get; set; } 
+        public ICollection<Category> Categories { get; set; }
+        public ICollection<Product> Products { get; set; }
     }
 }

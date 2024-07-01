@@ -25,8 +25,7 @@ namespace OnlineStore.Infrastructure.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
-        public DbSet<SaleCategory> SaleCategories { get; set; }
-        public DbSet<SaleProduct> SaleProducts { get; set; }
+        public DbSet<Sale> Sales { get; set; }
         public DbSet<Store> Stores { get; set; }
         public DbSet<StoreManager> StoreManagers { get; set; }
         public DbSet<StoreManagerPermissions> StoreManagersPermissions { get; set; }

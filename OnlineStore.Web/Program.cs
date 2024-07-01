@@ -66,8 +66,7 @@ namespace OnlineStore.Web
             builder.Services.AddScoped(typeof(CategoryRepo<>));
             builder.Services.AddScoped(typeof(OrderRepo<>));
             builder.Services.AddScoped(typeof(ProductRepo<>));
-            builder.Services.AddScoped(typeof(SaleCategoryRepo<>));
-            builder.Services.AddScoped(typeof(SaleProductRepo<>));
+            builder.Services.AddScoped(typeof(SaleRepo<>));
             builder.Services.AddScoped(typeof(StoreMangerPermissionRepo<>));
             builder.Services.AddScoped(typeof(StoreMangerRepo<>));
             builder.Services.AddScoped(typeof(StoreRepo<>));
