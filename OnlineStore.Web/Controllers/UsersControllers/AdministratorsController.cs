@@ -13,12 +13,12 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         {
             administratorRepo = _administratorRepo;
         }
-        public ActionResult Index()
-        {
-            var admins = administratorRepo.GetAllAdminsAsync();
-            return View(admins.Where(u => u.SSN != string.Empty));
-        }
-        public ActionResult Details(int id)
+		public ActionResult Index()
+		{
+			var admins = administratorRepo.GetAllAdminsAsync();
+			return View(admins.Where( u => u.SSN != string.Empty));
+		}
+		public ActionResult Details(int id)
         {
             return View(administratorRepo.GetById(id).Result);
         }

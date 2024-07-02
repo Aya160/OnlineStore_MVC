@@ -30,11 +30,27 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQ3JlYXRlQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Accounts/CreateVendor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQ3JlYXRlVmVuZG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Accounts/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Accounts/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Addresses/Create.cshtml]
+=======
 [C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Accounts/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Addresses/Create.cshtml]
+>>>>>>> 67a43b707a0d66f4c0ea0777f2c369a77fd3a722
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc2VzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 

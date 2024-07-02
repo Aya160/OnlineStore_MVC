@@ -40,13 +40,13 @@ namespace OnlineStore.Web
             })
       .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            #endregion
+			#endregion
 
 
-            #region Resolve Controllers
+			#region Resolve Controllers
 
-            #region Resolve AppAconting Controllers
-            builder.Services.AddScoped(typeof(DetailsInvoiceRepo<>));
+			#region Resolve AppAconting Controllers
+			builder.Services.AddScoped(typeof(DetailsInvoiceRepo<>));
             builder.Services.AddScoped(typeof(DeliverCartRepo<>));
             builder.Services.AddScoped(typeof(InvoiceLineRepo<>));
             builder.Services.AddScoped(typeof(InvoiceOrderRepo<>));
@@ -87,9 +87,9 @@ namespace OnlineStore.Web
             builder.Services.AddTransient<ProductImagesController>();
 
 
-            #endregion
+			#endregion
 
-            var app = builder.Build();
+			var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
