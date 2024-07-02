@@ -7,13 +7,14 @@ using OnlineStore.Web.ViewModels;
 
 namespace OnlineStore.Web.Controllers.UsersControllers
 {
-    public class AccountsController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,AddressRepo<Address> _addressRepo, CustomerRepo<Customer> _customerRepo, VendorRepo<Vendor> _vendorRepo) : Controller
+    public class AccountsController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,AddressRepo<Address> _addressRepo, CustomerRepo<Customer> _customerRepo, VendorRepo<Vendor> _vendorRepo,ProductImagesController _imagesController) : Controller
     {
         private readonly UserManager<ApplicationUser> userManager = userManager;
         private readonly SignInManager<ApplicationUser> signInManager = signInManager;
         private readonly AddressRepo<Address> addressRepo = _addressRepo;
         private readonly CustomerRepo<Customer> customerRepo = _customerRepo;
         private readonly VendorRepo<Vendor> vendorRepo = _vendorRepo;
+        private readonly ProductImagesController imagesController = _imagesController;
 
         public IActionResult Register()
         {
@@ -35,8 +36,9 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                     PhoneNumber = userData.PhoneNO1,
                     PhoneNo2 = userData.PhoneNO2,
                     Gender = userData.Gender,
-                  //  Address = userData.Address,
+                    ImageUrl = userData.Image.FileName,
                 };
+                imagesController.UploadImage(userData.Image);
                 var existsEmail = await userManager.FindByEmailAsync(userData.EmailAddress);
                 if (existsEmail is null)
                 {
@@ -53,11 +55,11 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                         };
                         var customer = new Customer
                         {
-                           // AccountId = appUser.Id,
+                           Image = appUser.ImageUrl,
                             
                         };
                         
-                       
+                       await customerRepo.CreateAsync(customer);
                         await addressRepo.CreateAsync(address);
                         await userManager.AddToRoleAsync(appUser, "Customer");
                         await signInManager.SignInAsync(appUser, true);
@@ -128,7 +130,9 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                     PhoneNo2 = userData.PhoneNO2,
                     Gender = userData.Gender,
                     SSN = userData.SSN,
+                    ImageUrl = userData.Image.FileName,
                 };
+                imagesController.UploadImage(userData.Image);
                 var existsEmail = await userManager.FindByEmailAsync(userData.EmailAddress);
                 if (existsEmail is null)
                 {
@@ -158,6 +162,12 @@ namespace OnlineStore.Web.Controllers.UsersControllers
             }
             return View(userData);
         }
+
+        [HttpGet]
+        public IActionResult CreateVendor()
+        {
+            return View();
+        }
         [Authorize(Roles ="Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -175,8 +185,9 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                     PhoneNumber = userData.PhoneNO1,
                     PhoneNo2 = userData.PhoneNO2,
                     Gender = userData.Gender,
-                    Salary = userData.Salary,
+                    ImageUrl = userData.Image.FileName,
                 };
+                imagesController.UploadImage(userData.Image);
                 var existsEmail = await userManager.FindByEmailAsync(userData.EmailAddress);
                 if (existsEmail is null)
                 {
@@ -190,6 +201,12 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                             City = userData.City,
                             Zip = userData.Zip,
                             UserId = appUser.Id
+                        };
+                        var vendor = new Vendor
+                        {
+                            Name = $"{userData.FirstName} {userData.LastName}",
+                            Salary = userData.Salary,
+                            StoreId = userData.StoreId,
                         };
                         await addressRepo.CreateAsync(address);
                         await userManager.AddToRoleAsync(appUser, "Vendor");

@@ -13,9 +13,7 @@ namespace OnlineStore.Infrastructure.EntityConfigs.UsersCon
             builder.HasBaseType<BaseEntity>();
             builder.HasOne(ac => ac.Address).WithOne(ad => ad.Account).
                 HasForeignKey<Account>(ac => ac.AddressId).OnDelete(DeleteBehavior.Restrict);
-            builder.HasOne(ac => ac.Customer).WithOne(c => c.Account);
-            builder.HasOne(ac => ac.Vendor).WithOne(v => v.Account);
-            builder.HasOne(ac => ac.Administrator).WithOne(ad => ad.Account);
+
         }
     }
 }

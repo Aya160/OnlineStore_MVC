@@ -1,5 +1,13 @@
 ﻿@model OnlineStore.Web.ViewModels.RegisterViewModel
 
+@{
+    ViewData["Title"] = "CreateAdmin";
+}
+
+<h1>CreateAdmin</h1>
+
+<h4>RegisterViewModel</h4>
+<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="CreateAdmin">
@@ -55,6 +63,11 @@
                 <span asp-validation-for="SSN" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Salary" class="control-label"></label>
+                <input asp-for="Salary" class="form-control" />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="StreetAddress" class="control-label"></label>
                 <input asp-for="StreetAddress" class="form-control" />
                 <span asp-validation-for="StreetAddress" class="text-danger"></span>
@@ -75,6 +88,16 @@
                 <span asp-validation-for="City" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" type="" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StoreId" class="control-label"></label>
+                <input asp-for="StoreId" class="form-control" />
+                <span asp-validation-for="StoreId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -85,6 +108,3 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
