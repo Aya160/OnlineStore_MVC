@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using OnlineStore.Core.Entities.Users;
 using OnlineStore.Core.IRepository;
 using OnlineStore.Infrastructure.Data;
@@ -9,7 +10,7 @@ namespace OnlineStore.Infrastructure.Repository.Users
     {
         private readonly ApplicationDbContext context;
 
-        public AdministratorRepo(ApplicationDbContext _context)
+        public AdministratorRepo(ApplicationDbContext _context, UserManager<ApplicationUser> _userManager)
         {
             context = _context;
         }

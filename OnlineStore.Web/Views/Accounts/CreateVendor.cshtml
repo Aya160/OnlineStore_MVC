@@ -1,0 +1,117 @@
+﻿@model OnlineStore.Web.ViewModels.RegisterViewModel
+
+<section class="login_box_area section-margin">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="login_form_inner register_form_inner">
+					<h3>Create New Vendor</h3>
+					<form class="row login_form" asp-action="CreateVendor" id="register_form" enctype="multipart/form-data">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" asp-for="FirstName" placeholder="Firstname" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Firstname'">
+							<span asp-validation-for="FirstName" class="text-danger"> </span>
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="LastName" type="text" class="form-control" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'">
+							<span asp-validation-for="LastName" class="text-danger"></span>
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="EmailAddress" type="email" class="form-control" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+							<span asp-validation-for="EmailAddress" class="text-danger"></span>
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" asp-for="UserName" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+							<span asp-validation-for="UserName" class="text-danger"></span>
+
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="Password" type="password" class="form-control" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+							<span asp-validation-for="Password" class="text-danger"></span>
+
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'">
+							<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+						</div>
+					
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" asp-for="StreetAddress" placeholder="Street Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Street Address'">
+							<span asp-validation-for="StreetAddress" class="text-danger"></span>
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="State" type="text" class="form-control" placeholder="State" onfocus="this.placeholder = ''" onblur="this.placeholder = 'State'">
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="Zip" type="text" class="form-control" placeholder="ZipCode" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ZipCode'">
+							<span asp-validation-for="Zip" class="text-danger"></span>
+
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="City" type="text" class="form-control" placeholder="City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City'">
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="PhoneNO1" type="text" class="form-control" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'">
+							<span asp-validation-for="PhoneNO1" class="text-danger"></span>
+
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="PhoneNO2" type="text" class="form-control" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'">
+							<span asp-validation-for="PhoneNO2" class="text-danger"></span>
+
+						</div>
+						<div class="col-md-12 form-group">
+							<div class="input-group mb-3">
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" asp-for="Gender" value="1" checked>
+									<label class="form-check-label">Male</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" asp-for="Gender" value="2">
+									<label class="form-check-label">Female</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 form-group">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<label class="input-group-text" asp-for="Image">Images</label>
+									<input type="file" asp-for="Image">
+									<div id="preview-images"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12 form-group">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<label class="input-group-text" asp-for="StoreId">Stores</label>
+								</div>
+								<select class="form-control" asp-for="StoreId">
+									<option value="1">Category 1</option>
+									<option value="2">Category 2</option>
+									<option value="2">Category 3</option>
+								</select>
+							</div>
+						</div>
+				
+
+
+						<div class="col-md-12 form-group">
+							<button type="submit" value="submit" class="button button-register w-100">Register</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+
+
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

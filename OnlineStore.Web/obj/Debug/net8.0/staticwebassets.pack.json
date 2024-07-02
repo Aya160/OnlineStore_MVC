@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\OnlineStore.Web.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\UploadedFiles\\Martin(marketting).jpg",
+      "PackagePath": "staticwebassets\\UploadedFiles\\Martin(marketting).jpg"
+    },
+    {
       "Id": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\UploadedFiles\\marketting.jpg",
       "PackagePath": "staticwebassets\\UploadedFiles\\marketting.jpg"
     },
     {
       "Id": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\UploadedFiles\\marketting1.jpg",
       "PackagePath": "staticwebassets\\UploadedFiles\\marketting1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\UploadedFiles\\novel1.jpg",
+      "PackagePath": "staticwebassets\\UploadedFiles\\novel1.jpg"
     },
     {
       "Id": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\css\\main.css",

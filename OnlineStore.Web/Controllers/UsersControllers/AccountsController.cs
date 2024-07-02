@@ -150,7 +150,7 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                         await addressRepo.CreateAsync(address);
                         await userManager.AddToRoleAsync(appUser, "Admin");
                         await signInManager.SignInAsync(appUser, true);
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "Adminstrators");
                     }
                     foreach (var item in user.Errors)
                     {
@@ -162,13 +162,13 @@ namespace OnlineStore.Web.Controllers.UsersControllers
             }
             return View(userData);
         }
-
-        [HttpGet]
+		[Authorize(Roles = "Admin")]
+		[HttpGet]
         public IActionResult CreateVendor()
         {
             return View();
         }
-        [Authorize(Roles ="Admin")]
+        //[Authorize(Roles ="Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateVendor(RegisterViewModel userData)
@@ -211,7 +211,7 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                         await addressRepo.CreateAsync(address);
                         await userManager.AddToRoleAsync(appUser, "Vendor");
                         await signInManager.SignInAsync(appUser, true);
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "Venddors");
                     }
                     foreach (var item in user.Errors)
                     {

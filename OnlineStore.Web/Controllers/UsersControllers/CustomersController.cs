@@ -15,7 +15,7 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         }
         public ActionResult Index()
         {
-            var customers = customerRepo.GetAllAsync().Result;
+            var customers = customerRepo.GetAllCustomersAsync();
             return View(customers);
         }
         public ActionResult Details(int id)

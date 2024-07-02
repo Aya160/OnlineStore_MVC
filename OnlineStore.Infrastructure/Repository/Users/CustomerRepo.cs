@@ -15,8 +15,11 @@ namespace OnlineStore.Infrastructure.Repository.Users
         }
         public async Task<IEnumerable<T>> GetAllAsync() => (IEnumerable<T>)await context.Customers.Include(c => c.Orders).ToListAsync();
 
-        // Where is the Table between Orders & Customers, isn't the relation M to M
-        public async Task<T> GetById(int id) => (T)await context
+		// Where is the Table between Orders & Customers, isn't the relation M to M
+
+		public IEnumerable<ApplicationUser> GetAllCustomersAsync() =>
+		   context.Users.Where(u => u.Salary== 0 && u.SSN == string.Empty).ToList();
+		public async Task<T> GetById(int id) => (T)await context
             .Customers.FindAsync(id); //------------------------ Include()
         public async Task CreateAsync(T entity)
         {
