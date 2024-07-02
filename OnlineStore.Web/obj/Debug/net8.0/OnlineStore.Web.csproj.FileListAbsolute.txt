@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Web\obj\Debug\net8.0\OnlineStore.Web.csproj.AssemblyReference.cache
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Web\obj\Debug\net8.0\OnlineStore.Web.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Web\obj\Debug\net8.0\OnlineStore.Web.AssemblyInfoInputs.cache
@@ -268,3 +269,5 @@ C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Web\obj\Debug\
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Web\obj\Debug\net8.0\OnlineStore.Web.pdb
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Web\obj\Debug\net8.0\OnlineStore.Web.genruntimeconfig.cache
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Web\obj\Debug\net8.0\ref\OnlineStore.Web.dll
+=======
+>>>>>>> d9328ed83a9907070d0c54b04c9dfc87682ff00d

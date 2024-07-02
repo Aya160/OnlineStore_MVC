@@ -36,23 +36,14 @@
                                    aria-expanded="false">Shop</a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a class="nav-link" asp-controller="Category" asp-action="Index">Shop Category</a></li>
-<<<<<<< HEAD
-                                    <li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="tabel-confirm.html">View</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="invoice.html">Invoice</a></li>
-=======
                                     <li class="nav-item"><a class="nav-link" asp-controller="Products" asp-action="Index">Product</a></li>
                                     <li class="nav-item"><a class="nav-link" asp-controller="DeliverCarts" asp-action="Index">Shopping Cart</a></li>
                                     <li class="nav-item"><a class="nav-link" asp-controller="DeliverCarts" asp-action="Index">Confirmation</a></li>
                                     <li class="nav-item"><a class="nav-link" asp-controller="InvoiceOrderLine" asp-action="Index">View</a></li>
                                     <li class="nav-item"><a class="nav-link" asp-controller="InvoiceLines" asp-action="Index">Invoice</a></li>
->>>>>>> d9328ed83a9907070d0c54b04c9dfc87682ff00d
                                 </ul>
                             </li>
-                            
+
                             <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                    aria-expanded="false">Pages</a>
@@ -82,16 +73,11 @@
             </nav>
         </div>
     </header>
-    <!--================ End Header Menu Area =================-->
-
-
     <div class="container-flauid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <!--================ Start footer Area  =================-->
     <footer class="footer">
         <div class="footer-area">
             <div class="container">
@@ -180,18 +166,5 @@
             </div>
         </div>
     </footer>
-    <!--================ End footer Area  =================-->
-
-
-
-    <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
-    <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="vendors/skrollr.min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
-    <script src="vendors/jquery.ajaxchimp.min.js"></script>
-    <script src="vendors/mail-script.js"></script>
-    <script src="js/main.js"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

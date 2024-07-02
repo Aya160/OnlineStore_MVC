@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Infrastructure\bin\Debug\net8.0\OnlineStore.Infrastructure.deps.json
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Infrastructure\bin\Debug\net8.0\OnlineStore.Infrastructure.runtimeconfig.json
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Infrastructure\bin\Debug\net8.0\OnlineStore.Infrastructure.dll
@@ -16,3 +17,5 @@ C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Infrastructure
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Infrastructure\obj\Debug\net8.0\OnlineStore.Infrastructure.pdb
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Infrastructure\obj\Debug\net8.0\OnlineStore.Infrastructure.genruntimeconfig.cache
 C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Infrastructure\obj\Debug\net8.0\ref\OnlineStore.Infrastructure.dll
+=======
+>>>>>>> d9328ed83a9907070d0c54b04c9dfc87682ff00d
