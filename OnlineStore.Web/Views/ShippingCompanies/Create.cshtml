@@ -1,6 +1,6 @@
 ﻿@model OnlineStore.Core.Entities.Shipping.ShippingCompanies
 
-<div class="row">
+<@* div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -30,7 +30,51 @@
             </div>
         </form>
     </div>
-</div>
+</div> *@
+
+<section class="login_box_area section-margin">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<div class="hover">
+							<h4>Shipping Companies</h4>
+							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<form asp-action="Create">
+					<div class="login_form_inner register_form_inner">
+						<h3> Add Shipping</h3>
+						<form class="row login_form" action="#/" id="register_form">
+							<div class="col-md-12 form-group">
+								<input asp-for="CompanyName" class="form-control" placeholder="Company Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Company Name'">
+								<span asp-validation-for="CompanyName" class="text-danger"></span>
+							</div>
+							<div class="col-md-12 form-group">
+								<input asp-for="CompanyNO" class="form-control" placeholder="CompanyNO" onfocus="this.placeholder = ''" onblur="this.placeholder = 'CompanyNO'">
+								<span asp-validation-for="CompanyNO" class="text-danger"></span>
+							</div>
+							 <div class="col-md-12 form-group">
+								<input asp-for="ContractStartDate" class="form-control" placeholder="Contract Start Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contract Start Date'">
+								<span asp-validation-for="ContractEndDate" class="text-danger"></span>
+								<span asp-validation-for="ContractStartDate" class="text-danger"></span>
+							 </div>
+							 <div class="col-md-12 form-group">
+								<input asp-for="ContractEndDate" class="form-control" placeholder="Contract End Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contract End Date'">
+							 </div>
+							<div class="col-md-12 form-group">
+								<button type="submit" value="submit" class="button button-register w-100">Add Shipping</button>
+							</div>
+						</form>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
 
 <div>
     <a asp-action="Index">Back to List</a>

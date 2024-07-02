@@ -1,4 +1,4 @@
-﻿@model OnlineStore.Core.Entities.StoreEntity.Category
+﻿@* @model OnlineStore.Core.Entities.StoreEntity.Category
 
 @{
     var SalesList = ViewBag.Sales as SelectList;
@@ -27,4 +27,53 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+ *@
+
+@model OnlineStore.Core.Entities.StoreEntity.Category
+
+@{
+	var SalesList = ViewBag.Sales as SelectList;
+}
+
+<section class="login_box_area section-margin">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="login_box_img">
+					<div class="hover">
+						<h4>Category</h4>
+						<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="login_form_inner">
+					<h3>Add Category</h3>
+						<div class="col-md-12 form-group">
+							<form asp-action="Create">
+							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+							<input asp-for="Name" class="form-control" placeholder="Category Name" onfocus="this.placeholder = ''"
+								   onblur="this.placeholder = 'Category Name'">
+							@* <input asp-for="Name" class="form-control" /> *@
+							<span asp-validation-for="Name" class="text-danger"></span>
+							<select asp-for="SaleId" asp-items="SalesList" class="form form-control">
+								<option value="0">Select Offer</option>
+							</select>
+							</form>
+						</div>
+						<div class="col-md-12 form-group">
+							<button type="submit" value="submit" class="button button-register w-100">Add Category</button>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
 }
