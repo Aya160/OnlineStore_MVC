@@ -898,9 +898,6 @@ namespace OnlineStore.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("AccountId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -908,10 +905,6 @@ namespace OnlineStore.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AccountId")
-                        .IsUnique()
-                        .HasFilter("[AccountId] IS NOT NULL");
 
                     b.ToTable("Administrators");
 
@@ -970,6 +963,9 @@ namespace OnlineStore.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
@@ -1038,9 +1034,6 @@ namespace OnlineStore.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("AccountId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
@@ -1048,10 +1041,6 @@ namespace OnlineStore.Infrastructure.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AccountId")
-                        .IsUnique()
-                        .HasFilter("[AccountId] IS NOT NULL");
 
                     b.ToTable("Customers");
 
@@ -1065,9 +1054,6 @@ namespace OnlineStore.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("AccountId")
-                        .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -1085,10 +1071,6 @@ namespace OnlineStore.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AccountId")
-                        .IsUnique()
-                        .HasFilter("[AccountId] IS NOT NULL");
 
                     b.HasIndex("StoreId");
 
@@ -1444,16 +1426,6 @@ namespace OnlineStore.Infrastructure.Migrations
                     b.Navigation("Address");
                 });
 
-            modelBuilder.Entity("OnlineStore.Core.Entities.Users.Administrator", b =>
-                {
-                    b.HasOne("OnlineStore.Core.Entities.Users.Account", "Account")
-                        .WithOne("Administrator")
-                        .HasForeignKey("OnlineStore.Core.Entities.Users.Administrator", "AccountId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("Account");
-                });
-
             modelBuilder.Entity("OnlineStore.Core.Entities.Users.AdministratorPermission", b =>
                 {
                     b.HasOne("OnlineStore.Core.Entities.Users.Administrator", "Administrator")
@@ -1464,29 +1436,12 @@ namespace OnlineStore.Infrastructure.Migrations
                     b.Navigation("Administrator");
                 });
 
-            modelBuilder.Entity("OnlineStore.Core.Entities.Users.Customer", b =>
-                {
-                    b.HasOne("OnlineStore.Core.Entities.Users.Account", "Account")
-                        .WithOne("Customer")
-                        .HasForeignKey("OnlineStore.Core.Entities.Users.Customer", "AccountId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("Account");
-                });
-
             modelBuilder.Entity("OnlineStore.Core.Entities.Users.Vendor", b =>
                 {
-                    b.HasOne("OnlineStore.Core.Entities.Users.Account", "Account")
-                        .WithOne("Vendor")
-                        .HasForeignKey("OnlineStore.Core.Entities.Users.Vendor", "AccountId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
                     b.HasOne("OnlineStore.Core.Entities.StoreEntity.Store", "Store")
                         .WithMany("Vendors")
                         .HasForeignKey("StoreId")
                         .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("Account");
 
                     b.Navigation("Store");
                 });
@@ -1569,15 +1524,6 @@ namespace OnlineStore.Infrastructure.Migrations
             modelBuilder.Entity("OnlineStore.Core.Entities.StoreEntity.StoreManager", b =>
                 {
                     b.Navigation("Permissions");
-                });
-
-            modelBuilder.Entity("OnlineStore.Core.Entities.Users.Account", b =>
-                {
-                    b.Navigation("Administrator");
-
-                    b.Navigation("Customer");
-
-                    b.Navigation("Vendor");
                 });
 
             modelBuilder.Entity("OnlineStore.Core.Entities.Users.Address", b =>

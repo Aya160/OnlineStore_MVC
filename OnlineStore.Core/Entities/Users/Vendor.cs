@@ -9,8 +9,6 @@ namespace OnlineStore.Core.Entities.Users
         public string Name { get; set; }
         public string SSN { get; set; }
         public decimal Salary { get; set; }
-        public int? AccountId { get; set; }
-        public Account Account { get; set; }
         // public int? ManagerId { get; set; }
         public StoreManager StoreManager { get; set; }
          public int? StoreId { get; set; }

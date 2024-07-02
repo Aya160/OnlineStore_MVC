@@ -10,8 +10,8 @@ namespace OnlineStore.Infrastructure.EntityConfigs.UsersCon
     {
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
-            builder.HasOne(c => c.Account).WithOne(a => a.Customer)
-                .HasForeignKey<Customer>(c => c.AccountId).OnDelete(DeleteBehavior.Restrict);
+            //builder.HasOne(c => c.Account).WithOne(a => a.Customer)
+            //    .HasForeignKey<Customer>(c => c.AccountId).OnDelete(DeleteBehavior.Restrict);
             builder.HasMany(c => c.Orders).WithOne(a => a.Customer);
         }
     }
