@@ -20,16 +20,19 @@ namespace OnlineStore.Infrastructure.EntityConfigs.General
         private readonly AdministratorRepo<Administrator> administratorRepo;
         private readonly StoreRepo<Store> storeRepo;
         private readonly VendorRepo<Vendor> vendorRepo;
+		private readonly OrderRepo<Order> orderRepo;
 
-        public SelectListHelper(ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo , AddressRepo<Address> addressRepo,
-            AdministratorRepo<Administrator> administratorRepo , StoreRepo<Store> storeRepo,VendorRepo<Vendor> vendorRepo) 
+		public SelectListHelper(ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo , AddressRepo<Address> addressRepo,
+            AdministratorRepo<Administrator> administratorRepo , StoreRepo<Store> storeRepo,VendorRepo<Vendor> vendorRepo ,
+            OrderRepo<Order> orderRepo) 
         {
             this.shippingCompaniesRepo = shippingCompaniesRepo;
             this.addressRepo = addressRepo;
             this.administratorRepo = administratorRepo;
             this.storeRepo = storeRepo;
             this.vendorRepo = vendorRepo;
-        }
+			this.orderRepo = orderRepo;
+		}
         public async Task<SelectList> GetCompaniesListAsync()
         {
             var companiesList = await shippingCompaniesRepo.GetAllAsync();
@@ -56,5 +59,10 @@ namespace OnlineStore.Infrastructure.EntityConfigs.General
             return new SelectList(vendorList, "Id", "Name");
         }
 
-    }
+		public async Task<SelectList> GetOrdersListAsync()
+		{
+			var orderList = await orderRepo.GetAllAsync();
+			return new SelectList(orderList, "Id", "Name");
+		}
+	}
 }

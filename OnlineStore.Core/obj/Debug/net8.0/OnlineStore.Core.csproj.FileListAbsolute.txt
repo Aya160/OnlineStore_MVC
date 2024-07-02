@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Core\bin\Debug\net8.0\OnlineStore.Core.deps.json
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Core\bin\Debug\net8.0\OnlineStore.Core.runtimeconfig.json
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Core\bin\Debug\net8.0\OnlineStore.Core.dll
@@ -14,20 +13,3 @@ C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Core\obj\Debug\net8.0\refin
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Core\obj\Debug\net8.0\OnlineStore.Core.pdb
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Core\obj\Debug\net8.0\OnlineStore.Core.genruntimeconfig.cache
 C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Core\obj\Debug\net8.0\ref\OnlineStore.Core.dll
-=======
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\bin\Debug\net8.0\OnlineStore.Core.deps.json
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\bin\Debug\net8.0\OnlineStore.Core.runtimeconfig.json
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\bin\Debug\net8.0\OnlineStore.Core.dll
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\bin\Debug\net8.0\OnlineStore.Core.pdb
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\obj\Debug\net8.0\OnlineStore.Core.csproj.AssemblyReference.cache
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\obj\Debug\net8.0\OnlineStore.Core.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\obj\Debug\net8.0\OnlineStore.Core.AssemblyInfoInputs.cache
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\obj\Debug\net8.0\OnlineStore.Core.AssemblyInfo.cs
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\obj\Debug\net8.0\OnlineStore.Core.csproj.CoreCompileInputs.cache
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\obj\Debug\net8.0\OnlineStore.Core.sourcelink.json
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\obj\Debug\net8.0\OnlineStore.Core.dll
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\obj\Debug\net8.0\refint\OnlineStore.Core.dll
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\obj\Debug\net8.0\OnlineStore.Core.pdb
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\obj\Debug\net8.0\OnlineStore.Core.genruntimeconfig.cache
-C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Core\obj\Debug\net8.0\ref\OnlineStore.Core.dll
->>>>>>> 2184066ea343833cee554ac95f358739d378c4a5

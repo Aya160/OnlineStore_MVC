@@ -10,14 +10,10 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
     {
         private readonly DeliverCartRepo<DeliverCart> deliverCartRepo;
         private readonly SelectListHelper selectListHelper;
-
-        public ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo { get; }
-
-        public DeliverCartsController(DeliverCartRepo<DeliverCart> deliverCartRepo, ShippingCompaniesRepo<ShippingCompanies> shippingCompaniesRepo,
+        public DeliverCartsController(DeliverCartRepo<DeliverCart> deliverCartRepo,
            SelectListHelper selectListHelper)
         {
             this.deliverCartRepo = deliverCartRepo;
-            this.shippingCompaniesRepo = shippingCompaniesRepo;
             this.selectListHelper = selectListHelper;
         }
         // GET: DeliverCartsController
