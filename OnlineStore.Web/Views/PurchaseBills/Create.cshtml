@@ -1,6 +1,6 @@
 ﻿@model OnlineStore.Core.Entities.AppAccounting.PurchaseBill
 
-<div class="row">
+@* <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -39,7 +39,70 @@
             </div>
         </form>
     </div>
-</div>
+</div> *@
+
+<section class="login_box_area section-margin">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="login_box_img">
+					<div class="hover">
+						<h4>Product</h4>
+						<p>
+							There are advances being made in science and technology everyday, and a good example of
+							this is the
+						</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="login_form_inner register_form_inner">
+					<h3>Add Product</h3>
+					<form class="row login_form" asp-action="Create" enctype="multipart/form-data" id="register_form">
+						<div class="col-md-12 form-group">
+							<input asp-for="InvoiceName" type="text" class="form-control"
+								   placeholder="Invoice Name" onfocus="this.placeholder = ''"
+								   onblur="this.placeholder = 'Invoice Name'">
+							<span asp-validation-for="InvoiceName" class="text-danger"></span>
+
+						</div>
+
+						<div class="col-md-12 form-group">
+							<input asp-for="CashPayment" type="text" class="form-control" placeholder="Cash Payment"
+								   onfocus="this.placeholder = ''" onblur="this.placeholder = 'Cash Payment'">
+							<span asp-validation-for="CashPayment" class="text-danger"></span>
+
+						</div>
+
+						<div class="col-md-12 form-group">
+							<input asp-for="CreditPayment" type="text" class="form-control" placeholder="Credit Payment"
+								   onfocus="this.placeholder = ''" onblur="this.placeholder = 'Credit Payment'">
+							<span asp-validation-for="CreditPayment" class="text-danger"></span>
+
+						</div>
+
+						<div class="col-md-12 form-group">
+							<input asp-for="CreateDate" type="text" class="form-control" placeholder="Create Date"
+								   onfocus="this.placeholder = ''" onblur="this.placeholder = 'Create Date'">
+							<span asp-validation-for="CreateDate" class="text-danger"></span>
+
+						</div>
+						</form>
+						</div>
+						
+
+						<div class="col-md-12 form-group">
+							<button type="submit" value="Create" class="button button-register w-100">
+								Add
+								Proudact
+							</button>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <div>
     <a asp-action="Index">Back to List</a>

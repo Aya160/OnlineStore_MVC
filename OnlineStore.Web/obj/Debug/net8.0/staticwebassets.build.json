@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "RQyHPrZtCNADemmLtcg7l6sH68mrcV/WXPMnD7MDJwY=",
-=======
-  "Hash": "i8Cl/rQM1Tq5KYv9h1IRxXfjgtYJTXEM7KBbqSdIaD4=",
->>>>>>> 67a43b707a0d66f4c0ea0777f2c369a77fd3a722
+  "Hash": "cV/uOwxMqNiO9ktphMu3/La5cMMAt/J9RAmI1VtoruI=",
   "Source": "OnlineStore.Web",
   "BasePath": "_content/OnlineStore.Web",
   "Mode": "Default",
@@ -3745,11 +3741,10 @@
       "OriginalItemSpec": "wwwroot\\UploadedFiles\\marketting1.jpg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\UploadedFiles\\Martin(marketting).jpg",
+      "Identity": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\wwwroot\\UploadedFiles\\Martin(marketting).jpg",
       "SourceId": "OnlineStore.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\wwwroot\\",
       "BasePath": "_content/OnlineStore.Web",
       "RelativePath": "UploadedFiles/Martin(marketting).jpg",
       "AssetKind": "All",
@@ -3765,10 +3760,10 @@
       "OriginalItemSpec": "wwwroot\\UploadedFiles\\Martin(marketting).jpg"
     },
     {
-      "Identity": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\UploadedFiles\\novel1.jpg",
+      "Identity": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\wwwroot\\UploadedFiles\\novel1.jpg",
       "SourceId": "OnlineStore.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\wwwroot\\",
       "BasePath": "_content/OnlineStore.Web",
       "RelativePath": "UploadedFiles/novel1.jpg",
       "AssetKind": "All",
@@ -3784,10 +3779,7 @@
       "OriginalItemSpec": "wwwroot\\UploadedFiles\\novel1.jpg"
     },
     {
-      "Identity": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\vendors\\bootstrap\\bootstrap.bundle.min.js",
-=======
       "Identity": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\wwwroot\\vendors\\bootstrap\\bootstrap.bundle.min.js",
->>>>>>> 67a43b707a0d66f4c0ea0777f2c369a77fd3a722
       "SourceId": "OnlineStore.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\wwwroot\\",

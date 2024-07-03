@@ -53,14 +53,18 @@
 					<h3>Add Category</h3>
 						<div class="col-md-12 form-group">
 							<form asp-action="Create">
+							<form class="row login_form" asp-action="Create" enctype="multipart/form-data" id="register_form">
 							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-							<input asp-for="Name" class="form-control" placeholder="Category Name" onfocus="this.placeholder = ''"
-								   onblur="this.placeholder = 'Category Name'">
-							@* <input asp-for="Name" class="form-control" /> *@
+							<div class="col-md-12 form-group">
+								<input asp-for="Name" type="text" class="form-control" placeholder="Category Name" 
+								onfocus="this.placeholder = ''" onblur="this.placeholder = 'Category Name'">
 							<span asp-validation-for="Name" class="text-danger"></span>
+							</div>
+
 							<select asp-for="SaleId" asp-items="SalesList" class="form form-control">
 								<option value="0">Select Offer</option>
 							</select>
+							</form>
 							</form>
 						</div>
 						<div class="col-md-12 form-group">

@@ -1,6 +1,6 @@
 ﻿@model OnlineStore.Core.Entities.AppAccounting.DetailsInvoice
 
-<div class="row">
+@* <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -30,7 +30,48 @@
             </div>
         </form>
     </div>
-</div>
+</div> *@
+
+<section class="login_box_area section-margin">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="login_box_img">
+					<div class="hover">
+						<h4>Details Invoice</h4>
+						<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<form asp-action="Create">
+					<div class="login_form_inner register_form_inner">
+						<h3>Add Details Invoice</h3>
+						<form class="row login_form" action="#/" id="register_form">
+							<div class="col-md-12 form-group">
+								<input asp-for="PayCash" class="form-control" placeholder="Pay Cash" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Pay Cash'">
+								<span asp-validation-for="PayCash" class="text-danger"></span>
+							</div>
+							<div class="col-md-12 form-group">
+								<input asp-for="Postpaid" class="form-control" placeholder="Post paid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Post paid'">
+								<span asp-validation-for="Postpaid" class="text-danger"></span>
+							</div>
+							<div class="col-md-12 form-group">
+								<input asp-for="DueDate" class="form-control" placeholder="Due Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Due Date'">
+								<span asp-validation-for="DueDate" class="text-danger"></span>
+							</div>   
+							<div class="col-md-12 form-group">
+								<button type="submit" value="submit" class="button button-register w-100">Add Details Invoice</button>
+							</div>
+
+						</form>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
 
 <div>
     <a asp-action="Index">Back to List</a>

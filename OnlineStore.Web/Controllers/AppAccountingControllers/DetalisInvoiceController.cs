@@ -11,11 +11,14 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
     {
         private readonly DetailsInvoiceRepo<DetailsInvoice> detailsInvoiceRepo;
         private readonly SupplierRepo<Supplier> supplierRepo;
+        private readonly PurchaseBillRepo<PurchaseBill> purchaseBillRepo;
 
-        public DetalisInvoiceController(DetailsInvoiceRepo<DetailsInvoice> detailsInvoiceRepo, SupplierRepo<Supplier> supplierRepo)
+        public DetalisInvoiceController(DetailsInvoiceRepo<DetailsInvoice> detailsInvoiceRepo, SupplierRepo<Supplier> supplierRepo,
+            PurchaseBillRepo<PurchaseBill> purchaseBillRepo)
         {
             this.detailsInvoiceRepo = detailsInvoiceRepo;
             this.supplierRepo = supplierRepo;
+            this.purchaseBillRepo = purchaseBillRepo;
         }
         // GET: DetalisInvoiceController
         public ActionResult Index()
@@ -35,6 +38,9 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
             var supplierList = await supplierRepo.GetAllAsync();
             SelectList supplierNameList = new SelectList(supplierList, "Id", "SupplierName");
             ViewBag.Suppliers = supplierNameList;
+            var purchaseBillList = await purchaseBillRepo.GetAllAsync();
+            SelectList purchaseBillNameList = new SelectList(purchaseBillList, "Id", "SupplierName");
+            ViewBag.Suppliers = purchaseBillNameList;
             return View();
         }
 
