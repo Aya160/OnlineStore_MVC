@@ -187,14 +187,15 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                     Gender = userData.Gender,
                     ImageUrl = userData.Image.FileName,
                 };
-                imagesController.UploadImage(userData.Image);
+                
                 var existsEmail = await userManager.FindByEmailAsync(userData.EmailAddress);
                 if (existsEmail is null)
                 {
                     var user = await userManager.CreateAsync(appUser, userData.Password);
                     if (user.Succeeded)
                     {
-                        var address = new Address
+						imagesController.UploadImage(userData.Image);
+						var address = new Address
                         {
                             StreetAdderss = userData.StreetAddress,
                             State = userData.State,
@@ -224,5 +225,55 @@ namespace OnlineStore.Web.Controllers.UsersControllers
             return View(userData);
         }
 
-    }
+		public async Task<IActionResult> EditProfile()
+		{
+			// Retrieve the current user
+			var user = await userManager.GetUserAsync(User);
+
+            // Map the user data to a EditProfileViewModel
+            var viewModel = new EditProfileViewModel
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                PhoneNumber = user.PhoneNumber,
+                Profile = user.ImageUrl
+			};
+
+			return View(viewModel);
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> EditProfile(EditProfileViewModel viewModel)
+		{
+			if (ModelState.IsValid)
+			{
+                var user = await userManager.GetUserAsync(User);
+
+				user.FirstName = viewModel.FirstName;
+				user.LastName = viewModel.LastName;
+				user.PhoneNumber = viewModel.PhoneNumber;
+                user.ImageUrl = viewModel.ProfileImage.FileName;
+                if (viewModel.ProfileImage is not null ||  
+                    (user.ImageUrl != viewModel.ProfileImage.FileName))
+                {
+					imagesController.UploadImage(viewModel.ProfileImage);
+				}
+
+				var result = await userManager.UpdateAsync(user);
+				if (result.Succeeded)
+				{
+					return RedirectToAction("ProfileUpdated");
+				}
+				else
+				{
+					foreach (var error in result.Errors)
+					{
+						ModelState.AddModelError("", error.Description);
+					}
+				}
+			}
+			return View(viewModel);
+		}
+
+	}
 }

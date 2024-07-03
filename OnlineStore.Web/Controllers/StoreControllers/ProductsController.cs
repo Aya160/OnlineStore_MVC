@@ -53,7 +53,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 {
                     Name = productViewModel.Name,
                     Price = productViewModel.Price,
-                    SaleId = productViewModel.SaleProductId,
+                    SaleId = productViewModel.SaleId,
                     CategoryId = productViewModel.CategoryId,
                     ImageUrl = productViewModel.Image.FileName,
                 };
@@ -71,6 +71,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             var salesList = await saleRepo.GetAllAsync();
             SelectList saleList = new SelectList(salesList, "Id", "Discount");
             ViewBag.Sales = saleList;
+
             var categoriesList = await categoryRepo.GetAllAsync();
             SelectList categoriesNameList = new SelectList(categoriesList, "Id", "Name");
             ViewBag.Categories = categoriesNameList;
@@ -80,7 +81,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             {
                 Name = product.Name,
                 Price = product.Price,
-                SaleProductId = product.SaleId,
+                SaleId = product.SaleId,
                 CategoryId = product.CategoryId,
                 ImageUrl = product.ImageUrl,
             };
