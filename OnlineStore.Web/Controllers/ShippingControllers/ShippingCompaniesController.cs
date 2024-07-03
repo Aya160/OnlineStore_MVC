@@ -49,11 +49,13 @@ namespace OnlineStore.Web.Controllers.ShippingControllers
         {
             try
             {
-                var oldCompanies = shippingCompaniesRepo.GetById(id).Result;
+                var oldCompanies =  shippingCompaniesRepo.GetById(id).Result;
                 oldCompanies.CompanyName = shippingCompanies.CompanyName;
-                oldCompanies.CompanyName = shippingCompanies.CompanyNO;
+                oldCompanies.CompanyNO = shippingCompanies.CompanyNO;
                 oldCompanies.ContractStartDate = shippingCompanies.ContractStartDate;
                 oldCompanies.ContractEndDate = shippingCompanies.ContractEndDate;
+
+                await shippingCompaniesRepo.UpdateAsync(id, oldCompanies);
                 return RedirectToAction(nameof(Index));
             }
             catch

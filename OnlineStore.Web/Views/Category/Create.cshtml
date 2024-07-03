@@ -54,13 +54,23 @@
 						<div class="col-md-12 form-group">
 							<form asp-action="Create">
 							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-							<input asp-for="Name" class="form-control" placeholder="Category Name" onfocus="this.placeholder = ''"
-								   onblur="this.placeholder = 'Category Name'">
-							@* <input asp-for="Name" class="form-control" /> *@
+							<div class="col-md-12 form-group">
+								<input asp-for="Name" type="text" class="form-control" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'">
+								<span asp-validation-for="Name" class="text-danger"></span>
+							</div>
 							<span asp-validation-for="Name" class="text-danger"></span>
-							<select asp-for="SaleId" asp-items="SalesList" class="form form-control">
-								<option value="0">Select Offer</option>
-							</select>
+							
+							<div class="col-md-12 form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label asp-for="SaleId" class="input-group-text">Category</label>
+									</div>
+									<select class="form-control" asp-for="SaleId" asp-items="SalesList">
+										<option value="0">Category 1</option>
+
+									</select>
+								</div>
+							</div>
 							</form>
 						</div>
 						<div class="col-md-12 form-group">
