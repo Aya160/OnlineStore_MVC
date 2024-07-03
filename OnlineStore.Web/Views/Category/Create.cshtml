@@ -56,6 +56,24 @@
 							<form class="row login_form" asp-action="Create" enctype="multipart/form-data" id="register_form">
 							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 							<div class="col-md-12 form-group">
+<<<<<<< HEAD
+								<input asp-for="Name" type="text" class="form-control" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'">
+								<span asp-validation-for="Name" class="text-danger"></span>
+							</div>
+							<span asp-validation-for="Name" class="text-danger"></span>
+							
+							<div class="col-md-12 form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label asp-for="SaleId" class="input-group-text">Category</label>
+									</div>
+									<select class="form-control" asp-for="SaleId" asp-items="SalesList">
+										<option value="0">Category 1</option>
+
+									</select>
+								</div>
+							</div>
+=======
 								<input asp-for="Name" type="text" class="form-control" placeholder="Category Name" 
 								onfocus="this.placeholder = ''" onblur="this.placeholder = 'Category Name'">
 							<span asp-validation-for="Name" class="text-danger"></span>
@@ -64,6 +82,7 @@
 							<select asp-for="SaleId" asp-items="SalesList" class="form form-control">
 								<option value="0">Select Offer</option>
 							</select>
+>>>>>>> 4433f0f3a435203f7ae011851dafe63b6a86ad2d
 							</form>
 							</form>
 						</div>

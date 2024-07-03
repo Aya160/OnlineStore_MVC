@@ -7,8 +7,6 @@ using OnlineStore.Infrastructure.Repository.AppAccouting;
 using OnlineStore.Infrastructure.Repository.Shipping;
 using OnlineStore.Infrastructure.Repository.StoreEntity;
 using OnlineStore.Infrastructure.Repository.Users;
-using OnlineStore.Web.Controllers.UsersControllers;
-using System;
 namespace OnlineStore.Web
 {
     public class Program
