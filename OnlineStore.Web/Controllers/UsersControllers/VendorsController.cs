@@ -18,7 +18,8 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         }
         public ActionResult Index()
         {
-            var vendors = vendorRepo.GetAllAsync().Result;
+
+            var vendors = vendorRepo.GetAllVendorsAsync();
             return View(vendors);
         }
         public ActionResult Details(int id)

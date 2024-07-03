@@ -11,7 +11,7 @@ namespace OnlineStore.Web.ViewModels
         public IFormFile Image { get; set; }
         public int? CategoryId { get; set; }
         public Category Category { get; set; }
-        public int? SaleProductId { get; set; }
-        public SaleProduct SaleProduct { get; set; }
+        public int? SaleId { get; set; }
+        public Sale Sale { get; set; }
     }
 }

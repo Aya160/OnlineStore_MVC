@@ -15,7 +15,8 @@ namespace OnlineStore.Infrastructure.Repository.Users
             context = _context;
         }
         public async Task<IEnumerable<T>> GetAllAsync() => (IEnumerable<T>)await context.Vendors.Include(v => v.StoreManager).ToListAsync();
-
+        public IEnumerable<ApplicationUser> GetAllVendorsAsync() =>
+           context.Users.Where(u => u.Salary != 0 && u.SSN == string.Empty).ToList();
         public async Task<T> GetById(int id) => (T)await context.Vendors.Include(v => v.StoreManager).FirstOrDefaultAsync(v => v.Id == id);
         public async Task CreateAsync(T entity)
         {

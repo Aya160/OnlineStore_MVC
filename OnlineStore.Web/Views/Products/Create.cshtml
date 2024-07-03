@@ -1,50 +1,89 @@
 ﻿@model OnlineStore.Web.ViewModels.ProductViewModel
 
 @{
-    ViewData["Title"] = "Create";
+	var SalesList = ViewBag.Sales as SelectList;
+	var CategoriesList = ViewBag.Categories as SelectList;
 }
 
-<h1>Create</h1>
 
-<h4>ProductViewModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Image" class="control-label"></label>
-                <input asp-for="Image" type="file" class="form-control" />
-                <span asp-validation-for="ImageUrl" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <input asp-for="CategoryId" class="form-control" />
-                <span asp-validation-for="CategoryId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SaleProductId" class="control-label"></label>
-                <input asp-for="SaleProductId" class="form-control" />
-                <span asp-validation-for="SaleProductId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+<section class="login_box_area section-margin">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="login_box_img">
+					<div class="hover">
+						<h4>Product</h4>
+						<p>
+							There are advances being made in science and technology everyday, and a good example of
+							this is the
+						</p>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="login_form_inner register_form_inner">
+					<h3>Add Product</h3>
+					<form class="row login_form" asp-action="Create" enctype="multipart/form-data" id="register_form">
+						<div class="col-md-12 form-group">
+							<input asp-for="Name" type="text" class="form-control"
+								   placeholder="Product Name" onfocus="this.placeholder = ''"
+								   onblur="this.placeholder = 'Product Name'">
+							<span asp-validation-for="Name" class="text-danger"></span>
+
+						</div>
+						
+						<div class="col-md-12 form-group">
+							<input asp-for="Price" type="text" class="form-control" placeholder="Price"
+								   onfocus="this.placeholder = ''" onblur="this.placeholder = 'Price'">
+							<span asp-validation-for="Price" class="text-danger"></span>
+
+						</div>
+
+
+						<div class="col-md-12 form-group">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<label asp-for="SaleId" class="input-group-text">Sale</label>
+								</div>
+								<select class="form-control" asp-for="SaleId" asp-items="SalesList">
+									<option value="0">Category 1</option>
+
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 form-group">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<label asp-for="CategoryId" class="input-group-text">Category</label>
+								</div>
+								<select class="form-control" asp-for="CategoryId" asp-items="CategoriesList">
+									<option value="0">Category 1</option>
+
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 form-group">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<label class="input-group-text" asp-for="Image">Images</label>
+									<input type="file" asp-for="Image">
+									<div id="preview-images"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12 form-group">
+							<button type="submit" value="Create" class="button button-register w-100">
+								Add
+								Proudact
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 

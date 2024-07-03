@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\",
+=======
   "WorkspaceRootPath": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\",
+<<<<<<< HEAD
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\rtc\\desktop\\mvc\\onlinestore_mvc\\onlinestore.web\\views\\detalisinvoice\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -57,6 +61,16 @@
     {
       "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\rtc\\desktop\\mvc\\onlinestore_mvc\\onlinestore.web\\views\\administratorpermissions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\views\\administratorpermissions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+<<<<<<< HEAD
+  "Documents": [],
+=======
+>>>>>>> a97f95bc4a22ae6ada68b7810f91fe9b62550f01
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|c:\\users\\ramad\\desktop\\graduation project\\onlinestore\\onlinestore.web\\controllers\\userscontrollers\\administratorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8384C8EF-74A0-4C01-B84A-AB76B9680003}|OnlineStore.Web\\OnlineStore.Web.csproj|solutionrelative:onlinestore.web\\controllers\\userscontrollers\\administratorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> ba33e956a4e75996f2fb980974080f966778f516
     }
   ],
   "DocumentGroupContainers": [
@@ -66,6 +80,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 8,
           "Children": [
             {
@@ -163,10 +178,26 @@
               "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T22:42:40.272Z"
+=======
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+>>>>>>> ba33e956a4e75996f2fb980974080f966778f516
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\Views\\DetalisInvoice\\Create.cshtml",
               "RelativeDocumentMoniker": "OnlineStore.Web\\Views\\DetalisInvoice\\Create.cshtml",
@@ -236,6 +267,31 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-02T21:49:17.679Z"
+=======
+              "Title": "AdministratorsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorsController.cs",
+              "RelativeDocumentMoniker": "OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorsController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorsController.cs",
+              "RelativeToolTip": "OnlineStore.Web\\Controllers\\UsersControllers\\AdministratorsController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBIAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T20:23:21.6Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 435,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+>>>>>>> ba33e956a4e75996f2fb980974080f966778f516
             }
           ]
         }

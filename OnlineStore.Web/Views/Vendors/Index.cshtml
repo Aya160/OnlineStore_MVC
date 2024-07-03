@@ -1,5 +1,7 @@
-﻿@model IEnumerable<OnlineStore.Core.Entities.Users.Vendor>
-
+﻿@model IEnumerable<OnlineStore.Core.Entities.Users.ApplicationUser>
+<p>
+    <a asp-controller="Accounts" asp-action="CreateVendor">Create New</a>
+</p>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -7,18 +9,15 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.UserName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SSN)
+                @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Salary)
             </th>
 
-            <th>
-                @Html.DisplayNameFor(model => model.StoreId)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -26,13 +25,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.UserName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SSN)
+                    @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Salary)
+                   $ @Html.DisplayFor(modelItem => item.Salary)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
