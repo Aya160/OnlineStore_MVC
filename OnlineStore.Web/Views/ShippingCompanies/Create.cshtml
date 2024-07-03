@@ -48,7 +48,7 @@
 					<form asp-action="Create">
 					<div class="login_form_inner register_form_inner">
 						<h3> Add Shipping</h3>
-						<form class="row login_form" action="#/" id="register_form">
+						<form class="row login_form" asp-action="Create" id="register_form">
 							<div class="col-md-12 form-group">
 								<input asp-for="CompanyName" class="form-control" placeholder="Company Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Company Name'">
 								<span asp-validation-for="CompanyName" class="text-danger"></span>

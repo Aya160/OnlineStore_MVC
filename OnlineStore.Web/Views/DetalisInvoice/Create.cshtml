@@ -1,5 +1,11 @@
 ﻿@model OnlineStore.Core.Entities.AppAccounting.DetailsInvoice
 
+@{
+	var InvoiceList = ViewBag.Invoice as SelectList;
+	var SupplierList = ViewBag.Suppliers as SelectList;
+}
+
+
 @* <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -64,7 +70,28 @@
 							<div class="col-md-12 form-group">
 								<button type="submit" value="submit" class="button button-register w-100">Add Details Invoice</button>
 							</div>
+							<div class="col-md-12 form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label asp-for="InvoiceId" class="input-group-text">Invoice</label>
+									</div>
+									<select class="form-control" asp-for="InvoiceId" asp-items="InvoiceList">
+										<option value="0"></option>
 
+									</select>
+								</div>
+							</div>
+							<div class="col-md-12 form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label asp-for="SupplierId" class="input-group-text">Supplier</label>
+									</div>
+									<select class="form-control" asp-for="SupplierId" asp-items="SupplierList">
+										<option value="0"></option>
+
+									</select>
+								</div>
+							</div>
 						</form>
 					</div>
 				</form>

@@ -39,8 +39,8 @@ namespace OnlineStore.Web.Controllers.AppAccountingControllers
             SelectList supplierNameList = new SelectList(supplierList, "Id", "SupplierName");
             ViewBag.Suppliers = supplierNameList;
             var purchaseBillList = await purchaseBillRepo.GetAllAsync();
-            SelectList purchaseBillNameList = new SelectList(purchaseBillList, "Id", "SupplierName");
-            ViewBag.Suppliers = purchaseBillNameList;
+            SelectList purchaseBillNameList = new SelectList(purchaseBillList, "Id", "InvoiceName");
+            ViewBag.Invoices = purchaseBillNameList;
             return View();
         }
 
