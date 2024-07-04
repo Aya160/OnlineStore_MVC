@@ -14,19 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineStore.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b99cc96c2e9b01b80a59cf17178cc3fc7edccc1")]
-=======
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4433f0f3a435203f7ae011851dafe63b6a86ad2d")]
-=======
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba33e956a4e75996f2fb980974080f966778f516")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e52537332ac845602e2d2049daac6d7912f0a3f9")]
->>>>>>> 4433f0f3a435203f7ae011851dafe63b6a86ad2d
->>>>>>> 5b99cc96c2e9b01b80a59cf17178cc3fc7edccc1
->>>>>>> 7c0a74ce74b8280efcc3623b6f2ec143330b690e
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c72a2bd58f25107b764e4678d066a283f1932556")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineStore.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineStore.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

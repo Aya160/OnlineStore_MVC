@@ -7,7 +7,7 @@ using OnlineStore.Web.ViewModels;
 
 namespace OnlineStore.Web.Controllers.UsersControllers
 {
-    public class AccountsController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,AddressRepo<Address> _addressRepo, CustomerRepo<Customer> _customerRepo, VendorRepo<Vendor> _vendorRepo,ProductImagesController _imagesController) : Controller
+    public class AccountsController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,AddressRepo<Address> _addressRepo, CustomerRepo<Customer> _customerRepo, VendorRepo<Vendor> _vendorRepo,ProductImagesController _imagesController, AdministratorRepo<Administrator> _administratorRepo) : Controller
     {
         private readonly UserManager<ApplicationUser> userManager = userManager;
         private readonly SignInManager<ApplicationUser> signInManager = signInManager;
@@ -15,6 +15,7 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         private readonly CustomerRepo<Customer> customerRepo = _customerRepo;
         private readonly VendorRepo<Vendor> vendorRepo = _vendorRepo;
         private readonly ProductImagesController imagesController = _imagesController;
+        private readonly AdministratorRepo<Administrator> administratorRepo = _administratorRepo;
 
         public IActionResult Register()
         {
@@ -147,6 +148,12 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                             Zip = userData.Zip,
                             UserId = appUser.Id
                         };
+                        var admin = new Administrator()
+                        {
+                            SSN = userData.SSN,
+                        };
+                        await administratorRepo.CreateAsync(admin);
+
                         await addressRepo.CreateAsync(address);
                         await userManager.AddToRoleAsync(appUser, "Admin");
                         await signInManager.SignInAsync(appUser, true);
@@ -209,6 +216,7 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                             Salary = userData.Salary,
                             StoreId = userData.StoreId,
                         };
+                        await vendorRepo.CreateAsync(vendor);
                         await addressRepo.CreateAsync(address);
                         await userManager.AddToRoleAsync(appUser, "Vendor");
                         await signInManager.SignInAsync(appUser, true);

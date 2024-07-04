@@ -25,6 +25,11 @@ namespace OnlineStore.Web.Controllers.StoreControllers
             var category = categoryRepo.GetById(id);
             return View(category.Result);
         }
+        public ActionResult GetList()
+        {
+            var category = categoryRepo.GetProductListByIdAsync();
+            return View(category);
+        }
         public async Task<ActionResult> CreateAsync()
         {
             var salesList = await saleRepo.GetAllAsync();
