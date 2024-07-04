@@ -1,36 +1,47 @@
 ﻿@model OnlineStore.Core.Entities.StoreEntity.Product
 
-<div>
 
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CategoryId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CategoryId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SaleId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SaleId)
-        </dd>
-       
-    </dl>
+
+
+<div class="product_image_area container">
+	<div class="container">
+		<div class="row s_product_inner">
+			<div class="col-lg-6">
+				<div class="owl-carousel owl-theme s_Product_carousel">
+					<div class="single-prd-item">
+						<img class="img-fluid"  src="/UploadedFiles/@Model.ImageUrl" alt="Product Image" width="100" height="100" />
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 offset-lg-1">
+				<div class="s_product_text">
+					<h3> @Html.DisplayFor(model => model.Name)</h3>
+					<h2>$ @Html.DisplayFor(model => model.Price)</h2>
+                    <h4>@Html.DisplayFor(model => model.Sale.Discount)% off</h4>
+					
+					<p>
+						Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for
+						something that can make your interior look awesome, and at the same time give you the pleasant warm feeling
+						during the winter.
+					</p>
+					<div class="product_count">
+						
+						<a class="button primary-btn" asp-action="Index" asp-controller="Products">Products</a>
+					</div>
+					<div class="card_area d-flex align-items-center">
+						<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
+						<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<a asp-action="Index" class="btn btn-dark">Back to List</a>
+				<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+			</div>
+
+		</div>
+	</div>
 </div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+

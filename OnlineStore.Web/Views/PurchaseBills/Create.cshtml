@@ -1,5 +1,9 @@
 ﻿@model OnlineStore.Core.Entities.AppAccounting.PurchaseBill
 
+@{
+	var Admins = ViewBag.Admins as SelectList;
+}
+
 @* <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -47,7 +51,7 @@
 			<div class="col-lg-6">
 				<div class="login_box_img">
 					<div class="hover">
-						<h4>Product</h4>
+						<h4>PurchaseBill</h4>
 						<p>
 							There are advances being made in science and technology everyday, and a good example of
 							this is the
@@ -58,7 +62,7 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="login_form_inner register_form_inner">
-					<h3>Add Product</h3>
+					<h3>Add PurchaseBill</h3>
 					<form class="row login_form" asp-action="Create" enctype="multipart/form-data" id="register_form">
 						<div class="col-md-12 form-group">
 							<input asp-for="InvoiceName" type="text" class="form-control"
@@ -87,6 +91,18 @@
 								   onfocus="this.placeholder = ''" onblur="this.placeholder = 'Create Date'">
 							<span asp-validation-for="CreateDate" class="text-danger"></span>
 
+						</div>
+
+						<div class="col-md-12 form-group">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<label asp-for="AdministratorId" class="input-group-text">Category</label>
+								</div>
+								<select class="form-control" asp-for="AdministratorId" asp-items="Admins">
+									<option value="0"></option>
+
+								</select>
+							</div>
 						</div>
 						</form>
 						</div>
