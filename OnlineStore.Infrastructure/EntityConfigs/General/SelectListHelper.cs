@@ -45,8 +45,9 @@ namespace OnlineStore.Infrastructure.EntityConfigs.General
         }
         public async Task<SelectList> GetAdministratorListAsync()
         {
-            var administratorList = await administratorRepo.GetAllAsync();
-            return new SelectList(administratorList, "Id", "SSN");
+            var administratorList =  administratorRepo.GetAllAdminsAsync();
+            var list = administratorList.Where( u => u.SSN != string.Empty ).ToList();
+            return new SelectList(list, "Id", "SSN");
         }
         public async Task<SelectList> GetStoresListAsync()
         {

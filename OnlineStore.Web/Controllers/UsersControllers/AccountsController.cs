@@ -26,7 +26,7 @@ namespace OnlineStore.Web.Controllers.UsersControllers
         {
             if (ModelState.IsValid)
             {
-                ApplicationUser appUser = new()
+                var appUser = new ApplicationUser()
                 {
                     UserName = userData.UserName,
                     PasswordHash = userData.Password,
@@ -60,9 +60,9 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                         };
                         
                        await customerRepo.CreateAsync(customer);
-                        await addressRepo.CreateAsync(address);
-                        await userManager.AddToRoleAsync(appUser, "Customer");
-                        await signInManager.SignInAsync(appUser, true);
+                       await addressRepo.CreateAsync(address);
+                       await userManager.AddToRoleAsync(appUser, "Customer");
+                       await signInManager.SignInAsync(appUser, true);
                         return RedirectToAction("Index", "Home");
                     }
                     foreach (var item in user.Errors)
@@ -150,7 +150,7 @@ namespace OnlineStore.Web.Controllers.UsersControllers
                         await addressRepo.CreateAsync(address);
                         await userManager.AddToRoleAsync(appUser, "Admin");
                         await signInManager.SignInAsync(appUser, true);
-                        return RedirectToAction("Index", "Adminstrators");
+                        return RedirectToAction("Index", "Administrators");
                     }
                     foreach (var item in user.Errors)
                     {

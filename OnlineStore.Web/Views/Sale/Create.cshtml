@@ -33,7 +33,7 @@
 				<form asp-action="Create"> 
 					<div class="login_form_inner">
 					<h3>Add Sale</h3>
-					<form class="row login_form" action="#/" id="contactForm">
+					<form class="row login_form" asp-action="Create" id="contactForm">
 						<div class="col-md-12 form-group">
 								<input asp-for="StartSale" class="form-control" placeholder="Start at" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start at'">
 								<span asp-validation-for="StartSale" class="text-danger"></span>

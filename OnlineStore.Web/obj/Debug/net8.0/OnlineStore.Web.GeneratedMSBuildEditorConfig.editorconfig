@@ -17,427 +17,427 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OnlineStore.Web
 build_property.RootNamespace = OnlineStore.Web
-build_property.ProjectDir = C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web\
+build_property.ProjectDir = C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Web\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\RTC\Desktop\MVC\OnlineStore_MVC\OnlineStore.Web
+build_property.MSBuildProjectDirectory = C:\Users\ramad\Desktop\Graduation Project\OnlineStore\OnlineStore.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Accounts/CreateAdmin.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Accounts/CreateAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQ3JlYXRlQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Accounts/CreateVendor.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Accounts/CreateVendor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQ3JlYXRlVmVuZG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Accounts/EditProfile.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Accounts/EditProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRWRpdFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Accounts/Login.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Accounts/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Accounts/Register.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Accounts/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Addresses/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Addresses/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc2VzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Addresses/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Addresses/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc2VzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Addresses/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Addresses/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc2VzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Addresses/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Addresses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc2VzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/AdministratorPermissions/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/AdministratorPermissions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvclBlcm1pc3Npb25zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/AdministratorPermissions/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/AdministratorPermissions/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvclBlcm1pc3Npb25zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/AdministratorPermissions/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/AdministratorPermissions/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvclBlcm1pc3Npb25zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/AdministratorPermissions/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/AdministratorPermissions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvclBlcm1pc3Npb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Administrators/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Administrators/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Administrators/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Administrators/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Administrators/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Administrators/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Administrators/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Administrators/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Category/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Category/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Category/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Category/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Category/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Customers/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Customers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Customers/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Customers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Customers/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Customers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Customers/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Customers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/DeliverCarts/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/DeliverCarts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVsaXZlckNhcnRzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/DeliverCarts/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/DeliverCarts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVsaXZlckNhcnRzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/DeliverCarts/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/DeliverCarts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVsaXZlckNhcnRzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/DeliverCarts/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/DeliverCarts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVsaXZlckNhcnRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/DetalisInvoice/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/DetalisInvoice/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxpc0ludm9pY2VcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/DetalisInvoice/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/DetalisInvoice/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxpc0ludm9pY2VcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/DetalisInvoice/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/DetalisInvoice/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxpc0ludm9pY2VcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/DetalisInvoice/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/DetalisInvoice/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxpc0ludm9pY2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Home/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Home/Privacy.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceLines/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceLines/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZUxpbmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceLines/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceLines/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZUxpbmVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceLines/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceLines/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZUxpbmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceLines/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceLines/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZUxpbmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrderLine/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrderLine/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyTGluZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrderLine/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrderLine/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyTGluZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrderLine/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrderLine/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyTGluZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrderLine/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrderLine/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyTGluZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrderOnlineLine/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrderOnlineLine/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyT25saW5lTGluZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrderOnlineLine/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrderOnlineLine/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyT25saW5lTGluZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrderOnlineLine/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrderOnlineLine/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyT25saW5lTGluZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrderOnlineLine/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrderOnlineLine/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyT25saW5lTGluZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrder/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrder/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrder/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrder/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrder/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrder/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/InvoiceOrder/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/InvoiceOrder/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZU9yZGVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Orders/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Orders/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Orders/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Orders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Orders/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Orders/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Orders/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ProductImages/Upload.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/ProductImages/Upload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEltYWdlc1xVcGxvYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ProductImages/UploadImage.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/ProductImages/UploadImage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEltYWdlc1xVcGxvYWRJbWFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Products/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Products/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Products/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Products/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Products/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Products/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/PurchaseBills/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/PurchaseBills/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VCaWxsc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/PurchaseBills/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/PurchaseBills/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VCaWxsc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/PurchaseBills/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/PurchaseBills/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VCaWxsc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/PurchaseBills/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/PurchaseBills/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VCaWxsc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Roles/CreateRole.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Roles/CreateRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlUm9sZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Sale/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Sale/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Sale/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Sale/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Sale/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Sale/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Sale/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Sale/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Shared/Error.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Shared/_HeaderFooterLayout.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Shared/_HeaderFooterLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXJGb290ZXJMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ShippingCompaniesPermissions/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/ShippingCompaniesPermissions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdDb21wYW5pZXNQZXJtaXNzaW9uc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ShippingCompaniesPermissions/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/ShippingCompaniesPermissions/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdDb21wYW5pZXNQZXJtaXNzaW9uc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ShippingCompaniesPermissions/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/ShippingCompaniesPermissions/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdDb21wYW5pZXNQZXJtaXNzaW9uc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ShippingCompaniesPermissions/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/ShippingCompaniesPermissions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdDb21wYW5pZXNQZXJtaXNzaW9uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ShippingCompanies/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/ShippingCompanies/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdDb21wYW5pZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ShippingCompanies/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/ShippingCompanies/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdDb21wYW5pZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ShippingCompanies/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/ShippingCompanies/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdDb21wYW5pZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/ShippingCompanies/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/ShippingCompanies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdDb21wYW5pZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/StoreManagerPermissions/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/StoreManagerPermissions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVNYW5hZ2VyUGVybWlzc2lvbnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/StoreManagerPermissions/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/StoreManagerPermissions/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVNYW5hZ2VyUGVybWlzc2lvbnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/StoreManagerPermissions/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/StoreManagerPermissions/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVNYW5hZ2VyUGVybWlzc2lvbnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/StoreManagerPermissions/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/StoreManagerPermissions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVNYW5hZ2VyUGVybWlzc2lvbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/StoreMangers/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/StoreMangers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVNYW5nZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/StoreMangers/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/StoreMangers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVNYW5nZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/StoreMangers/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/StoreMangers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVNYW5nZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/StoreMangers/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/StoreMangers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVNYW5nZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Stores/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Stores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Stores/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Stores/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Stores/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Stores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Stores/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Stores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Suppliers/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Suppliers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Suppliers/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Suppliers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Suppliers/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Suppliers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Suppliers/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Suppliers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Vendors/Create.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Vendors/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZG9yc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Vendors/Details.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Vendors/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZG9yc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Vendors/Edit.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Vendors/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZG9yc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Vendors/Index.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Vendors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZG9yc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/_ViewImports.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/_ViewStart.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/RTC/Desktop/MVC/OnlineStore_MVC/OnlineStore.Web/Views/Shared/_Layout.cshtml]
+[C:/Users/ramad/Desktop/Graduation Project/OnlineStore/OnlineStore.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-owlhy5b8ao

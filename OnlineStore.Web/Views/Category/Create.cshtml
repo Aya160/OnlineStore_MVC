@@ -52,11 +52,9 @@
 				<div class="login_form_inner">
 					<h3>Add Category</h3>
 						<div class="col-md-12 form-group">
-							<form asp-action="Create">
 							<form class="row login_form" asp-action="Create" enctype="multipart/form-data" id="register_form">
 							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 							<div class="col-md-12 form-group">
-<<<<<<< HEAD
 								<input asp-for="Name" type="text" class="form-control" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'">
 								<span asp-validation-for="Name" class="text-danger"></span>
 							</div>
@@ -69,26 +67,15 @@
 									</div>
 									<select class="form-control" asp-for="SaleId" asp-items="SalesList">
 										<option value="0">Category 1</option>
-
 									</select>
 								</div>
 							</div>
-=======
-								<input asp-for="Name" type="text" class="form-control" placeholder="Category Name" 
-								onfocus="this.placeholder = ''" onblur="this.placeholder = 'Category Name'">
-							<span asp-validation-for="Name" class="text-danger"></span>
-							</div>
-
-							<select asp-for="SaleId" asp-items="SalesList" class="form form-control">
-								<option value="0">Select Offer</option>
-							</select>
->>>>>>> 4433f0f3a435203f7ae011851dafe63b6a86ad2d
-							</form>
+                            <div class="col-md-12 form-group">
+                                <button type="submit" value="submit" class="button button-register w-100">Add Category</button>
+                            </div>
 							</form>
 						</div>
-						<div class="col-md-12 form-group">
-							<button type="submit" value="submit" class="button button-register w-100">Add Category</button>
-						</div>
+					
 				</div>
 			</div>
 		</div>

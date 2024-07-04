@@ -89,7 +89,7 @@ namespace OnlineStore.Web.Controllers.StoreControllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id, Product product)
+        public async Task<ActionResult> Edit(int id, ProductViewModel product)
         {
             try
             {
@@ -97,6 +97,9 @@ namespace OnlineStore.Web.Controllers.StoreControllers
                 oldProduct.SaleId = product.SaleId;
                 oldProduct.Name = product.Name;
                 oldProduct.Price = product.Price;
+                oldProduct.ImageUrl = product.Image.FileName;
+
+                    productImages.UploadImage(product.Image);
                 await productRepo.UpdateAsync(id, oldProduct);
                 return RedirectToAction(nameof(Index));
             }
