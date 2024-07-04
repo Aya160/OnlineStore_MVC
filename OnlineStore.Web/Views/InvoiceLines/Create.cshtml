@@ -1,6 +1,6 @@
 ﻿@model OnlineStore.Core.Entities.AppAccounting.InvoiceLine
 
-<div class="row">
+@* <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -31,6 +31,56 @@
         </form>
     </div>
 </div>
+ *@
+
+<section class="order_details section-margin--small">
+    <div class="container">
+        <div class="order_details_table">
+            <h2>Invoice lines</h2>
+            <div class="form-group col-lg-6 col-md-6 date">
+                <input type="Invoice Date" class="form-control" id="Invoice Date" placeholder="Invoice Date"
+                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'Invoice Date'">
+            </div>
+            <div class="table-responsive">
+                <table id="invoice-table" class="table invoice-table-tabel-border">
+                    <thead id="invoice-table-head">
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invoice-table-body">
+                        <tr>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                        </tr> 
+                    </tbody>
+                </table>
+
+                <!-- Add new product button -->
+                <button id="add-product-btn" class="btn btn-primary">Add new product</button>
+
+                <script>
+                    const tableBody = document.getElementById('invoice-table-body');
+                    const addProductBtn = document.getElementById('add-product-btn');
+
+                    addProductBtn.addEventListener('click', () => {
+                        const newRow = tableBody.insertRow();
+                        newRow.innerHTML = `
+                                                 <tr>
+                                                      <td contenteditable="true"></td>
+                                                      <td contenteditable="true"></td>
+                                                      <td contenteditable="true">1.00</td>
+                                                     <td contenteditable="true">0.00</td>
+                                                 </tr>
+                                                `;
+                    });
+                </script>
+            </div>
+        </div>
+</section>
 
 <div>
     <a asp-action="Index">Back to List</a>

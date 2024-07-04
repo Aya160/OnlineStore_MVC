@@ -1,40 +1,6 @@
-﻿@* @model OnlineStore.Core.Entities.StoreEntity.Category
-
-@{
-    var SalesList = ViewBag.Sales as SelectList;
-}
-
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
+﻿@model OnlineStore.Web.ViewModels.StoreViewModel
 
 
-            <select asp-for="SaleId" asp-items="SalesList" class="form form-control">
-                <option value="0">Select Offer</option>
-            </select>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
- *@
-
-@model OnlineStore.Core.Entities.StoreEntity.Category
-
-@{
-	var SalesList = ViewBag.Sales as SelectList;
-}
 
 <section class="login_box_area section-margin">
 	<div class="container">
@@ -42,58 +8,61 @@
 			<div class="col-lg-6">
 				<div class="login_box_img">
 					<div class="hover">
-						<h4>Category</h4>
+						<h4> New Store</h4>
 						<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
 
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-6">
-				<div class="login_form_inner">
-					<h3>Add Category</h3>
+				<div class="login_form_inner register_form_inner">
+					<h3>Add New Store</h3>
+					<form class="row login_form" asp-action="Create" id="register_form">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 						<div class="col-md-12 form-group">
-							<form asp-action="Create">
-							<form class="row login_form" asp-action="Create" enctype="multipart/form-data" id="register_form">
-							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-							<div class="col-md-12 form-group">
-<<<<<<< HEAD
-								<input asp-for="Name" type="text" class="form-control" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'">
-								<span asp-validation-for="Name" class="text-danger"></span>
-							</div>
-							<span asp-validation-for="Name" class="text-danger"></span>
-							
-							<div class="col-md-12 form-group">
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<label asp-for="SaleId" class="input-group-text">Category</label>
-									</div>
-									<select class="form-control" asp-for="SaleId" asp-items="SalesList">
-										<option value="0">Category 1</option>
+							<input asp-for="Name" type="text" class="form-control" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'">
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="Location" type="text" class="form-control" placeholder="Location" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Location'">
+							<span asp-validation-for="Location" class="text-danger"></span>
+						</div>
 
-									</select>
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" asp-for="StreetAddress" placeholder="Street Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Street Address'">
+							<span asp-validation-for="StreetAddress" class="text-danger"></span>
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="State" type="text" class="form-control" placeholder="State" onfocus="this.placeholder = ''" onblur="this.placeholder = 'State'">
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="Zip" type="text" class="form-control" placeholder="ZipCode" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ZipCode'">
+							<span asp-validation-for="Zip" class="text-danger"></span>
+
+						</div>
+						<div class="col-md-12 form-group">
+							<input asp-for="City" type="text" class="form-control" placeholder="City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City'">
+						</div>
+						<div class="col-md-12 form-group">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<label asp-for="AdministratorId" class="input-group-text">Category</label>
 								</div>
-							</div>
-=======
-								<input asp-for="Name" type="text" class="form-control" placeholder="Category Name" 
-								onfocus="this.placeholder = ''" onblur="this.placeholder = 'Category Name'">
-							<span asp-validation-for="Name" class="text-danger"></span>
-							</div>
+								<select class="form-control" asp-for="AdministratorId" asp-items-="CategoriesList">
+									<option value="0">Category 1</option>
 
-							<select asp-for="SaleId" asp-items="SalesList" class="form form-control">
-								<option value="0">Select Offer</option>
-							</select>
->>>>>>> 4433f0f3a435203f7ae011851dafe63b6a86ad2d
-							</form>
-							</form>
+								</select>
+							</div>
 						</div>
 						<div class="col-md-12 form-group">
-							<button type="submit" value="submit" class="button button-register w-100">Add Category</button>
+							<button type="submit" value="submit" class="button button-register w-100">Create</button>
 						</div>
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
 
 @section Scripts {
 	@{
