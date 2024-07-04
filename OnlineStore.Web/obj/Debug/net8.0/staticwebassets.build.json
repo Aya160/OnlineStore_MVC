@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "ZfW4Ha3fCUIg2arx6VuhDZu96in7979pHEUGZjWu4bs=",
+=======
+  "Hash": "OPF3+emUwraBkMyJTJHytPn1zOf5JukmvibyOZc3jq8=",
+>>>>>>> c3d8d33464d102f42de31001e80017376b340c75
   "Source": "OnlineStore.Web",
   "BasePath": "_content/OnlineStore.Web",
   "Mode": "Default",
@@ -4045,7 +4049,30 @@
       "OriginalItemSpec": "wwwroot\\UploadedFiles\\tv3.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\wwwroot\\vendors\\bootstrap\\bootstrap.bundle.min.js",
+=======
+      "Identity": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\UploadedFiles\\wa4.jpg",
+      "SourceId": "OnlineStore.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineStore.Web",
+      "RelativePath": "UploadedFiles/wa4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UploadedFiles\\wa4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\vendors\\bootstrap\\bootstrap.bundle.min.js",
+>>>>>>> c3d8d33464d102f42de31001e80017376b340c75
       "SourceId": "OnlineStore.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\wwwroot\\",

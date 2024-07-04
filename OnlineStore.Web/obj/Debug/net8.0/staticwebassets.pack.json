@@ -77,7 +77,15 @@
       "PackagePath": "staticwebassets\\UploadedFiles\\tv3.jpg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\RTC\\Desktop\\MVC\\OnlineStore_MVC\\OnlineStore.Web\\wwwroot\\css\\main.css",
+=======
+      "Id": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\UploadedFiles\\wa4.jpg",
+      "PackagePath": "staticwebassets\\UploadedFiles\\wa4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\Desktop\\Graduation Project\\OnlineStore\\OnlineStore.Web\\wwwroot\\css\\main.css",
+>>>>>>> c3d8d33464d102f42de31001e80017376b340c75
       "PackagePath": "staticwebassets\\css\\main.css"
     },
     {
