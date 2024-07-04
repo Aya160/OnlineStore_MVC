@@ -1,5 +1,10 @@
 ﻿@model OnlineStore.Web.ViewModels.StoreViewModel
 
+@{
+	var Admins = ViewBag.Admins as SelectList;
+}
+
+
 <section class="login_box_area section-margin">
 	<div class="container">
 		<div class="row">
@@ -45,8 +50,8 @@
 								<div class="input-group-prepend">
 									<label asp-for="AdministratorId" class="input-group-text">Category</label>
 								</div>
-								<select class="form-control" asp-for="AdministratorId" asp-items-="CategoriesList">
-									<option value="0">Category 1</option>
+								<select class="form-control" asp-for="AdministratorId" asp-items="Admins">
+									<option value="0"></option>
 
 								</select>
 							</div>
